@@ -6,7 +6,7 @@ every commit.
 """
 from __future__ import annotations
 
-import re
+import ast
 
 import numpy as np
 import pytest
@@ -110,16 +110,25 @@ def test_source_never_sets_ignore_errors_true():
     docs/data_access_report.md Section 4: featurize_many with
     ignore_errors=True accepts formula strings and returns an all-NaN matrix.
     That would not crash the loop - it would make every prediction identical.
+
+    The scan reads the parsed syntax tree rather than the raw text, so that
+    documenting the trap in a docstring is not itself a violation.
     """
-    src = repo_root() / "src"
     offenders = []
-    for path in src.rglob("*.py"):
-        text = path.read_text(encoding="utf-8")
-        if re.search(r"ignore_errors\s*=\s*True", text):
-            offenders.append(str(path))
-        for call in re.finditer(r"featurize_many\((.*?)\)", text, re.S):
-            if "ignore_errors=False" not in call.group(1):
-                offenders.append(f"{path}: featurize_many without ignore_errors=False")
+    for path in (repo_root() / "src").rglob("*.py"):
+        tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
+            keywords = {kw.arg: kw.value for kw in node.keywords if kw.arg}
+            flag = keywords.get("ignore_errors")
+            if isinstance(flag, ast.Constant) and flag.value is True:
+                offenders.append(f"{path.name}:{node.lineno} ignore_errors=True")
+            called = getattr(node.func, "attr", None) or getattr(node.func, "id", "")
+            if called == "featurize_many" and not (
+                    isinstance(flag, ast.Constant) and flag.value is False):
+                offenders.append(
+                    f"{path.name}:{node.lineno} featurize_many without ignore_errors=False")
     assert not offenders, offenders
 
 
