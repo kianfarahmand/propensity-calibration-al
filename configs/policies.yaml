@@ -15,11 +15,13 @@ surrogate:                       # Section 5
   nu: 2.5
   n_restarts_optimizer: 2
   normalize_y: false             # targets are already standardized on the pool
-  constant_bounds: [1.0e-3, 1.0e3]
+  constant_bounds: [1.0e-3, 1.0e+3]
   length_scale_init: 1.0
-  length_scale_bounds: [1.0e-2, 1.0e3]
+  length_scale_bounds: [1.0e-2, 1.0e+3]
   noise_level_init: 1.0e-2
-  noise_level_bounds: [1.0e-7, 1.0e1]
+  noise_level_bounds: [1.0e-7, 1.0e+1]
+  # Exponents carry an explicit sign throughout this file: PyYAML follows
+  # YAML 1.1, where 1.0e3 is a string and 1.0e+3 is a float.
   jitter: 1.0e-10
   # Predictive sd used for calibration includes the WhiteKernel noise term,
   # because the coverage event is about an observation y(x), not the latent f.
