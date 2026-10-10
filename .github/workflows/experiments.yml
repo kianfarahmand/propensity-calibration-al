@@ -36,8 +36,11 @@ jobs:
           python-version: "3.11"
       - run: pip install pyyaml
       - id: shards
-        run: echo "matrix=$(python scripts/make_shards.py ${{ inputs.config }})" >> "$GITHUB_OUTPUT"
-      - run: python scripts/make_shards.py ${{ inputs.config }} | head -c 2000
+        run: |
+          MATRIX=$(python scripts/make_shards.py ${{ inputs.config }} \
+            --dataset "${{ inputs.dataset }}" --arm "${{ inputs.arm }}")
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "$MATRIX" | head -c 2000
 
   run:
     needs: plan
@@ -52,9 +55,6 @@ jobs:
         shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
-
-      - if: inputs.dataset != '' && inputs.dataset != matrix.dataset
-        run: echo "skipping ${{ matrix.name }}" && exit 0
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
