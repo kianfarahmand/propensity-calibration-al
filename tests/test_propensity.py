@@ -92,8 +92,7 @@ def window(n=20, seed=0, pool_size=500, biased=True):
     for s in range(n):
         # a deliberately uneven sampling distribution over two strata
         covered = s % 4 != 0                       # 75% covered in the selected sample
-        pi = (0.5 if covered else 0.05) / pool_size * pool_size
-        pi = (0.5 if covered else 0.05)
+        pi = 0.5 if covered else 0.05
         points.append(WindowPoint(step=s + 1, index=s, y=0.0, propensity=pi,
                                   pool_size=pool_size,
                                   mu=0.0 if covered else 10.0, sd=1.0,
