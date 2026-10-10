@@ -1,0 +1,93 @@
+# Every constant the method depends on. Sourced from PREREGISTRATION.md; the
+# section is named against each block. Nothing in src/ hard-codes any of these.
+#
+# Values marked "not pre-registered" are choices the frozen plan left open. Each
+# one is logged in preregistration/deviations.md with its reason, as the S04
+# procedure requires: an ambiguity in the plan is a deviation to record, not a
+# choice to make silently.
+
+estimand:                        # Section 1
+  alpha_primary: 0.90
+  alpha_secondary: [0.50, 0.80, 0.95]
+
+surrogate:                       # Section 5
+  kernel: "ConstantKernel * Matern(nu=2.5, isotropic) + WhiteKernel"
+  nu: 2.5
+  n_restarts_optimizer: 2
+  normalize_y: false             # targets are already standardized on the pool
+  constant_bounds: [1.0e-3, 1.0e3]
+  length_scale_init: 1.0
+  length_scale_bounds: [1.0e-2, 1.0e3]
+  noise_level_init: 1.0e-2
+  noise_level_bounds: [1.0e-7, 1.0e1]
+  jitter: 1.0e-10
+  # Predictive sd used for calibration includes the WhiteKernel noise term,
+  # because the coverage event is about an observation y(x), not the latent f.
+  # Acquisition uses the latent sd. Not pre-registered; see deviations.md.
+  coverage_sd_includes_noise: true
+  acquisition_sd_includes_noise: false
+
+acquisition:                     # Section 6
+  epsilon: 0.05                  # exploration floor, fixed, never tuned
+  c_grid: [0.25, 0.5, 1.0, 2.0, 4.0]
+  c: null                        # set by S05 tuning; null means "not yet fixed"
+  tau_rule: "c * MAD of the acquisition score over the current pool"
+  mad_floor: 1.0e-12             # not pre-registered; guards a constant score
+  ucb_kappa: 2.0                 # not pre-registered; see deviations.md
+  ei_xi: 0.0                     # not pre-registered; classic EI, no jitter
+
+estimator:                       # Section 7
+  window: 30
+  clip_percentile: 95            # applied always, not adaptively
+  ess_floor: 10                  # readings below this are suppressed
+  self_normalized: true          # Hajek, not Horvitz-Thompson
+  loo_refit: true                # Section 7.1 primary specification
+
+controller:                      # Section 8
+  form: recalibration
+  log_lambda_bounds: [-2.0, 2.0]
+  bisection_iterations: 60       # not pre-registered; 60 gives ~1e-17 on the bracket
+  smoothing: 0.3                 # exponential smoothing of lambda_t
+  hold_on_suppressed: true
+  policy_switch:                 # secondary form, reported separately
+    band: 0.05
+    consecutive: 3
+    policies: [ei, max_variance]
+
+competitors:                     # Section 9, arms 8-11
+  online_calibration:            # Deshpande and Kuleshov 2021 form
+    learning_rate: 0.1           # not pre-registered
+  localized_conformal:           # LOCBO 2025 form
+    bandwidth_rule: median_heuristic   # not pre-registered
+    bandwidth_scale: 1.0
+  gp_hedge:
+    portfolio: [ei, ucb, max_variance]
+    eta: null                    # null means sqrt(8 ln K / T), the standard choice
+  global_scaling:
+    fit_step: 50
+
+protocol:                        # Section 10
+  n_init: 10
+  n_steps: 150
+  seeds_evaluation: 30
+  seeds_tuning: 10
+  tuning_steps_window: [50, 150]
+
+# Section 9. "monitor" is what the controller reads; "controller" is what it
+# does with it; "randomized" says whether propensities are usable at all.
+arms:
+  1:  {name: random,            policy: random,       monitor: none,       controller: none,           randomized: true,  role: floor}
+  2:  {name: greedy_ei,         policy: ei,           monitor: none,       controller: none,           randomized: false, role: standard practice}
+  3:  {name: greedy_ucb,        policy: ucb,          monitor: none,       controller: none,           randomized: false, role: standard practice}
+  4:  {name: greedy_maxvar,     policy: max_variance, monitor: none,       controller: none,           randomized: false, role: pure exploration control}
+  5:  {name: boltz_ei,          policy: ei,           monitor: none,       controller: none,           randomized: true,  role: isolates randomization from debiasing}
+  6:  {name: boltz_ei_naive,    policy: ei,           monitor: naive,      controller: recalibration,  randomized: true,  role: the uncorrected controller}
+  7:  {name: boltz_ei_ipw,      policy: ei,           monitor: ipw,        controller: recalibration,  randomized: true,  role: the proposed method}
+  8:  {name: boltz_ei_online,   policy: ei,           monitor: online,     controller: recalibration,  randomized: true,  role: no-propensity competitor}
+  9:  {name: boltz_ei_locbo,    policy: ei,           monitor: locbo,      controller: recalibration,  randomized: true,  role: no-propensity competitor}
+  10: {name: gp_hedge,          policy: hedge,        monitor: none,       controller: none,           randomized: false, role: switching without a reliability signal}
+  11: {name: global_scaling,    policy: ei,           monitor: naive,      controller: global_scaling, randomized: true,  role: static recalibration control}
+  12: {name: ipw_no_loo,        policy: ei,           monitor: ipw,        controller: recalibration,  randomized: true,  role: "ablation: drift correction",  overrides: {loo_refit: false}}
+  13: {name: ipw_no_clip,       policy: ei,           monitor: ipw,        controller: recalibration,  randomized: true,  role: "ablation: variance control", overrides: {clip_percentile: 100}}
+
+load_bearing: [5, 8, 9]
