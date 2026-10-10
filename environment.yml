@@ -1,26 +1,30 @@
 # Environment for propensity-calibration-al.
 #
-# NOTE ON PINS: the bounds below are floors, not an exact lock. Step 1
-# (environment build and data-access verification) replaces this file with a
-# full `conda env export --no-builds` of the first environment that solves AND
-# successfully downloads the benchmark datasets, so that CI and a laptop run
-# resolve identically. Do not start an evaluation run against this floor file.
+#   conda env create -f environment.yml && conda activate pcal
+#
+# Pins are exact and taken from the solved environment of 2026-10-10; the exact
+# Python-level distribution set from that same solve is recorded in
+# environment.lock.txt. Build strings are deliberately omitted so the same pins
+# resolve on linux-64 (GitHub Actions) and on the authoring machine (win-64).
+#
+# matplotlib-base rather than matplotlib: the full package pulls in Qt/PySide6
+# for an interactive backend no headless CI run can use.
 name: pcal
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
-  - numpy>=1.26
-  - scipy>=1.11
-  - pandas>=2.1
-  - scikit-learn>=1.4
-  - statsmodels>=0.14
-  - matplotlib-base>=3.8
-  - pyyaml>=6.0
-  - pymatgen>=2024.1.1
-  - matminer>=0.9.2
-  - pytest>=7.4
-  - pytest-xdist>=3.5
-  - pip
-  - pip:
-      - -e .
+  - python=3.11.17
+  - numpy=2.4.6
+  - scipy=1.17.1
+  - pandas=2.3.3
+  - scikit-learn=1.9.1
+  - matplotlib-base=3.11.2
+  - statsmodels=0.15.0
+  - pymatgen=2026.9.24
+  - matminer=0.10.1
+  - pyarrow=25.0.0
+  - pyyaml=6.0.3
+  - tqdm=4.70.1
+  - requests=2.34.2
+  - joblib=1.6.0
+  - pytest=9.1.1
