@@ -58,6 +58,8 @@ class Pool:
     n_after_dedup: int
     n_components: int
     explained_variance: float
+    n_features_used: int = 0
+    n_features_dropped: int = 0
     build_seconds: float = 0.0
     provenance: dict = field(default_factory=dict)
 
@@ -85,6 +87,8 @@ class Pool:
             "n_after_dedup": self.n_after_dedup,
             "n_pool": self.n,
             "n_components": self.n_components,
+            "n_features_used": self.n_features_used,
+            "n_features_dropped": self.n_features_dropped,
             "explained_variance": round(float(self.explained_variance), 6),
             "direction": self.direction,
             "kind": self.kind,
@@ -223,14 +227,33 @@ def build_pool(dataset: str, datasets_cfg: dict | None = None,
         raise ValueError(f"direction must be max or min, got {direction!r}")
     y_raw = -t if direction == "min" else t
 
+    # 5b. drop feature COLUMNS that are not finite for every pool member.
+    #
+    # Section 4.1 rejects an all-NaN feature row, which is the catastrophic case
+    # from docs/data_access_report.md, but is silent about scattered NaNs: Magpie
+    # leaves individual elemental properties missing for some elements, so a
+    # column can be NaN for a handful of compositions without any row being
+    # entirely NaN. Standardizing that matrix propagates the NaNs and the PCA
+    # then fails with "SVD did not converge".
+    #
+    # Columns are dropped rather than rows, because dropping rows would silently
+    # change the pre-registered pool, and imputation would invent descriptor
+    # values. The operation is unsupervised and label-free, like the rest of
+    # step 6. Logged in preregistration/deviations.md.
+    finite_columns = np.isfinite(Xf).all(axis=0)
+    n_dropped = int((~finite_columns).sum())
+    if finite_columns.sum() < 20:
+        raise ValueError(f"{dataset}: only {int(finite_columns.sum())} usable "
+                         "feature columns; the descriptor matrix is unusable")
+    Xf = Xf[:, finite_columns]
+
     # 6. standardize features, then PCA to 95% of variance capped at 20
     from sklearn.decomposition import PCA
     from sklearn.preprocessing import StandardScaler
 
     Z = StandardScaler().fit_transform(Xf)
-    constant = ~np.isfinite(Z).all(axis=0)
-    if constant.any():
-        Z = np.nan_to_num(Z, nan=0.0, posinf=0.0, neginf=0.0)
+    if not np.isfinite(Z).all():
+        raise ValueError(f"{dataset}: non-finite values survived standardization")
     pca = PCA(n_components=None, svd_solver="full", random_state=0).fit(Z)
     cumulative = np.cumsum(pca.explained_variance_ratio_)
     k = int(np.searchsorted(cumulative, float(pool_cfg["pca_variance"])) + 1)
@@ -248,6 +271,7 @@ def build_pool(dataset: str, datasets_cfg: dict | None = None,
         direction=direction, units=spec.get("units", ""), kind=spec["kind"],
         n_raw_rows=n_raw_rows, n_after_dedup=n_after_dedup,
         n_components=k, explained_variance=float(cumulative[k - 1]),
+        n_features_used=int(Xf.shape[1]), n_features_dropped=n_dropped,
         build_seconds=time.time() - started,
         provenance={"expect_n": spec.get("expect_n"),
                     "subsample_seed": int(pool_cfg["subsample_seed"]),
