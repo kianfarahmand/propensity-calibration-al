@@ -154,9 +154,9 @@ def test_ipw_corrects_a_bias_the_naive_reading_reports(policies):
     prefers covered points two to one. The naive mean of the selected sample
     reports the sampler's preference; the weighted estimate reports the pool.
     """
-    rng = np.random.default_rng(0)
-    pool_size, n = 1000, 400
-    covered = rng.random(n) < 2.0 / 3.0          # selected sample is 2/3 covered
+    pool_size = 1000
+    covered = np.array([True] * 200 + [False] * 100)   # exactly 2/3 of the sample
+    n = covered.size
     points = []
     for s, is_cov in enumerate(covered):
         # propensity is twice as large for covered points, so the weight halves
@@ -168,6 +168,5 @@ def test_ipw_corrects_a_bias_the_naive_reading_reports(policies):
     cfg["estimator"] = {**policies["estimator"], "window": n, "clip_percentile": 100}
     naive = fill(NaiveMonitor(cfg), points).read(0.90)[0]
     ipw = fill(IPWMonitor(cfg), points).read(0.90)[0]
-    assert naive == pytest.approx(2.0 / 3.0, abs=0.06)
-    assert ipw == pytest.approx(0.5, abs=0.06)
-    assert abs(ipw - 0.5) < abs(naive - 0.5)
+    assert naive == pytest.approx(2.0 / 3.0, abs=1e-12), "the sample is 2/3 covered"
+    assert ipw == pytest.approx(0.5, abs=1e-12), "the pool is half covered"
