@@ -1,0 +1,18 @@
+# Smoke configuration. Its only job is to prove the machinery runs end to end
+# on a clean Linux machine inside CI, and to measure wall-clock per step so S05
+# can size its shards from a measurement rather than a guess.
+#
+# This produces NO scientific result. One dataset, two seeds, twenty steps.
+# matbench_steels is the smallest pool (312 rows) and is a tuning dataset, so
+# nothing here touches evaluation data.
+name: smoke
+datasets: [matbench_steels]
+arms: [5, 6, 7]
+seeds: {start: 0, count: 2}
+n_steps: 20
+n_init: 10
+overrides:
+  acquisition.c: 1.0            # a placeholder for the smoke run only; the real
+                                # c is fixed by the S05 tuning sweep
+  estimator.ess_floor: 3        # 20 steps never fills the 30-step window
+out_dir: results/raw/smoke
