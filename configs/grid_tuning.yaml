@@ -1,0 +1,19 @@
+# Tuning grid. PREREGISTRATION.md Section 10: c is selected here and nowhere
+# else, and once it is fixed these two datasets are not used again for any
+# purpose. Run by S05.
+name: tuning
+datasets: [matbench_steels, dielectric_constant]
+arms: [7]                       # only the proposed method needs c
+seeds: {start: 0, count: 10}
+n_steps: 150
+n_init: 10
+sweep:
+  parameter: acquisition.c
+  values: [0.25, 0.5, 1.0, 2.0, 4.0]
+criterion:
+  statistic: mean_absolute_deviation      # of C_hat_t(0.90) from evaluator truth
+  steps: [50, 150]
+  aggregate: mean over the two datasets and their seeds
+  eligibility: median ESS at step 100 >= 10
+  ties: smaller c
+out_dir: results/raw/tuning
