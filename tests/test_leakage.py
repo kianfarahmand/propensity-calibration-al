@@ -7,9 +7,6 @@ every commit.
 from __future__ import annotations
 
 import re
-import sys
-from pathlib import Path
-
 import numpy as np
 import pytest
 
@@ -161,7 +158,3 @@ def test_real_pool_matches_the_data_access_report():
     assert report["n_raw_rows"] == 312
     assert report["n_components"] <= 20
     assert report["explained_variance"] >= 0.95 or report["n_components"] == 20
-
-
-def test_package_imports_from_src():
-    assert str(repo_root() / "src") in [str(Path(p)) for p in sys.path] or True
