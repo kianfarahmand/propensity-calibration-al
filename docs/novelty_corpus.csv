@@ -1,0 +1,1079 @@
+id,title,year,cites,doi,screen,grade,axes
+W4306735081,Conformal prediction under feedback covariate shift for biomolecular design,2022.0,44,10.1073/pnas.2204569119,INCLUDE,3.0,PCL
+W4383604562,Understanding Uncertainty Sampling via Equivalent Loss,2023.0,5,10.48550/arxiv.2307.02719,INCLUDE,3.0,PCL
+W4307413423,Bayesian Optimization with Conformal Prediction Sets,2022.0,1,10.48550/arxiv.2210.12496,INCLUDE,3.0,PCL
+W4396882488,Conformal Validity Guarantees Exist for Any Data Distribution (and How to Find Them),2024.0,0,10.48550/arxiv.2405.06627,INCLUDE,3.0,PCL
+W7220411942,Coverage You Can Steer: Online Conformal Calibration for RL-Driven Hardware-Aware NAS,2026.0,0,10.48550/arxiv.2610.03127,INCLUDE,3.0,PCL
+W2169027522,Confidence-based active learning,2006.0,230,10.1109/tpami.2006.156,INCLUDE,2.0,CL
+W2946593308,Galaxy Zoo: probabilistic morphology through Bayesian CNNs and active learning,2019.0,162,10.1093/mnras/stz2816,INCLUDE,2.0,CL
+W2911789160,Bayesian semi-supervised learning for uncertainty-calibrated prediction of molecular properties and active learning,2019.0,157,10.1039/c9sc00616h,INCLUDE,2.0,CL
+W2896845269,A combined projection-outline-based active learning Kriging and adaptive importance sampling method for hybrid reliability analysis with small failure,2018.0,145,10.1016/j.cma.2018.10.003,INCLUDE,2.0,PL
+W2936696202,Active Adversarial Domain Adaptation,2020.0,140,10.1109/wacv45572.2020.9093390,INCLUDE,2.0,PL
+W168489101,Robust Selective Sampling from Single and Multiple Teachers.,2010.0,91,,INCLUDE,2.0,PL
+W2945357717,Debiasing the Human-Recommender System Feedback Loop in Collaborative Filtering,2019.0,80,10.1145/3308560.3317303,INCLUDE,2.0,PL
+W2920209184,Efficient methods by active learning Kriging coupled with variance reduction based sampling methods for time-dependent failure probability,2019.0,74,10.1016/j.ress.2019.03.004,INCLUDE,2.0,PL
+W1966086610,ACTIVE LEARNING TO OVERCOME SAMPLE SELECTION BIAS: APPLICATION TO PHOTOMETRIC VARIABLE STAR CLASSIFICATION,2011.0,65,10.1088/0004-637x/744/2/192,INCLUDE,2.0,PL
+W2787344741,Active Learning Kriging Model Combining With Kernel-Density-Estimation-Based Importance Sampling Method for the Estimation of Low Failure Probability,2018.0,64,10.1115/1.4039339,INCLUDE,2.0,PL
+W2936788460,Conformal Prediction Under Covariate Shift,2019.0,53,10.48550/arxiv.1904.06019,INCLUDE,2.0,PC
+W4210571535,BUAK-AIS: Efficient Bayesian Updating with Active learning Kriging-based Adaptive Importance Sampling,2022.0,52,10.1016/j.cma.2022.114578,INCLUDE,2.0,PL
+W2913629080,Inductive conformal predictor for convolutional neural networks: Applications to active learning for image classification,2019.0,52,10.1016/j.patcog.2019.01.035,INCLUDE,2.0,CL
+W4206902561,On the Quality of Uncertainty Estimates from Neural Network Potential Ensembles,2021.0,47,10.1103/physreve.105.015311,INCLUDE,2.0,CL
+W2970662657,A combined Importance Sampling and active learning Kriging reliability method for small failure probability with random and correlated interval variab,2019.0,43,10.1016/j.strusafe.2019.101875,INCLUDE,2.0,PL
+W3006231165,System reliability analysis with small failure probability based on active learning Kriging model and multimodal adaptive importance sampling,2020.0,39,10.1007/s00158-020-02515-5,INCLUDE,2.0,PL
+W3038120922,Active learning method combining Kriging model and multimodal‐optimization‐based importance sampling for the estimation of small failure probability,2020.0,38,10.1002/nme.6495,INCLUDE,2.0,PL
+W4392820616,Simulation-free reliability analysis with importance sampling-based adaptive training physics-informed neural networks: Method and application to chlo,2024.0,38,10.1016/j.ress.2024.110083,INCLUDE,2.0,PL
+W3011015278,Reliability and reliability sensitivity analysis of structure by combining adaptive linked importance sampling and Kriging reliability method,2020.0,37,10.1016/j.cja.2019.12.032,INCLUDE,2.0,PL
+W1988747891,Unbiased query-by-bagging active learning for VHR image classification,2010.0,34,10.1117/12.864861,INCLUDE,2.0,PL
+W4318570212,Semi-supervised active transfer learning for fetal ECG arrhythmia detection,2023.0,33,10.1016/j.cmpbup.2023.100096,INCLUDE,2.0,CL
+W3124430069,On Statistical Bias In Active Learning: How and When To Fix It,2021.0,31,10.48550/arxiv.2101.11665,INCLUDE,2.0,PL
+W3200657814,An efficient method combining polynomial-chaos kriging and adaptive radial-based importance sampling for reliability analysis,2021.0,30,10.1016/j.compgeo.2021.104434,INCLUDE,2.0,PL
+W2963308846,UPAL: Unbiased Pool Based Active Learning,2011.0,28,10.48550/arxiv.1111.1784,INCLUDE,2.0,PL
+W4388749740,Parallel Bayesian probabilistic integration for structural reliability analysis with small failure probabilities,2023.0,25,10.1016/j.strusafe.2023.102409,INCLUDE,2.0,PL
+W1981097774,Generalized Query by Transduction for online active learning,2009.0,24,10.1109/iccvw.2009.5457449,INCLUDE,2.0,CL
+W4395474886,AK-Gibbs: An active learning Kriging model based on Gibbs importance sampling algorithm for small failure probabilities,2024.0,19,10.1016/j.cma.2024.116992,INCLUDE,2.0,PL
+W4392383780,Doubly robust calibration of prediction sets under covariate shift,2024.0,19,10.1093/jrsssb/qkae009,INCLUDE,2.0,PC
+W2579291683,Transfer learning with active queries from source domain,2016.0,19,,INCLUDE,2.0,PL
+W1807095418,Surrogate losses in passive and active learning,2019.0,18,10.1214/19-ejs1635,INCLUDE,2.0,PL
+W4365445733,An efficient structural reliability analysis method with active learning Kriging-assisted robust adaptive importance sampling,2023.0,17,10.1016/j.istruc.2023.03.169,INCLUDE,2.0,PL
+W4206923803,An importance sampling reliability method combining Kriging and Gaussian Mixture Model through ring subregion strategy for multiple failure modes,2022.0,16,10.1007/s00158-021-03155-z,INCLUDE,2.0,PL
+W4407172588,Sequential and adaptive probabilistic integration for structural reliability analysis,2025.0,16,10.1016/j.strusafe.2025.102577,INCLUDE,2.0,PL
+W4378652945,A Kriging-assisted two-stage adaptive radial-based importance sampling method for random-interval hybrid reliability analysis,2023.0,15,10.1007/s00158-023-03587-9,INCLUDE,2.0,PL
+W3187994717,Metamodelling for geotechnical reliability analysis with noisy and incomplete models,2021.0,15,10.1080/17499518.2021.1952611,INCLUDE,2.0,PL
+W4404059916,An active learning reliability method combining population Monte Carlo and Kriging model for small failure probability,2024.0,14,10.1016/j.istruc.2024.107621,INCLUDE,2.0,PL
+W3207850139,An efficient hybrid reliability analysis method based on active learning Kriging model and multimodal‐optimization‐based importance sampling,2021.0,14,10.1002/nme.6847,INCLUDE,2.0,PL
+W4405359520,A novel active learning Kriging based on improved Metropolis-Hastings and importance sampling for small failure probabilities,2024.0,13,10.1016/j.cma.2024.117658,INCLUDE,2.0,PL
+W4404539099,A stratified beta-sphere sampling method combined with important sampling and active learning for rare event analysis,2024.0,12,10.1016/j.strusafe.2024.102546,INCLUDE,2.0,PL
+W4392678900,An improved adaptive Kriging model-based metamodel importance sampling reliability analysis method,2024.0,12,10.1007/s00366-023-01941-5,INCLUDE,2.0,PL
+W4396666545,Novel Ransomware Detection Exploiting Uncertainty and Calibration Quality Measures Using Deep Learning,2024.0,12,10.3390/info15050262,INCLUDE,2.0,CL
+W4410529825,Two-stage failure probability function estimation method based on improved cross-entropy importance sampling and adaptive Kriging,2025.0,12,10.1016/j.ress.2025.111272,INCLUDE,2.0,PL
+W4322717464,Dirichlet-based Uncertainty Calibration for Active Domain Adaptation,2023.0,11,10.48550/arxiv.2302.13824,INCLUDE,2.0,CL
+W3214178105,Low-Cost Lithography Hotspot Detection with Active Entropy Sampling and Model Calibration,2021.0,11,10.1109/dac18074.2021.9586273,INCLUDE,2.0,CL
+W4392190314,BALQUE: Batch active learning by querying unstable examples with calibrated confidence,2024.0,10,10.1016/j.patcog.2024.110385,INCLUDE,2.0,CL
+W4399074239,Bayesian Safety Validation for Failure Probability Estimation of Black-Box Systems,2024.0,10,10.2514/1.i011395,INCLUDE,2.0,PL
+W4388485303,Calibration of uncertainty in the active learning of machine learning force fields,2023.0,10,10.1088/2632-2153/ad0ab5,INCLUDE,2.0,CL
+W3041627739,On uncertainty estimation in active learning for image segmentation,2020.0,10,10.48550/arxiv.2007.06364,INCLUDE,2.0,CL
+W4379389632,Reliability and global sensitivity analysis based on importance directional sampling and adaptive Kriging model,2023.0,10,10.1007/s00158-023-03584-y,INCLUDE,2.0,PL
+W4404260627,Conformal prediction with local weights: randomization enables robust guarantees,2024.0,9,10.1093/jrsssb/qkae103,INCLUDE,2.0,PC
+W4292702345,Novel reliability evaluation method combining active learning kriging and adaptive weighted importance sampling,2022.0,9,10.1007/s00158-022-03346-2,INCLUDE,2.0,PL
+W2126289448,Distributed active learning with application to battery health management,2011.0,8,,INCLUDE,2.0,PL
+W4315786805,Error-guided method combining adaptive learning kriging model and parallel-tempering-based importance sampling for system reliability analysis,2023.0,8,10.1080/0305215x.2022.2163392,INCLUDE,2.0,PL
+W4409356557,Robust Bayesian Optimization via Localized Online Conformal Prediction,2025.0,8,10.1109/tsp.2025.3559568,INCLUDE,2.0,CL
+W4291117012,A novel approach for multi‐output structural system reliability problem with small failure probability,2022.0,7,10.1002/nme.7097,INCLUDE,2.0,PL
+W4400229030,Active Sampling: A Machine-Learning-Assisted Framework for Finite Population Inference with Optimal Subsamples,2024.0,7,10.1080/00401706.2024.2374554,INCLUDE,2.0,PL
+W4412761365,Apax: A Flexible and Performant Framework for the Development of Machine-Learned Interatomic Potentials,2025.0,7,10.1021/acs.jcim.5c01221,INCLUDE,2.0,CL
+W4309762195,A double-loop relevant vector machine-based system reliability analysis method with Meta-IS idea and active learning strategy,2022.0,6,10.1016/j.probengmech.2022.103398,INCLUDE,2.0,PL
+W3095936509,Bayesian Optimization Meets Laplace Approximation for Robotic Introspection,2020.0,5,10.48550/arxiv.2010.16141,INCLUDE,2.0,CL
+W7131112535,Context-Aware Masking and Learnable Diffusion-Guided Patch Refinement in Transformers via Sparse Supervision for Hyperspectral Image Classification,2025.0,5,10.1109/iccvw69036.2025.00306,INCLUDE,2.0,CL
+W4398143373,"Distribution-Free Prediction Intervals Under Covariate Shift, With an Application to Causal Inference",2024.0,5,10.1080/01621459.2024.2356886,INCLUDE,2.0,PC
+W3190040206,Dual Active Learning for Both Model and Data Selection,2021.0,5,10.24963/ijcai.2021/420,INCLUDE,2.0,PL
+W2740822160,On Gleaning Knowledge from Multiple Domains for Active Learning,2017.0,5,10.24963/ijcai.2017/420,INCLUDE,2.0,PL
+W4401878814,Overcoming Overconfidence for Active Learning,2024.0,5,10.1109/access.2024.3449915,INCLUDE,2.0,CL
+W4210703010,Robust active learning with binary responses,2022.0,5,10.1016/j.jspi.2022.01.004,INCLUDE,2.0,PL
+W4409681652,Towards interpretable drug interaction prediction via dual-stage attention and Bayesian calibration with active learning,2025.0,5,10.7717/peerj-cs.2847,INCLUDE,2.0,CL
+W4411299069,A two-stage active learning Kriging method based on portfolio allocation and importance sampling for structural reliability analysis,2025.0,4,10.1007/s00158-025-04044-5,INCLUDE,2.0,PL
+W7133230476,Active Kriging-based uniform importance sampling with rejection control for highly efficient and accurate structural reliability analysis,2026.0,4,10.1016/j.ress.2026.112513,INCLUDE,2.0,PL
+W7130860228,Active operator learning with predictive uncertainty quantification for partial differential equations,2026.0,4,10.1016/j.jcp.2026.114791,INCLUDE,2.0,CL
+W4410731478,Conformal predictive intervals in survival analysis: a resampling approach,2025.0,4,10.1093/biomtc/ujaf063,INCLUDE,2.0,PC
+W4366716692,"Gaussian active learning on multi-resolution arbitrary polynomial chaos emulator: concept for bias correction, assessment of surrogate reliability and",2023.0,4,10.1007/s10596-023-10199-1,INCLUDE,2.0,CL
+W3037461381,Optimal sampling in unbiased active learning,2020.0,4,,INCLUDE,2.0,PL
+W4224993359,Systematic Reliability-Based Multidisciplinary Optimization by Parallel Adaptive Importance Candidate Region,2022.0,4,10.3390/aerospace9050240,INCLUDE,2.0,PL
+W4381053536,A Conditional Expectation Approach to Model Selection and Active Learning under Covariate Shift,2008.0,3,10.7551/mitpress/7921.003.0012,INCLUDE,2.0,PL
+W4379794400,Bayesian Safety Validation for Black-Box Systems,2023.0,3,10.2514/6.2023-3596,INCLUDE,2.0,PL
+W4414396354,Evaluation of uncertainty estimations for Gaussian process regression based machine learning interatomic potentials,2025.0,3,10.1088/2632-2153/ae09ef,INCLUDE,2.0,CL
+W2162984349,Importance-Weighted Label Prediction For Active Learning With Noisy Annotations,2012.0,3,,INCLUDE,2.0,PL
+W4317437973,On the role of Model Uncertainties in Bayesian Optimization,2023.0,3,10.48550/arxiv.2301.05983,INCLUDE,2.0,CL
+W113173505,Overcoming Sample Selection Bias in Variable Star Classification,2012.0,3,10.1007/978-1-4614-3323-1_22,INCLUDE,2.0,PL
+W4389789041,Safe and reliable transport of prediction models to new healthcare settings without the need to collect new labeled data,2023.0,3,10.1101/2023.12.13.23299899,INCLUDE,2.0,PC
+W4323059310,Structural Reliability Analysis Using Bayesian Support Vector Regression and Subset-Assisted Importance Sampling with Active Learning,2023.0,3,10.2139/ssrn.4372629,INCLUDE,2.0,PL
+W2138334855,Unbiased active learning for image retrieval,2008.0,3,10.1109/icme.2008.4607687,INCLUDE,2.0,PL
+W7162193915,Active Bayesian support vector regression with importance sampling for rare event reliability analysis,2026.0,2,10.1016/j.ress.2026.112896,INCLUDE,2.0,PL
+W3090855199,Ask-n-Learn: Active Learning via Reliable Gradient Representations for Image Classification,2020.0,2,10.48550/arxiv.2009.14448,INCLUDE,2.0,CL
+W4405179413,Efficient Active Deep Decoding of Linear Codes Using Importance Sampling,2024.0,2,10.1109/lcomm.2024.3514493,INCLUDE,2.0,PL
+W2897790130,Integrating Active Learning and Contextually Guide for Semantic Labeling of LiDAR Point Cloud,2018.0,2,10.1109/prrs.2018.8486166,INCLUDE,2.0,PL
+W7167458478,Active Calibration of Reachable Sets Using Approximate Pick-to-Learn,2026.0,1,10.1109/lcsys.2026.3710205,INCLUDE,2.0,CL
+W2545354269,Active learning for misspecified generalized linear models,2007.0,1,,INCLUDE,2.0,PL
+W2980261889,Active Learning with Importance Sampling,2019.0,1,10.48550/arxiv.1910.04371,INCLUDE,2.0,PL
+W4200630763,Addressing Bias in Active Learning with Depth Uncertainty Networks... or Not,2021.0,1,10.48550/arxiv.2112.06926,INCLUDE,2.0,PL
+W7201848665,"Auditing Conformal Prediction under Distribution Shift: A Detectability Boundary, Exact Label-Budget Design, and Repair",2026.0,1,10.21203/rs.3.rs-10396495/v1,INCLUDE,2.0,PC
+W4416013270,"Balancing Accuracy, Calibration, and Efficiency in Active Learning with Vision Transformers Under Label Noise",2025.0,1,10.48550/arxiv.2505.04375,INCLUDE,2.0,CL
+W4415981961,Calibrated Uncertainty Sampling for Active Learning,2025.0,1,10.48550/arxiv.2510.03162,INCLUDE,2.0,CL
+W4402818517,CALICO: Confident Active Learning with Integrated Calibration,2024.0,1,10.1007/978-3-031-72332-2_9,INCLUDE,2.0,CL
+W4387801342,Conformal Drug Property Prediction with Density Estimation under Covariate Shift,2023.0,1,10.48550/arxiv.2310.12033,INCLUDE,2.0,PC
+W2401618911,Importance sampling of delta-AUC: A basis for active learning for improved keyword search,2016.0,1,10.1109/icassp.2016.7472076,INCLUDE,2.0,PL
+W3199158479,Improving Robustness and Efficiency in Active Learning with Contrastive Loss.,2021.0,1,,INCLUDE,2.0,CL
+W2937170475,Inductive Conformal Predictor for Sparse Coding Classifiers: Applications to Image Classification,2019.0,1,10.1109/icassp.2019.8682740,INCLUDE,2.0,CL
+W7140303491,Machine Learning–Assisted Bio‐Interfacial Engineering Resolves Structural–Functional Conflicts in Nanocomposites,2026.0,1,10.1002/adma.202518806,INCLUDE,2.0,LC
+W4415640984,Onboard conformal prediction for domain shift in Earth observation,2025.0,1,10.1117/12.3070046,INCLUDE,2.0,PC
+W4403516082,Online Calibrated and Conformal Prediction Improves Bayesian Optimization,2021.0,1,10.48550/arxiv.2112.04620,INCLUDE,2.0,CL
+W4412030861,Query based learning via conformal uncertainty for RUL prediction,2025.0,1,10.1109/icphm65385.2025.11062060,INCLUDE,2.0,CL
+W4415372394,Reducing Annotation Effort in Semantic Segmentation Through Conformal Risk Controlled Active Learning,2025.0,1,10.3390/ai6100270,INCLUDE,2.0,CL
+W4414451833,Spilt conformal prediction with missing response,2025.0,1,10.1007/s11222-025-10722-7,INCLUDE,2.0,PC
+W7126079324,Uncertainty Quantification of Machine Learning Models With Adaptive Sampling Applications,2026.0,1,10.2514/6.2026-2023,INCLUDE,2.0,CL
+W7118190329,A 3-tier information fusioned framework featuring explainable deep active optimized CRNet for accurate heart disease prediction,2026.0,0,10.1186/s12967-025-07292-7,INCLUDE,2.0,PL
+W7167302935,A Diagnostic Benchmark of Safe Bayesian Optimization for Adaptive Deep Brain Stimulation: Coverage Mechanism and an Over-Certification Failure Mode,2026.0,0,,INCLUDE,2.0,CL
+W4407430216,A GENERALIZED LIKELIHOOD-WEIGHTED OPTIMAL SAMPLING ALGORITHM FOR RARE-EVENT PROBABILITY QUANTIFICATION,2025.0,0,10.1615/int.j.uncertaintyquantification.2025054176,INCLUDE,2.0,PL
+W4401880120,Active labeling for online ensemble learning,2024.0,0,10.1109/sam60225.2024.10636477,INCLUDE,2.0,CL
+W7154966646,Active learning-based optimization of variance reduction of Monte Carlo simulations: a feasibility study for the case of nanodosimetry around a gold n,2026.0,0,10.1088/1402-4896/ae6206,INCLUDE,2.0,PL
+W4415938544,Active learning-based variance reduction for Monte Carlo simulations: A feasibility study for the nanodosimetry around a gold nanoparticle,2025.0,0,10.48550/arxiv.2511.00563,INCLUDE,2.0,PL
+W4404341731,Active Learning for Vision-Language Models,2024.0,0,10.48550/arxiv.2410.22187,INCLUDE,2.0,CL
+W3032947762,Active Learning from Skewed Data Solution with a Weighted Extreme Learning Machine,2020.0,0,,INCLUDE,2.0,PL
+W7128445336,Active Learning Guided Rule and Transformer Fusion for Quality Assurance in Code Security,2025.0,0,10.56581/ijlemr.10.12.17-20,INCLUDE,2.0,CL
+W1998191174,Active learning with optimal distribution for image classification,2011.0,0,10.1109/icmt.2011.6001789,INCLUDE,2.0,PL
+W4391301944,Actively learning deep Gaussian process models for failure contour and probability estimation.,2024.0,0,10.2514/6.2024-0577,INCLUDE,2.0,PL
+W7214794788,Adapting Nonstationary Multi-output Gaussian Processes to Bayesian Optimization,2026.0,0,10.48550/arxiv.2609.32464,INCLUDE,2.0,CL
+W4402441077,Advanced scene text recognition and application for dynamic driving scenes,2024.0,0,10.1117/12.3041890,INCLUDE,2.0,CL
+W3195941115,AI3SD Video: Calibrated deep representations and entropy based active learning for materials property prediction,2021.0,0,10.5258/soton/p0143,INCLUDE,2.0,CL
+W7165403902,AK-MCS-C2 : Active Kriging Monte Carlo Simulation method with conformal certification for failure probability estimation,2026.0,0,10.48550/arxiv.2606.20191,INCLUDE,2.0,CL
+W7162796357,AM‐GMSIS: An Efficient Reliability Evaluation Method for Passive Nuclear Safety Systems Based on Ensemble Neural Network and Adaptive Multimodal Sampl,2026.0,0,10.1111/risa.70266,INCLUDE,2.0,PL
+W7213315032,Attribute-Blind Locally-weighted Conformal Calibration for Subgroup-robust Clinical Risk Prediction,2026.0,0,10.2139/ssrn.7451640,INCLUDE,2.0,PC
+W4416378012,"Bayesian--AI Fusion for Epidemiological Decision Making: Calibrated Risk, Honest Uncertainty, and Hyperparameter Intelligence",2025.0,0,10.48550/arxiv.2511.11983,INCLUDE,2.0,CL
+W7213365235,Bayesian Optimisation Using Product-of-Experts Gaussian Process Models with Uncertainty Calibration,2026.0,0,10.48550/arxiv.2609.15555,INCLUDE,2.0,CL
+W7160644263,Boundary Conditions of Cost-Aware Active Learning: A Multi-Dataset Taxonomy of Calibration and Length-Variance Failure Modes,2026.0,0,10.1109/csnt69054.2026.11502457,INCLUDE,2.0,CL
+W7131630940,Budgeted Active Experimentation for Treatment Effect Estimation from Observational and Randomized Data,2026.0,0,10.48550/arxiv.2602.22021,INCLUDE,2.0,PL
+W7160443324,CAL-Log: Calibration-Aware Logarithmic Cost Modeling for Active Learning in Low-Resource NLP,2026.0,0,10.1109/scse70081.2026.11499970,INCLUDE,2.0,CL
+W4416036520,COM-BOM: Bayesian Exemplar Search for Efficiently Exploring the Accuracy-Calibration Pareto Frontier,2025.0,0,10.18653/v1/2025.emnlp-main.1027,INCLUDE,2.0,CL
+W4392617592,Conditional Predictive Inference for Missing Outcomes,2024.0,0,10.48550/arxiv.2403.04613,INCLUDE,2.0,PC
+W7140322726,Conformal Cross-Modal Active Learning,2026.0,0,10.48550/arxiv.2603.23159,INCLUDE,2.0,CL
+W4407760025,Conformal Inference under High-Dimensional Covariate Shifts via Likelihood-Ratio Regularization,2025.0,0,10.48550/arxiv.2502.13030,INCLUDE,2.0,PC
+W7162797129,CONFORMAL PREDICTION SETS FOR TABULAR REGRESSION UNDER COVARIATE SHIFT,2026.0,0,10.5281/zenodo.20444834,INCLUDE,2.0,PC
+W7165536720,Conformal Prediction Sets for Tabular Regression Under Covariate Shift: Finite-Sample Marginal and Conditional Coverage Guarantees for Gradient-Booste,2026.0,0,10.2139/ssrn.6868419,INCLUDE,2.0,PC
+W4415186902,Conformal Prediction Under Generalized Covariate Shift with Posterior Drift,2025.0,0,10.48550/arxiv.2502.17744,INCLUDE,2.0,PC
+W4395443633,Conformal Predictive Systems Under Covariate Shift,2024.0,0,10.48550/arxiv.2404.15018,INCLUDE,2.0,PC
+W7147257886,Conformalized Signal Temporal Logic Inference under Covariate Shift,2026.0,0,10.48550/arxiv.2603.27062,INCLUDE,2.0,PC
+W2913281960,Correcting selection bias in active learning based on selective inference framework,2017.0,0,,INCLUDE,2.0,PL
+W7204239224,CS-WCP: Robust Conformal Sets for LLM-Judge Traffic Shifts with Uncertain Group Proportions,2026.0,0,10.13140/rg.2.2.32991.21928,INCLUDE,2.0,PC
+W4408111614,CTypiClust: Confidence-Aware Typical Clustering for Budget-Agnostic Active Learning with Confidence Calibration,2025.0,0,10.5220/0013139400003912,INCLUDE,2.0,CL
+W7172453251,DASH: Decoupled Adaptive Surrogate - Acquisition Harness for Automated Bayesian Optimization,2026.0,0,10.48550/arxiv.2608.00641,INCLUDE,2.0,CL
+W7135010975,Debiased Active Learning for Sky-Image-Based PV Power Prediction,2026.0,0,10.5370/kiee.2026.75.3.569,INCLUDE,2.0,PL
+W4388604108,Dirichlet Active Learning,2023.0,0,10.48550/arxiv.2311.05501,INCLUDE,2.0,CL
+W7134139466,Distribution-free flash-flood human-impact forecasting under temporal covariate shift,2026.0,0,10.21203/rs.3.rs-8194686/v1,INCLUDE,2.0,PC
+W7170402636,Distribution-free predictive inference in health sciences: a review of conformal prediction methods for biostatistics and epidemiology,2026.0,0,10.1080/24709360.2026.2685947,INCLUDE,2.0,PC
+W7125587995,Dynamic Calibration Framework for Digital Twins Using Active Learning and Conformal Prediction,2025.0,0,10.1109/wsc68292.2025.11338975,INCLUDE,2.0,CL
+W7203788190,Dynamic Regime-Aware Conformal Calibration for Reliable Economic Forecast Intervals under Multiple Distribution Shifts,2026.0,0,10.48550/arxiv.2608.17079,INCLUDE,2.0,PC
+W4407386446,Enhancing Cost Efficiency in Active Learning with Candidate Set Query,2025.0,0,10.48550/arxiv.2502.06209,INCLUDE,2.0,CL
+W7168273849,Generative Conformal Prediction Under Covariate Shift,2026.0,0,10.1080/10618600.2026.2703276,INCLUDE,2.0,PC
+W7202382732,Generative conformal prediction under multiple covariate shifts,2026.0,0,10.1007/s11222-026-10936-3,INCLUDE,2.0,PC
+W7161842928,Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization,2026.0,0,10.48550/arxiv.2605.20145,INCLUDE,2.0,CL
+W4417291525,Graph-Based Bayesian Optimization for Quantum Circuit Architecture Search with Uncertainty Calibrated Surrogates,2025.0,0,10.48550/arxiv.2512.09586,INCLUDE,2.0,CL
+W7148269781,Group-weighted conformal prediction,2026.0,0,10.1214/26-ejs2506,INCLUDE,2.0,PC
+W4323709481,HappyMap: A Generalized Multi-calibration Method,2023.0,0,10.48550/arxiv.2303.04379,INCLUDE,2.0,PC
+W4223680004,Importance sampling based active learning for parametric seismic fragility curve estimation,2021.0,0,10.48550/arxiv.2109.04323,INCLUDE,2.0,PL
+W4400909499,Improve ROI with Causal Learning and Conformal Prediction,2024.0,0,10.1109/icde60146.2024.00052,INCLUDE,2.0,PC
+W7106275662,Individualized Prediction Bands in Causal Inference with Continuous Treatments,2025.0,0,10.48550/arxiv.2511.15075,INCLUDE,2.0,PC
+W7160202745,Isotonic and Conformal Calibration for Bayesian Optimization in RIS Systems,2026.0,0,10.1109/lwc.2026.3689451,INCLUDE,2.0,CL
+W7143467254,KMM-CP: Practical Conformal Prediction under Covariate Shift via Selective Kernel Mean Matching,2026.0,0,10.48550/arxiv.2603.26415,INCLUDE,2.0,PC
+W7212283028,KODEX — KSEEK: ACTIVE,2026.0,0,10.6084/m9.figshare.33634342,INCLUDE,2.0,CL
+W7125100941,Labels or Preferences? Budget-Constrained Learning with Human Judgments over AI-Generated Outputs,2026.0,0,10.48550/arxiv.2601.13458,INCLUDE,2.0,PL
+W4318751347,Leveraging Importance Weights in Subset Selection,2023.0,0,10.48550/arxiv.2301.12052,INCLUDE,2.0,PL
+W7154417465,Materials Property Prediction with Graph Transformers and Uncertainty-Calibrated Active Learning,2025.0,0,10.71465/fapm547,INCLUDE,2.0,CL
+W7134256163,MatForge: Meta-Adaptive Trial Framework for Optimization via Trajectory-Guided Experimentation,2026.0,0,10.26434/chemrxiv.15000728/v1,INCLUDE,2.0,CL
+W3200077995,Mitigating Sampling Bias and Improving Robustness in Active Learning,2021.0,0,10.48550/arxiv.2109.06321,INCLUDE,2.0,CL
+W4415524438,Model-Agnostic Uncertainty Calibration for Noisy Constraint Modeling in Bainitic Steel Optimization,2025.0,0,10.1109/mlsp62443.2025.11204224,INCLUDE,2.0,CL
+W4416051110,Multiply Robust Conformal Risk Control with Coarsened Data,2025.0,0,10.48550/arxiv.2508.15489,INCLUDE,2.0,PC
+W7172424932,"Objective-Dependent Active Learning and Calibrated Uncertainty for Sample-Efficient Discovery of Rare-Earth Extractants: A Benchmark on 1,202 Experime",2026.0,0,10.1021/acsomega.6c07482,INCLUDE,2.0,CL
+W7160962466,Online Sharp-Calibrated Bayesian Optimization,2026.0,0,10.48550/arxiv.2605.10572,INCLUDE,2.0,CL
+W4416250804,Optimizing Active Learning in Vision-Language Models via Parameter-Efficient Uncertainty Calibration,2025.0,0,10.1109/ijcnn64981.2025.11228515,INCLUDE,2.0,CL
+W7164201801,Predicting Current Outcomes From Historical Survey Data With Weighted Conformal Prediction,2026.0,0,10.48550/arxiv.2606.10563,INCLUDE,2.0,PC
+W7221030262,Quantifying Volumetric Risk: Class-Aware Asymmetric Weighted Conformal Prediction for 3D Medical Image Segmentation,2026.0,0,10.48550/arxiv.2610.09392,INCLUDE,2.0,PC
+W4360766344,Reducing Workload of Manual Annotation for User Requests via a Novel Active Learning Framework,2022.0,0,10.1109/iiotbdsc57192.2022.00047,INCLUDE,2.0,PL
+W4413206412,Refining Deep Active Learning Pipelines: Leveraging Pseudo-Labeling and Label Calibration for Enhancing Dataset Quality,2025.0,0,10.1109/iccai66501.2025.00010,INCLUDE,2.0,CL
+W4410640337,Risk Estimation with Active Labeling,2025.0,0,10.1007/978-981-96-6400-9_9,INCLUDE,2.0,PL
+W7123882267,Robust Bayesian Optimization via Tempered Posteriors,2026.0,0,10.48550/arxiv.2601.07094,INCLUDE,2.0,CL
+W7172437728,Robust Surrogate-Based Bayesian Inference via Sampling-Based Adaptive Active Learning (SALE),2026.0,0,10.48550/arxiv.2608.00841,INCLUDE,2.0,CL
+W4416936871,Sample-Efficient Expert Query Control in Active Imitation Learning via Conformal Prediction,2025.0,0,10.48550/arxiv.2512.00453,INCLUDE,2.0,CL
+W4416692548,Sampling as Bandits: Evaluation-Efficient Design for Black-Box Densities,2025.0,0,10.48550/arxiv.2509.01437,INCLUDE,2.0,PL
+W7214701331,Sharp training-conditional coverage for conformal prediction under covariate shift,2026.0,0,10.48550/arxiv.2609.33456,INCLUDE,2.0,PC
+W7143470033,Shift-Aware Stacking Ensemble with Conformal Prediction for Brain Stroke Detection,2025.0,0,10.1109/decon67170.2025.11447733,INCLUDE,2.0,PC
+W7131404504,Similarity-as-Evidence: Calibrating Overconfident VLMs for Interpretable and Label-Efficient Medical Active Learning,2026.0,0,10.48550/arxiv.2602.18867,INCLUDE,2.0,CL
+W7220999920,Sketched Calibration for Conformal Prediction under Covariate Shift,2026.0,0,10.48550/arxiv.2610.09208,INCLUDE,2.0,PC
+W7118463348,Spatiotemporal Lattice-Constrained Event Linking and Automatic Labeling for Cross-Document Accident Reports,2026.0,0,10.3390/app16020595,INCLUDE,2.0,CL
+W4415335985,SpeedCP: Fast Kernel-based Conditional Conformal Prediction,2025.0,0,10.48550/arxiv.2509.24100,INCLUDE,2.0,PC
+W4411475551,Towards Efficient Disaster Response via Cost-Effective Unbiased Class Rate Estimation Through Neyman Allocation Stratified Sampling Active Learning,2025.0,0,10.1007/978-981-96-6966-0_14,INCLUDE,2.0,PL
+W4399115809,Training-Conditional Coverage Bounds under Covariate Shift,2024.0,0,10.48550/arxiv.2405.16594,INCLUDE,2.0,PC
+W7213314618,"TRIAD-SO: Joint Adaptive Design, Replication, and Importance Sampling for Mean–CVaR Simulation Optimization under Rare Events",2026.0,0,10.2139/ssrn.7467163,INCLUDE,2.0,PL
+W4401024054,Unbiased Active Semi-supervised Binary Classification Models,2024.0,0,10.24963/ijcai.2024/485,INCLUDE,2.0,PL
+W7123468461,Uncertainty estimation affects predictor selection and its calibration improves materials optimization,2026.0,0,10.20517/jmi.2025.70,INCLUDE,2.0,CL
+W4396882294,Uncertainty Quantification With Multiple Sources,2024.0,0,10.48550/arxiv.2405.06479,INCLUDE,2.0,PC
+W7161867191,Unsupervised Confidence Calibration for Active Learning,2026.0,0,10.1109/isbi61048.2026.11515622,INCLUDE,2.0,CL
+W7167684605,Validation of the PecanRev Screening Engine,2026.0,0,10.17605/osf.io/gmysn,INCLUDE,2.0,CL
+W7160276310,Weight Clipping for Robust Conformal Inference under Unbounded Covariate Shifts,2026.0,0,10.48550/arxiv.2605.02072,INCLUDE,2.0,PC
+W7152468733,Weighted Bayesian Conformal Prediction,2026.0,0,10.48550/arxiv.2604.06464,INCLUDE,2.0,PC
+W7167615646,Weighted Conformal Prediction for Lab-to-Track Thermal Transfer in EV Motorsport Powertrains,2026.0,0,10.48550/arxiv.2607.02722,INCLUDE,2.0,PC
+W4417032006,Weighted Conformal Prediction for Survival Analysis under Covariate Shift,2025.0,0,10.48550/arxiv.2512.03738,INCLUDE,2.0,PC
+W7106672453,"When Active Learning Fails, Uncalibrated Out of Distribution Uncertainty Quantification Might Be the Problem",2025.0,0,10.48550/arxiv.2511.17760,INCLUDE,2.0,CL
+W2426031434,10.1162/153244302760185243,2000.0,882,10.1162/153244302760185243,INCLUDE,1.0,L
+W2916338083,Active learning in materials science with emphasis on adaptive sampling using uncertainties for targeted design,2019.0,838,10.1038/s41524-019-0153-8,INCLUDE,1.0,L
+W1514707997,Employing EM and Pool-Based Active Learning for Text Classification,1998.0,674,,INCLUDE,1.0,L
+W2798820905,The Power of Ensembles for Active Learning in Image Classification,2018.0,645,10.1109/cvpr.2018.00976,INCLUDE,1.0,L
+W2951786554,Deep Bayesian Active Learning with Image Data,2017.0,565,10.48550/arxiv.1703.02910,INCLUDE,1.0,L
+W2810469995,Accurate Uncertainties for Deep Learning Using Calibrated Regression,2018.0,345,10.48550/arxiv.1807.00263,INCLUDE,1.0,C
+W3112474878,Accelerating high-throughput virtual screening through molecular pool-based active learning,2021.0,305,10.1039/d0sc06805e,INCLUDE,1.0,L
+W2951061410,BatchBALD: Efficient and Diverse Batch Acquisition for Deep Bayesian Active Learning,2019.0,292,10.48550/arxiv.1906.08158,INCLUDE,1.0,L
+W2167595980,Importance weighted active learning,2009.0,275,10.1145/1553374.1553381,INCLUDE,1.0,P
+W2114232233,A bound on the label complexity of agnostic active learning,2007.0,237,10.1145/1273496.1273541,INCLUDE,1.0,L
+W2096649264,A Bayesian exploration-exploitation approach for optimal online sensing and planning with a visually guided mobile robot,2009.0,222,10.1007/s10514-009-9130-2,INCLUDE,1.0,L
+W3033994814,Committee neural network potentials control generalization errors and enable active learning,2020.0,198,10.1063/5.0016004,INCLUDE,1.0,L
+W1666672054,Online Choice of Active Learning Algorithms,2003.0,187,,INCLUDE,1.0,L
+W603830301,Active Learning by Learning,2015.0,168,10.1609/aaai.v29i1.9597,INCLUDE,1.0,L
+W1995200351,An efficient reliability method combining adaptive importance sampling and Kriging metamodel,2014.0,164,10.1016/j.apm.2014.10.015,INCLUDE,1.0,L
+W3110608319,Consistency-Based Semi-supervised Active Learning: Towards Minimizing Labeling Cost,2020.0,160,10.1007/978-3-030-58607-2_30,INCLUDE,1.0,L
+W2999359202,Benchmarking the acceleration of materials discovery by sequential learning,2020.0,150,10.1039/c9sc05999g,INCLUDE,1.0,L
+W3101345273,Cold-start Active Learning through Self-supervised Language Modeling,2020.0,140,10.18653/v1/2020.emnlp-main.637,INCLUDE,1.0,L
+W2255883267,Input-dependent estimation of generalization error under covariate shift,2005.0,132,10.1524/stnd.2005.23.4.249,INCLUDE,1.0,P
+W1543507677,Active Learning of Causal Bayes Net Structure,2006.0,121,,INCLUDE,1.0,L
+W2108740451,Unbiased online active learning in data streams,2011.0,100,10.1145/2020408.2020444,INCLUDE,1.0,P
+W4313453396,"Dynamic, adaptive sampling during nanopore sequencing using Bayesian experimental design",2023.0,96,10.1038/s41587-022-01580-z,INCLUDE,1.0,L
+W2026386069,Pool-based active learning in approximate linear regression,2009.0,94,10.1007/s10994-009-5100-3,INCLUDE,1.0,L
+W2767623047,Deep Active Learning over the Long Tail,2017.0,82,10.48550/arxiv.1711.00941,INCLUDE,1.0,L
+W2234859443,Doubly Robust Off-policy Value Evaluation for Reinforcement Learning,2015.0,79,10.48550/arxiv.1511.03722,INCLUDE,1.0,P
+W2921458329,Application of Bayesian Optimization for Pharmaceutical Product Development,2019.0,78,10.1007/s12247-019-09382-8,INCLUDE,1.0,L
+W4313543542,Active Learning Guided Drug Design Lead Optimization Based on Relative Binding Free Energy Modeling,2023.0,73,10.1021/acs.jcim.2c01052,INCLUDE,1.0,L
+W4388409550,Calibrated geometric deep learning improves kinase–drug binding predictions,2023.0,65,10.1038/s42256-023-00751-0,INCLUDE,1.0,C
+W2945836394,Structural reliability and reliability sensitivity analysis of extremely rare failure events by combining sampling and surrogate model methods,2019.0,59,10.1177/1748006x19844666,INCLUDE,1.0,L
+W3008280978,An active learning Kriging model combined with directional importance sampling method for efficient reliability analysis,2020.0,58,10.1016/j.probengmech.2020.103054,INCLUDE,1.0,L
+W4396239146,Uncertainty-biased molecular dynamics for learning uniformly accurate interatomic potentials,2024.0,55,10.1038/s41524-024-01254-1,INCLUDE,1.0,L
+W3165602876,A time-dependent parameter estimation framework for crop modeling,2021.0,53,10.1038/s41598-021-90835-x,INCLUDE,1.0,L
+W2166886563,Online Importance Weight Aware Updates,2010.0,50,10.48550/arxiv.1011.1576,INCLUDE,1.0,P
+W3112929524,Fine-tuning BERT for Low-Resource Natural Language Understanding via Active Learning,2020.0,49,10.18653/v1/2020.coling-main.100,INCLUDE,1.0,L
+W3018995000,An active learning high-throughput microstructure calibration framework for solving inverse structure–process problems in materials informatics,2020.0,48,10.1016/j.actamat.2020.04.054,INCLUDE,1.0,L
+W2899770378,Evidential query-by-committee active learning for pedestrian detection in high-density crowds,2018.0,48,10.1016/j.ijar.2018.11.007,INCLUDE,1.0,L
+W2033505180,Transductive active learning – A new semi-supervised learning approach based on iteratively refined generative models to capture structure in data,2014.0,46,10.1016/j.ins.2014.09.009,INCLUDE,1.0,L
+W3022152375,Active- and transfer-learning applied to microscale-macroscale coupling to simulate viscoelastic flows,2020.0,44,10.1016/j.jcp.2020.110069,INCLUDE,1.0,L
+W4390535086,Unlabeled data selection for active learning in image classification,2024.0,44,10.1038/s41598-023-50598-z,INCLUDE,1.0,L
+W107039962,"Smoothness, Disagreement Coefficient, and the Label Complexity of Agnostic Active Learning",2014.0,41,,INCLUDE,1.0,L
+W3206457652,Active learning and molecular dynamics simulations to find high melting temperature alloys,2022.0,40,10.1016/j.commatsci.2022.111386,INCLUDE,1.0,L
+W2158229980,Sampling for Inference in Probabilistic Models with Fast Bayesian Quadrature,2014.0,40,10.48550/arxiv.1411.0439,INCLUDE,1.0,L
+W2244094084,Sequential Model-Free Hyperparameter Tuning,2015.0,40,10.1109/icdm.2015.20,INCLUDE,1.0,L
+W1998259579,Taking into Account the Differences between Actively and Passively Acquired Data: The Case of Active Learning with Support Vector Machines for Imbalan,2009.0,40,10.13016/m2qp4k,INCLUDE,1.0,L
+W3037311587,Uncertainty-aware Self-training for Text Classification with Few Labels,2020.0,40,10.48550/arxiv.2006.15315,INCLUDE,1.0,L
+W2953172087,Confidence Calibration for Convolutional Neural Networks Using Structured Dropout,2019.0,39,10.48550/arxiv.1906.09551,INCLUDE,1.0,C
+W1583104845,Adaptive Submodularity: A New Approach to Active Learning and Stochastic Optimization.,2010.0,38,,INCLUDE,1.0,L
+W2914973938,Combining active learning with concept drift detection for data stream mining,2018.0,37,10.1109/bigdata.2018.8622549,INCLUDE,1.0,L
+W2343213531,A Maximum Entropy Framework for Semisupervised and Active Learning With Unknown and Label-Scarce Classes,2016.0,36,10.1109/tnnls.2016.2514401,INCLUDE,1.0,L
+W4410230532,Error-informed parallel adaptive Kriging method for time-dependent reliability analysis,2025.0,36,10.1016/j.ress.2025.111194,INCLUDE,1.0,L
+W4402716289,Think Twice Before Selection: Federated Evidential Active Learning for Medical Image Analysis with Domain Shifts,2024.0,36,10.1109/cvpr52733.2024.01087,INCLUDE,1.0,L
+W2790832473,Estimation of low failure probability based on active learning Kriging model with a concentric ring approaching strategy,2018.0,31,10.1007/s00158-018-1960-0,INCLUDE,1.0,L
+W4408178946,Conformal prediction with conditional guarantees,2025.0,30,10.1093/jrsssb/qkaf008,INCLUDE,1.0,C
+W1548614216,Model Selection Under Covariate Shift,2005.0,30,10.1007/11550907_37,INCLUDE,1.0,P
+W4389518829,Active Learning Principles for In-Context Learning with Large Language Models,2023.0,29,10.18653/v1/2023.findings-emnlp.334,INCLUDE,1.0,L
+W3033053239,How useful is active learning for image‐based plant phenotyping?,2021.0,29,10.1002/ppj2.20020,INCLUDE,1.0,L
+W4312999793,Towards a Comprehensive Visual Quality Inspection for Industry 4.0*,2022.0,29,10.1016/j.ifacol.2022.09.486,INCLUDE,1.0,L
+W2955023002,'In-Between' Uncertainty in Bayesian Neural Networks,2019.0,27,10.48550/arxiv.1906.11537,INCLUDE,1.0,C
+W3134022768,Accelerated Discovery of Zeolite Structures with Superior Mechanical Properties via Active Learning,2021.0,26,10.1021/acs.jpclett.1c00339,INCLUDE,1.0,L
+W1980711233,An Active Learning Approach for Rapid Characterization of Endothelial Cells in Human Tumors,2014.0,26,10.1371/journal.pone.0090495,INCLUDE,1.0,L
+W2090051261,Online active inference and learning,2011.0,25,10.1145/2020408.2020443,INCLUDE,1.0,P
+W4313420413,Optimized active learning Kriging reliability based assessment of laterally loaded pile groups modeled using random finite element analysis,2022.0,25,10.1016/j.compgeo.2022.105135,INCLUDE,1.0,L
+W2799090584,Robust Active Label Correction.,2018.0,25,,INCLUDE,1.0,L
+W2063863981,Uncertainty-based active learning with instability estimation for text classification,2012.0,25,10.1145/2093153.2093154,INCLUDE,1.0,L
+W2182404622,Baseline Methods for Active Learning,2011.0,24,,INCLUDE,1.0,L
+W4410759542,Materials-discovery workflow guided by symbolic regression for identifying acid-stable oxides for electrocatalysis,2025.0,24,10.1038/s41524-025-01596-4,INCLUDE,1.0,L
+W4225572361,McPAT-Calib: A RISC-V BOOM Microarchitecture Power Modeling Framework,2022.0,24,10.1109/tcad.2022.3169464,INCLUDE,1.0,L
+W2165618941,Accelerating the annotation of sparse named entities by dynamic sentence selection,2008.0,23,10.1186/1471-2105-9-s11-s8,INCLUDE,1.0,L
+W4396696429,A physics and data co-driven surrogate modeling method for high-dimensional rare event simulation,2024.0,22,10.1016/j.jcp.2024.113069,INCLUDE,1.0,L
+W2000676112,Online parameter optimization in robotic force controlled assembly processes,2014.0,22,10.1109/icra.2014.6907358,INCLUDE,1.0,L
+W3012217512,Value of Information Analysis via Active Learning and Knowledge Sharing in Error-Controlled Adaptive Kriging,2020.0,22,10.1109/access.2020.2980228,INCLUDE,1.0,L
+W4406000727,A Bayesian active learning platform for scalable combination drug screens,2025.0,21,10.1038/s41467-024-55287-7,INCLUDE,1.0,L
+W4409224742,An active learning method combining MRBF model and dimension-reduction importance sampling for reliability analysis with high dimensionality and very ,2025.0,21,10.1016/j.ress.2025.111107,INCLUDE,1.0,L
+W2513723063,"Assessing the effectiveness of a hybrid-flipped model of learning on fluid mechanics instruction: overall course performance, homework, and far- and n",2016.0,21,10.1080/03043797.2016.1218826,INCLUDE,1.0,P
+W2477734150,Jointly Informative and Manifold Structure Representative Sampling Based Active Learning for Remote Sensing Image Classification,2016.0,20,10.1109/tgrs.2016.2591066,INCLUDE,1.0,L
+W2972551158,Active Learning Methods for Low Resource End-to-End Speech Recognition,2019.0,19,10.21437/interspeech.2019-2316,INCLUDE,1.0,L
+W3031275541,Adaptive Quadrature Schemes for Bayesian Inference via Active Learning,2020.0,19,10.1109/access.2020.3038333,INCLUDE,1.0,L
+W4411193876,Discovery of unconventional and nonintuitive self-assembling peptide materials using experiment-driven machine learning,2025.0,19,10.1126/sciadv.adt9466,INCLUDE,1.0,L
+W4221157076,On robust risk-based active-learning algorithms for enhanced decision support,2022.0,19,10.1016/j.ymssp.2022.109502,INCLUDE,1.0,L
+W2139721647,Semi-supervised Kernel Logistic Regression and Its Extension to Active Learning Based on A-Optimality,2007.0,17,10.1109/icdmw.2007.64,INCLUDE,1.0,L
+W4401015223,The Road to Safety: A Review of Uncertainty and Applications to Autonomous Driving Perception,2024.0,17,10.3390/e26080634,INCLUDE,1.0,C
+W4399151368,BioDiscoveryAgent: An AI Agent for Designing Genetic Perturbation Experiments,2024.0,16,10.48550/arxiv.2405.17631,INCLUDE,1.0,L
+W2963934419,Building Bridges: Viewing Active Learning from the Multi-Armed Bandit Lens,2013.0,16,10.48550/arxiv.1309.6830,INCLUDE,1.0,L
+W4409481666,A random interval coupling-based active learning Kriging with meta-model importance sampling method for hybrid reliability analysis under small failur,2025.0,15,10.1016/j.cma.2025.117992,INCLUDE,1.0,L
+W4401524797,Active learning for regression of structure–property mapping: the importance of sampling and representation,2024.0,15,10.1039/d4dd00073k,INCLUDE,1.0,L
+W4409186878,AEK-MFIS: An adaptive ensemble of Kriging models based on multi-fidelity simulations and importance sampling for small failure probabilities,2025.0,15,10.1016/j.cma.2025.117952,INCLUDE,1.0,L
+W4391337912,Efficient training sets for surrogate models of tokamak turbulence with Active Deep Ensembles,2024.0,15,10.1088/1741-4326/ad240d,INCLUDE,1.0,L
+W2945579250,Enabling High-Dimensional Bayesian Optimization for Efficient Failure Detection of Analog and Mixed-Signal Circuits,2019.0,15,10.1145/3316781.3317818,INCLUDE,1.0,L
+W4415930067,A self-driving physical vapor deposition system making sample-specific decisions on the fly,2025.0,14,10.1038/s41524-025-01805-0,INCLUDE,1.0,L
+W4385469761,Active learning-based structural reliability evaluation Kriging model and sequential importance sampling,2023.0,14,10.1016/j.istruc.2023.104956,INCLUDE,1.0,L
+W2916244421,Fully Distributed Bayesian Optimization with Stochastic Policies,2019.0,14,10.24963/ijcai.2019/327,INCLUDE,1.0,L
+W2293936028,Inspecting Sample Reusability for Active Learning,2011.0,14,,INCLUDE,1.0,L
+W2518052614,Efficient calibration for rssi-based indoor localization by bayesian experimental design on multi-task classification,2016.0,13,10.1145/2971648.2971710,INCLUDE,1.0,L
+W3124722714,Improving the predictions of soil properties from VNIR–SWIR spectra in an unlabeled region using semi-supervised and active learning,2021.0,13,10.1016/j.geoderma.2020.114830,INCLUDE,1.0,L
+W3169986546,Sequential Active Learning of Low-Dimensional Model Representations for Reliability Analysis,2022.0,13,10.1137/21m1416758,INCLUDE,1.0,L
+W2910177331,Active learning in automated text classification: a case study exploring bias in predicted model performance metrics,2019.0,12,10.1007/s10669-019-09717-3,INCLUDE,1.0,L
+W4403863709,An Uncertainty Quantification and Calibration Framework for RUL Prediction and Accuracy Improvement,2024.0,12,10.1109/tim.2024.3485392,INCLUDE,1.0,C
+W2117707988,Sufficient Conditions for Agnostic Active Learnable,2009.0,12,,INCLUDE,1.0,L
+W3092762989,A Distribution-Free Test of Covariate Shift Using Conformal Prediction,2020.0,11,,INCLUDE,1.0,C
+W4391438497,An active learning strategy of reliability-based design and optimization by parallel adaptive sequential importance candidate region method,2024.0,11,10.1007/s00158-023-03724-4,INCLUDE,1.0,L
+W2902932699,Batch Mode Query by Committee for Motor Imagery-Based BCI,2018.0,11,10.1109/tnsre.2018.2883594,INCLUDE,1.0,L
+W4389747842,Bayesian Estimate of Mean Proper Scores for Diversity-Enhanced Active Learning,2023.0,11,10.1109/tpami.2023.3343359,INCLUDE,1.0,L
+W4308231307,Exploring the frontiers of chemistry with a generalreactive machine learning potential,2022.0,11,10.26434/chemrxiv-2022-15ct6,INCLUDE,1.0,L
+W4387975873,Forest Aboveground Biomass Estimation Using Machine Learning Ensembles: Active Learning Strategies for Model Transfer and Field Sampling Reduction,2023.0,11,10.3390/rs15215138,INCLUDE,1.0,L
+W1572623535,Generalization error estimation under covariate shift,2005.0,11,,INCLUDE,1.0,P
+W4310592124,Active Discovery of Donor:Acceptor Combinations For Efficient Organic Solar Cells,2022.0,10,10.1021/acsami.2c18540,INCLUDE,1.0,L
+W2903954058,Active learning for efficiently training emulators of computationally expensive mathematical models,2020.0,10,10.1002/sim.8679,INCLUDE,1.0,L
+W3032062202,Active Model Selection for Positive Unlabeled Time Series Classification,2020.0,10,10.1109/icde48307.2020.00038,INCLUDE,1.0,L
+W3177022620,Agreement-Discrepancy-Selection: Active Learning with Progressive Distribution Alignment,2021.0,10,10.1609/aaai.v35i8.16915,INCLUDE,1.0,L
+W4206254019,Improving deep label noise learning with dual active label correction,2022.0,10,10.1007/s10994-021-06081-9,INCLUDE,1.0,L
+W4220879432,A novel method for reliability analysis with interval parameters based on active learning Kriging and adaptive radial‐based importance sampling,2022.0,9,10.1002/nme.6968,INCLUDE,1.0,L
+W4396992757,Adaptive Kriging-assisted system reliability method for implicit limit state surfaces and its application in landslide runout risk assessment,2024.0,9,10.1016/j.compgeo.2024.106426,INCLUDE,1.0,L
+W2783702157,Big active learning,2017.0,9,10.1109/bigdata.2017.8257916,INCLUDE,1.0,L
+W3000008842,Conformal prediction based active learning by linear regression optimization,2020.0,9,10.1016/j.neucom.2020.01.018,INCLUDE,1.0,L
+W4413485630,A novel active learning reliability analysis method based on ensemble of Kriging models and importance sampling for small failure probabilities,2025.0,8,10.1016/j.cma.2025.118322,INCLUDE,1.0,L
+W3141378083,Active learning of potential-energy surfaces of weakly bound complexes with regression-tree ensembles,2021.0,8,10.1063/5.0057051,INCLUDE,1.0,L
+W2609580417,An empirical investigation into the inconsistency of sequential active learning,2016.0,8,10.1109/icpr.2016.7899635,INCLUDE,1.0,L
+W4313598235,Benchmarks and Algorithms for Offline Preference-Based Reward Learning,2023.0,8,10.48550/arxiv.2301.01392,INCLUDE,1.0,L
+W2913220669,Limitations of Assessing Active Learning Performance at Runtime,2019.0,8,10.48550/arxiv.1901.10338,INCLUDE,1.0,L
+W4412792803,PAKP: Parallelized Adaptive Kriging method with Partial least squares for high-dimensional reliability analysis,2025.0,8,10.1016/j.ress.2025.111476,INCLUDE,1.0,L
+W4412430469,Parallel active learning XGBoost for structural reliability analysis with application to an onshore wind turbine tower,2025.0,8,10.1016/j.ress.2025.111390,INCLUDE,1.0,L
+W101428673,Pool-Based Active Learning for Text Classification,1999.0,8,,INCLUDE,1.0,L
+W4401119820,Solving Bayesian inverse problems with expensive likelihoods using constrained Gaussian processes and active learning,2024.0,8,10.1088/1361-6420/ad5eb4,INCLUDE,1.0,L
+W4413996869,Towards efficient data-driven fault diagnosis under low-budget scenarios via hybrid deep active learning,2025.0,8,10.1016/j.ress.2025.111637,INCLUDE,1.0,L
+W4409278718,Accelerated material discovery of high-performance Mg alloys via active learning and high throughput multi-objective informed Bayesian optimization,2025.0,7,10.1016/j.mtcomm.2025.112484,INCLUDE,1.0,L
+W3030606345,An active learning ensemble method for regression tasks,2020.0,7,10.3233/ida-194608,INCLUDE,1.0,L
+W2909587838,Calibration Time Reduction Using Subjective Features Selection Based Transfer Learning For Multiclass BCI,2018.0,7,10.1109/smc.2018.00093,INCLUDE,1.0,L
+W4362658837,Multi-step Bayesian Optimization-based intelligent task planning for an ozone observation satellite,2023.0,7,10.1016/j.actaastro.2023.04.003,INCLUDE,1.0,L
+W3199184671,On the Relationship Between Calibrated Predictors and Unbiased Volume Estimation,2021.0,7,10.1007/978-3-030-87193-2_64,INCLUDE,1.0,C
+W3137345061,Pre-Training Acquisition Functions by Deep Reinforcement Learning for Fixed Budget Active Learning,2021.0,7,10.1007/s11063-021-10476-z,INCLUDE,1.0,L
+W4412803009,Transformer-Driven Active Transfer Learning for Cross-Hyperspectral Image Classification,2025.0,7,10.1109/jstars.2025.3594108,INCLUDE,1.0,L
+W4402100264,A Classification Method of Agricultural News Text Based on BERT and Deep Active Learning,2022.0,6,10.13998/j.cnki.issn1002-1248.22-0172,INCLUDE,1.0,L
+W1530548230,A -Optimality for Active Learning of Logistic Regression Classifiers,2004.0,6,,INCLUDE,1.0,L
+W4413203976,Active learning for high-dimensional reliability using matrix-operation anisotropic RBF model embedded with Multiscale Graph Correlation,2025.0,6,10.1016/j.cma.2025.118286,INCLUDE,1.0,L
+W4417210590,Adaptive Bayesian support vector regression with advanced simulation and dimension reduction for efficient reliability analysis,2025.0,6,10.1016/j.cma.2025.118606,INCLUDE,1.0,L
+W2398302998,Batch Mode Active Learning with Hierarchical-Structured Embedded Variance,2014.0,6,10.1137/1.9781611973440.2,INCLUDE,1.0,L
+W7133191440,Machine learning-driven BaTiO 3 -based high-entropy ceramics with ultrahigh energy storage density from crossover region,2026.0,6,10.26599/jac.2026.9221274,INCLUDE,1.0,L
+W4214930388,"Quantifying transfer learning synergies in infinite-layer and perovskite nitrides, oxides, and fluorides",2022.0,6,10.1088/1361-648x/ac5995,INCLUDE,1.0,L
+W3030501230,Semi-supervised Embedding Learning for High-dimensional Bayesian Optimization,2020.0,6,10.48550/arxiv.2005.14601,INCLUDE,1.0,L
+W4226335419,Uncertainty Estimation for Language Reward Models,2022.0,6,10.48550/arxiv.2203.07472,INCLUDE,1.0,C
+W2999953263,Unsupervised Pool-Based Active Learning for Linear Regression,2020.0,6,10.48550/arxiv.2001.05028,INCLUDE,1.0,L
+W4281697955,Active Bayesian Causal Inference,2022.0,5,10.48550/arxiv.2206.02063,INCLUDE,1.0,L
+W2034913716,Active learning for noisy oracle via density power divergence,2013.0,5,10.1016/j.neunet.2013.05.007,INCLUDE,1.0,L
+W4414997758,Active Learning‐Guided Accelerated Discovery of Ultra‐Efficient High‐Entropy Thermoelectrics,2025.0,5,10.1002/adma.202515054,INCLUDE,1.0,L
+W2948606716,Bayesian active learning with abstention feedbacks,2021.0,5,10.1016/j.neucom.2021.11.027,INCLUDE,1.0,L
+W4406612748,Closed-Loop Phase Selection in EEG-TMS Using Bayesian Optimization,2024.0,5,10.1109/smc54092.2024.10831723,INCLUDE,1.0,L
+W7127381736,Construction site object detection with active transfer learning and weighted adaptive uncertainty-diversity sampling using a small imbalanced dataset,2026.0,5,10.1016/j.autcon.2026.106819,INCLUDE,1.0,L
+W7127052831,"GreenMix-pareto: Uncertainty-aware, physics-guided multi-objective optimization of low-carbon concrete mix designs",2026.0,5,10.1016/j.asej.2026.104009,INCLUDE,1.0,C
+W2975264237,Learning in Confusion: Batch Active Learning with Noisy Oracle,2019.0,5,,INCLUDE,1.0,L
+W4281612374,Localization-based active learning (LOCAL) for object detection in 3D point clouds,2022.0,5,10.1117/12.2618513,INCLUDE,1.0,L
+W2405476433,Near-optimal adaptive pool-based active learning with general loss,2014.0,5,,INCLUDE,1.0,L
+W3178496959,Near-optimal inference in adaptive linear regression,2025.0,5,10.1214/24-aos2450,INCLUDE,1.0,P
+W3097680123,Noisy Batch Active Learning with Deterministic Annealing,2019.0,5,10.48550/arxiv.1909.12473,INCLUDE,1.0,L
+W4415818877,PhaseXplorer Creates High-Dimensional Phase Diagrams with Closed-Loop Active Learning,2025.0,5,10.1021/acsnano.5c07268,INCLUDE,1.0,L
+W114020735,PyCP: An Open-Source Conformal Predictions Toolkit,2013.0,5,10.1007/978-3-642-41142-7_37,INCLUDE,1.0,C
+W4410452445,Reliable Li-ion conductivity with efficient data generation and uncertainty estimation toward large-scale screening,2025.0,5,10.1016/j.cej.2025.163847,INCLUDE,1.0,L
+W7128434122,Sample-efficient active learning for materials informatics using integrated posterior variance,2026.0,5,10.1016/j.commatsci.2026.114551,INCLUDE,1.0,L
+W4386465388,Studying the effectiveness of deep active learning in software defect prediction,2023.0,5,10.1080/1206212x.2023.2252117,INCLUDE,1.0,L
+W7127585055,Uncertainty Calibration in Molecular Machine Learning: Comparing Evidential and Ensemble Approaches,2026.0,5,10.1002/chem.202503299,INCLUDE,1.0,C
+W4412076734,Uncertainty-driven active learning in a deep semi-supervised framework for WCE image classification,2025.0,5,10.1016/j.rineng.2025.106174,INCLUDE,1.0,L
+W4411023315,Active learning deep autoencoder model with importance sampling for reliability analysis,2025.0,4,10.1016/j.asoc.2025.113428,INCLUDE,1.0,L
+W4413556907,An Adaptive Clustering-Based Active Learning Kriging Method Combining With Importance Sampling for Structural Reliability Analysis With Multiple Failu,2025.0,4,10.1109/access.2025.3602203,INCLUDE,1.0,L
+W4310878862,Calibration and generalizability of probabilistic models on low-data chemical datasets with DIONYSUS,2022.0,4,10.48550/arxiv.2212.01574,INCLUDE,1.0,C
+W3107782394,Deep Active Learning for Sequence Labeling Based on Diversity and Uncertainty in Gradient,2020.0,4,10.18653/v1/2020.lifelongnlp-1.1,INCLUDE,1.0,L
+W1524918099,Efficient Pool-Based Active Learning of Halfspaces,2012.0,4,,INCLUDE,1.0,L
+W4294691577,Efficient Robust Global Optimization for Simulation-based Problems using Decomposed Gaussian Processes: Application to MPC Calibration,2022.0,4,10.23919/acc53348.2022.9867777,INCLUDE,1.0,L
+W4414809285,Flexible uncertainty calibration for machine-learned interatomic potentials,2026.0,4,10.1038/s41524-026-02080-3,INCLUDE,1.0,C
+W7163077819,Learning to Select Like Humans: Explainable Active Learning for Medical Imaging,2026.0,4,10.1109/cai68641.2026.11536249,INCLUDE,1.0,L
+W4410602524,Parallel constrained Bayesian optimization via batched Thompson sampling with enhanced active learning process for reliability-based design optimizati,2025.0,4,10.1016/j.cma.2025.118066,INCLUDE,1.0,L
+W4205339823,Performance enhancement‐based active learning sample selection method,2022.0,4,10.1002/cem.3386,INCLUDE,1.0,L
+W12440339,Pool-Based Active Learning with Query Construction,2011.0,4,10.1007/978-3-642-25664-6_2,INCLUDE,1.0,L
+W4417048781,Regularized evidential neural networks for deep active learning,2025.0,4,10.1016/j.patcog.2025.112836,INCLUDE,1.0,L
+W4412656804,Robust design optimization of engineering structures with random field uncertainties based on a Kriging-assisted parallel active learning strategy (KA,2025.0,4,10.1016/j.cma.2025.118255,INCLUDE,1.0,L
+W3129243175,Robust Policy Search for Robot Navigation,2021.0,4,10.1109/lra.2021.3060408,INCLUDE,1.0,L
+W1279109443,Some Baseline Methods for the Active Learning Challenge,2010.0,4,,INCLUDE,1.0,L
+W3119891423,Training a Neural-Network-Based Surrogate Model for Aerodynamic Optimization Using a Gaussian Process,2021.0,4,10.2514/6.2021-0893,INCLUDE,1.0,L
+W4416993537,Uncertainty quantification enables reliable deep learning for protein–ligand binding affinity prediction,2025.0,4,10.1038/s41598-025-27167-7,INCLUDE,1.0,C
+W4390963095,ValUES: A Framework for Systematic Validation of Uncertainty Estimation in Semantic Segmentation,2024.0,4,10.48550/arxiv.2401.08501,INCLUDE,1.0,C
+W4411333708,A single-loop active learning kriging method for failure probability upper bound function estimation,2025.0,3,10.1016/j.istruc.2025.109420,INCLUDE,1.0,L
+W4393968679,Active learning for efficient annotation in precision agriculture: a use-case on crop-weed semantic segmentation,2024.0,3,10.48550/arxiv.2404.02580,INCLUDE,1.0,L
+W1872991507,Active Learning Halfspaces under Margin Assumptions,2011.0,3,,INCLUDE,1.0,L
+W4360764520,Active Learning with Combinatorial Coverage,2022.0,3,10.1109/icmla55696.2022.00281,INCLUDE,1.0,L
+W4401117316,Actively learning numerical relativity,2024.0,3,10.1103/physrevd.110.024080,INCLUDE,1.0,L
+W2112323457,Approximate property checking of mixed-signal circuits,2014.0,3,10.1145/2593069.2593091,INCLUDE,1.0,L
+W4415227462,Bayesian active learning-aided structure-based virtual screening reveals novel inhibitors of mutant IDH1,2025.0,3,10.1007/s11030-025-11381-6,INCLUDE,1.0,L
+W4408145130,CHASe: Client Heterogeneity-Aware Data Selection for Effective Federated Active Learning,2025.0,3,10.1109/tkde.2025.3547423,INCLUDE,1.0,L
+W3028007824,Confidence based active learning for vehicle classification in urban traffic,2012.0,3,,INCLUDE,1.0,C
+W4414617244,Density-aware active learning for materials discovery: a case study on functionalized nanoporous materials,2025.0,3,10.1039/d5cp02908b,INCLUDE,1.0,L
+W4403105091,Enhancing protein aggregation prediction: a unified analysis leveraging graph convolutional networks and active learning,2024.0,3,10.1039/d4ra06285j,INCLUDE,1.0,L
+W1590422530,Estimating Optimal Active Learning via Model Retraining Improvement,2015.0,3,10.48550/arxiv.1502.01664,INCLUDE,1.0,L
+W4320169959,Fast Rates in Pool-Based Batch Active Learning,2022.0,3,10.48550/arxiv.2202.05448,INCLUDE,1.0,L
+W4412171622,ML-PTA: A Two-Stage ML-Enhanced Framework for Accelerating Nonlinear DC Circuit Simulation With Pseudo-Transient Analysis,2025.0,3,10.1109/tc.2025.3587470,INCLUDE,1.0,L
+W4367016238,Multi-Agent Active Learning for Distributed Black-Box Optimization,2023.0,3,10.1109/lcsys.2023.3270347,INCLUDE,1.0,L
+W2896840177,Practical Bayesian Optimization for Transportation Simulators,2018.0,3,10.48550/arxiv.1810.03688,INCLUDE,1.0,L
+W2978620574,Quantum speedup for pool-based active learning,2019.0,3,10.1007/s11128-019-2460-x,INCLUDE,1.0,L
+W4408812999,Swift Transfer of Lactating Piglet Detection Model Using Semi-Automatic Annotation Under an Unfamiliar Pig Farming Environment,2025.0,3,10.3390/agriculture15070696,INCLUDE,1.0,L
+W4220996411,Trade-offs in Sampling and Search for Early-stage Interactive Text Classification,2022.0,3,10.1145/3490099.3511134,INCLUDE,1.0,L
+W4404259391,Uncertainty Based Machine Learning-DFT Hybrid Framework for Accelerating Geometry Optimization,2024.0,3,10.1021/acs.jctc.4c00953,INCLUDE,1.0,L
+W4414495884,Uncertainty quantification in graph neural networks with shallow ensembles,2025.0,3,10.1088/2632-2153/ae0bf0,INCLUDE,1.0,C
+W4416601688,Uniform one-sided conformal bands for forward realized volatility curves,2025.0,3,10.3934/math.20251201,INCLUDE,1.0,C
+W4416893026,Variational digital twins,2026.0,3,10.1016/j.egyai.2026.100756,INCLUDE,1.0,C
+W4392638766,Vegetation Biomass and Nitrogen Content Estimation Using Ensembles: Regression and Active Learning Strategies for Field Sampling Reduction,2024.0,3,10.1109/jstars.2024.3375624,INCLUDE,1.0,L
+W4405029525,A Machine Learning Approach Capturing Hidden Parameters in Autonomous Thin-Film Deposition,2024.0,2,10.48550/arxiv.2411.18721,INCLUDE,1.0,L
+W3205943642,A Nested Weighted Tchebycheff Multi-Objective Bayesian Optimization Approach for Flexibility of Unknown Utopia Estimation in Expensive Black-Box Desig,2022.0,2,10.1115/1.4054480,INCLUDE,1.0,L
+W7131653376,Active learning emulators for nuclear two-body scattering in momentum space,2026.0,2,10.1103/s6my-pqs9,INCLUDE,1.0,L
+W4408351898,Adaptive Acquisition in Bayesian Optimization with Agnostic Ensembles,2025.0,2,10.1109/icassp49660.2025.10890671,INCLUDE,1.0,L
+W4214813101,Application of Gaussian Process Preference Learning for Visualizing Facial Features Related to Personality Traits,2021.0,2,10.1109/csde53843.2021.9718431,INCLUDE,1.0,L
+W4405662792,ASELMAR: Active and semi-supervised learning-based framework to reduce multi-labeling efforts for activity recognition,2024.0,2,10.1016/j.cviu.2024.104269,INCLUDE,1.0,L
+W3037647403,Data quality in the deep learning era: Active semi-supervised learning and text normalization for natural language understanding,2019.0,2,,INCLUDE,1.0,L
+W4409347078,Debiased Active Learning with Variational Gradient Rectifier,2025.0,2,10.1609/aaai.v39i15.33744,INCLUDE,1.0,L
+W3012207844,Efficient active learning of halfspaces,2013.0,2,10.5555/2567709.2567744,INCLUDE,1.0,L
+W4388080417,Efficient estimation of structural probability of failure with adaptive kriging and multi-layered hyperball-based importance sampling,2023.0,2,10.1080/02533839.2023.2274076,INCLUDE,1.0,L
+W4407986845,Enhancing Uncertainty Quantification in Molecular Machine Learning: A Comparative Study of Deep Evidential Regression and Ensembles with Posthoc Calib,2025.0,2,10.26434/chemrxiv-2025-fx019,INCLUDE,1.0,C
+W4390853338,Estimation of simulation failure set with active learning based on Gaussian Process classifiers and random set theory,2025.0,2,10.1016/j.strusafe.2025.102607,INCLUDE,1.0,L
+W4390818307,Estimation of stress intensity factor for surface cracks in the firtree groove structure of turbine disk using pool-based active learning with Gaussia,2024.0,2,10.15632/jtam-pl/174709,INCLUDE,1.0,L
+W3049367628,Exploratory-Phase-Free Estimation of GP Hyperparameters in Sequential Design Methods—At the Example of Bayesian Inverse Problems,2020.0,2,10.3389/frai.2020.00052,INCLUDE,1.0,L
+W4414359280,Faster Annotation for Elevation-Guided Flood Extent Mapping by Consistency-Enhanced Active Learning,2025.0,2,10.24963/ijcai.2025/1057,INCLUDE,1.0,L
+W4411884258,Learning atomic forces from uncertainty-calibrated adversarial attacks,2025.0,2,10.1038/s41524-025-01703-5,INCLUDE,1.0,C
+W4400141583,Length Optimization in Conformal Prediction,2024.0,2,10.48550/arxiv.2406.18814,INCLUDE,1.0,C
+W4361806891,MuRAL: Multi-Scale Region-based Active Learning for Object Detection,2023.0,2,10.48550/arxiv.2303.16637,INCLUDE,1.0,L
+W2950832426,Non-Parametric Calibration for Classification,2019.0,2,10.48550/arxiv.1906.04933,INCLUDE,1.0,C
+W4405841357,Optimizing Machine Learning Models for Disease Diagnosis Using Bayesian Hyperparameter Optimization (BHO),2024.0,2,10.1007/978-3-031-72215-8_16,INCLUDE,1.0,L
+W2974111094,Sampling Bias in Deep Active Classification: An Empirical Study,2019.0,2,10.48550/arxiv.1909.09389,INCLUDE,1.0,L
+W4402683948,STAR: Constraint LoRA with Dynamic Active Learning for Data-Efficient Fine-Tuning of Large Language Models,2024.0,2,10.18653/v1/2024.findings-acl.209,INCLUDE,1.0,L
+W4408313998,Subspace enhanced active learning method for high-dimensional reliability analysis,2025.0,2,10.1007/s00158-025-03967-3,INCLUDE,1.0,L
+W4387801680,A Deep Active Learning Framework for Semantic Labeling of Point Clouds,2023.0,1,10.1109/igarss52108.2023.10281634,INCLUDE,1.0,L
+W7117474339,A framework of active data selection and quantum-enhanced regression for predicting magnetic properties of sintered NdFeB magnets,2025.0,1,10.1038/s41524-025-01914-w,INCLUDE,1.0,L
+W3173311388,A Simple Baseline for Batch Active Learning with Stochastic Acquisition Functions.,2021.0,1,,INCLUDE,1.0,L
+W4401370254,Active learning approaches in molecule pKi prediction,2024.0,1,10.1002/minf.202400154,INCLUDE,1.0,L
+W2794799997,Active Learning for Data Streams under Concept Drift and concept evolution.,2016.0,1,,INCLUDE,1.0,L
+W7125600510,Active Learning for Pneumonia Detection with Vision Transformers and Bayesian Uncertainty Estimation,2025.0,1,10.1109/icnsoc66817.2025.00095,INCLUDE,1.0,L
+W4402259338,Active Learning Strategies for Remote Sensing Estimation of Agronomic Parameters with Limited Calibration Data,2024.0,1,10.1109/igarss53475.2024.10641708,INCLUDE,1.0,L
+W7165744471,Active learning with heteroscedastic Gaussian Process Regression model,2026.0,1,10.1016/j.probengmech.2026.103975,INCLUDE,1.0,L
+W4405637474,Active Sequential Posterior Estimation for Sample-Efficient Simulation-Based Inference,2024.0,1,10.32388/qj2jrk,INCLUDE,1.0,L
+W4417119455,Active Test-time Vision-Language Navigation,2025.0,1,10.52202/085713-1490,INCLUDE,1.0,L
+W4406245098,Advanced Monte Carlo for Acquisition Sampling in Bayesian Optimization,2025.0,1,10.3390/e27010058,INCLUDE,1.0,L
+W3161938660,Autonomous Experiments for Neutron Three-Axis Spectrometers (TAS) with Log-Gaussian Processes,2021.0,1,10.48550/arxiv.2105.07716,INCLUDE,1.0,L
+W3110563199,Batch mode active learning for mitotic phenotypes using conformal prediction,2020.0,1,,INCLUDE,1.0,L
+W7161268912,CA-SMART: An active learning framework for accelerating materials discovery under resource constraints,2026.0,1,10.1016/j.asoc.2026.115463,INCLUDE,1.0,L
+W2912762777,Chance Constrained Model Predictive Control via Active Uncertainty Set Learning and Calibration,2018.0,1,10.1109/cdc.2018.8619665,INCLUDE,1.0,C
+W4385734508,Combining Active Learning and Task Adaptation with BERT for Cost-Effective Annotation of Social Media Datasets,2023.0,1,10.18653/v1/2023.wassa-1.22,INCLUDE,1.0,L
+W4403815796,Conformal prediction for dose-response models with continuous treatments,2026.0,1,10.1016/j.ijar.2026.109751,INCLUDE,1.0,C
+W1607624531,Correcting Sampling Bias in Structural Genomics through Iterative Selection of Underrepresented Targets,2005.0,1,10.1137/1.9781611972757.73,INCLUDE,1.0,L
+W4408146082,Critic Loss for Image Classification,2024.0,1,10.1109/icmla61862.2024.00104,INCLUDE,1.0,C
+W3174710707,DEEP BAYESIAN ACTIVE LEARNING IN HIGH-RESOLUTION SATELLITE IMAGES FOR CHANGE DETECTION IN URBAN AND SUBURBAN AREAS,2021.0,1,10.5194/isprs-annals-v-3-2021-175-2021,INCLUDE,1.0,L
+W4404042775,Designing Target-Specific Datasets for Regioselectivity Predictions on Complex Substrates,2024.0,1,10.26434/chemrxiv-2024-skgxb-v2,INCLUDE,1.0,L
+W7130641568,Discovery of high-entropy perovskite oxygen carriers for chemical looping applications via an autonomous active learning protocol,2026.0,1,10.1016/j.mtener.2026.102239,INCLUDE,1.0,L
+W4377864107,Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods,2023.0,1,10.48550/arxiv.2305.12283,INCLUDE,1.0,C
+W4387427816,Distribution-free risk assessment of regression-based machine learning algorithms,2023.0,1,10.48550/arxiv.2310.03545,INCLUDE,1.0,C
+W4415427446,Efficient Emission Monitoring in Gas Turbines: A Conformal Adaptive Learning Approach,2025.0,1,10.3233/faia251465,INCLUDE,1.0,C
+W7118377063,Efficient estimation of temporal exceeding probability for ship responses in broadband wave fields,2026.0,1,10.1016/j.apor.2025.104898,INCLUDE,1.0,L
+W4405354984,Enhancing Modality Representation and Alignment for Multimodal Cold-start Active Learning,2024.0,1,10.1145/3696409.3700225,INCLUDE,1.0,L
+W4390188965,Improving Deep Learning-Based Defect Classification in Solar Cells Using Conformal Prediction,2023.0,1,10.1109/pvsc48320.2023.10360000,INCLUDE,1.0,C
+W7154521080,Improving FEMU Calibration from a Single Heterogeneous Test through a Data-Driven Approach: An Exploratory Study,2026.0,1,10.4028/p-qe9atp,INCLUDE,1.0,L
+W1984169813,Improving importance estimation in pool-based batch active learning for approximate linear regression,2012.0,1,10.1016/j.neunet.2012.09.002,INCLUDE,1.0,P
+W4312835196,Multi-Objective Bayesian Optimization Supported by Gaussian Process Classifiers and Conditional Probabilities,2022.0,1,10.1115/detc2022-91343,INCLUDE,1.0,L
+W4395022201,Neural Active Learning Beyond Bandits,2024.0,1,10.48550/arxiv.2404.12522,INCLUDE,1.0,L
+W4405561892,On the Role of Surrogates in Conformal Inference of Individual Causal Effects,2024.0,1,10.48550/arxiv.2412.12365,INCLUDE,1.0,C
+W4283824046,Pareto Optimization for Active Learning under Out-of-Distribution Data Scenarios,2022.0,1,10.48550/arxiv.2207.01190,INCLUDE,1.0,L
+W7161048166,Policy-Based Active Learning for Efficient Molecular Identification,2026.0,1,10.1021/acs.jcim.6c00474,INCLUDE,1.0,L
+W4388553908,Posterior Sampling-Based Bayesian Optimization with Tighter Bayesian Regret Bounds,2023.0,1,10.48550/arxiv.2311.03760,INCLUDE,1.0,L
+W7166567173,Scale-free and coverage-aware active learning for Kriging-based surrogate assisted structural reliability analysis,2026.0,1,10.1016/j.strusafe.2026.102744,INCLUDE,1.0,L
+W7128801094,Self-supervised vision-language learning with uncertainty-guided strategic annotation for minimal-annotation defect detection,2026.0,1,10.1016/j.cie.2026.111898,INCLUDE,1.0,L
+W4377966068,Study of Efficient Sampling Method for Training Data in Building CAE Surrogate Model,2022.0,1,10.1299/jsmecmd.2022.35.3-03,INCLUDE,1.0,L
+W4309397480,Towards Automated Design of Bayesian Optimization via Exploratory Landscape Analysis,2022.0,1,10.48550/arxiv.2211.09678,INCLUDE,1.0,L
+W7134134347,Trustworthy Compound–Protein Interaction Prediction with Interpretable and Conformalized Cross-Attention Transformers,2026.0,1,10.1021/acs.jcim.5c02709,INCLUDE,1.0,C
+W4409362415,Uncertainty-guided Active Learning with Theoretical Bounds on Label Complexity,2025.0,1,10.1145/3728716,INCLUDE,1.0,L
+W4285594876,Uncertainty quantification for predictions of atomistic neural networks,2022.0,1,10.48550/arxiv.2207.06916,INCLUDE,1.0,C
+W7220093663,การประเมนผลกระทบของนโยบายการถายโอนสถานศกษาขนพนฐาน สองคกรปกครองสวนทองถนตอความพรอมดานทรพยากรทางการศกษา ของสถานศกษาดวยเทคนคโพรเพนสตสกอร,2025.0,0,,INCLUDE,1.0,P
+W4313438431,3.4 Simulation and Machine Learning,2022.0,0,10.1515/9783110785982-017,INCLUDE,1.0,L
+W4412690954,3D Full-body Pose Estimation of Construction Machines Using Deep Neural Network and Stereo Vision,2025.0,0,10.22260/isarc2025/0168,INCLUDE,1.0,L
+W7159837990,A concept drift-oriented active learning method,2026.0,0,10.54097/14pf6057,INCLUDE,1.0,L
+W4413036197,A Density-Based Active Learning Framework Leveraging Self-supervised Features,2025.0,0,10.1007/978-3-031-95017-9_31,INCLUDE,1.0,L
+W3211044058,"A Holistic, Decision-Theoretic Framework for Pool-Based Active Learning",2021.0,0,10.17170/kobra-202109244802,INCLUDE,1.0,L
+W7163171646,A Hybrid Active and Semi-Supervised Learning Framework for Classification with Minimal Labeled Data,2026.0,0,10.5815/ijisa.2026.03.05,INCLUDE,1.0,L
+W7213275966,A modular active learning framework for autonomous atomic layer deposition,2026.0,0,10.21203/rs.3.rs-11039646/v1,INCLUDE,1.0,L
+W7172430281,A Multi-Modal Pre-training Framework-Driven Active Learning System for Enhanced Protein Evolution of Cs CE,2026.0,0,10.1021/acscatal.6c03864,INCLUDE,1.0,L
+W7143334463,A Multitask Active Learning Framework with Probabilistic Modeling for Multi-Species Acute Toxicity Prediction,2026.0,0,10.3390/molecules31071144,INCLUDE,1.0,L
+W7160755990,A Novel Adaptive Multiple-Fidelity Kriging Model-Based Reliability Analysis for Small Failure Probabilities,2026.0,0,10.1007/978-3-032-17313-3_75,INCLUDE,1.0,L
+W7160279867,A single-loop active learning framework for rare-event time-dependent reliability analysis under hybrid uncertainties,2026.0,0,10.1016/j.probengmech.2026.103941,INCLUDE,1.0,L
+W7161005411,A Unified Theory of Conditional Coverage in Conformal Prediction with Applications,2026.0,0,10.48550/arxiv.2605.11602,INCLUDE,1.0,C
+W7160202105,A Universal Pterocarpan-Vinyl-Polyphenol Scaffold for Multi-Target Skin Therapeutics: Six-Cycle Bayesian Active Learning Identifies Six Multi-Target L,2026.0,0,10.5281/zenodo.20018348,INCLUDE,1.0,L
+W7170613899,"Accelerating sustainable glass discovery: integrating molecular dynamics, machine learning, and robotic synthesis",2026.0,0,10.1038/s41524-026-02249-w,INCLUDE,1.0,L
+W4416440242,Accurate and Efficient Emulation of Proton-Deuteron Scattering via the Reduced Basis Method and Active Learning,2025.0,0,10.48550/arxiv.2511.01844,INCLUDE,1.0,L
+W4225982904,Achieving Minimax Rates in Pool-Based Batch Active Learning,2022.0,0,,INCLUDE,1.0,L
+W7202041114,Active Exploration of Chemical Space (AECS) A Theoretical Framework for Directed Molecular Discovery,2026.0,0,10.5281/zenodo.21856767,INCLUDE,1.0,L
+W7147280370,Active In-Context Learning for Tabular Foundation Models,2026.0,0,10.48550/arxiv.2603.27385,INCLUDE,1.0,L
+W7161302447,Active Learners as Efficient PRP Rerankers,2026.0,0,10.48550/arxiv.2605.14236,INCLUDE,1.0,L
+W7203984111,Active learning and explainable machine intelligence for lead-free chalcogenide perovskite photovoltaics: Gaussian process Bayesian optimization and S,2026.0,0,10.1088/2053-1591/ae9d20,INCLUDE,1.0,L
+W7165448287,"Active Learning and Parameter-Efficient Fine-Tuning for Domain-Specific Sovereign AI — API Gateway, AI Routing, Distributed Systems, Sovereign AI, and",2026.0,0,10.5281/zenodo.20775925,INCLUDE,1.0,L
+W7160677389,Active Learning-based Online Coupling of Sawmill Simulators and Their Surrogate Model: The Effect of Sampling Bias on Concept Drift Detection,2023.0,0,,INCLUDE,1.0,L
+W7214537481,Active learning-driven surrogate modeling for fatigue life prediction of LPBF hastelloy-X using defect-informed finite element analysis,2026.0,0,10.1007/s40964-026-01936-w,INCLUDE,1.0,L
+W7214186664,Active Learning for Biodiversity Monitoring: From Label Efficiency to Reliable Ecological Inference,2026.0,0,10.48550/arxiv.2609.27409,INCLUDE,1.0,L
+W7167020435,Active Learning for Cascaded Object Detection: Balancing Coverage and Uncertainty in Table Extraction Pipelines,2026.0,0,10.1007/978-3-032-36042-7_2,INCLUDE,1.0,L
+W7160946140,Active Learning for Gaussian Process Regression Under Self-Induced Boltzmann Weights,2026.0,0,10.48550/arxiv.2605.10654,INCLUDE,1.0,L
+W7154502316,Active Learning for Materials Science application.,2026.0,0,10.48505/nims.6253,INCLUDE,1.0,L
+W218374236,Active Learning for Regression via Density Power Divergence,2013.0,0,10.1527/tjsai.28.13,INCLUDE,1.0,L
+W1805827794,Active Learning of Halfspaces under a Margin Assumption,2011.0,0,10.48550/arxiv.1112.1556,INCLUDE,1.0,L
+W7214008030,Active learning structural reliability analysis using Separable PINNs,2026.0,0,10.1016/j.ress.2026.113502,INCLUDE,1.0,L
+W7160501458,Active Sampling Sample-Based Quantum Diagonalization from Finite-Shot Measurements,2026.0,0,10.1109/qcnc69040.2026.00163,INCLUDE,1.0,L
+W7161560521,AdaNP-BO: Adaptive Neural Process Bayesian Optimization with Learnable Stochastic Activations,2026.0,0,10.2139/ssrn.6788053,INCLUDE,1.0,L
+W4400104924,"Adaptive, Active Learning, and Multifidelity Monte Carlo Methods in the MOOSE Stochastic Tools Module",2024.0,0,,INCLUDE,1.0,L
+W3017695174,Adaptive Experimental Design for Aerodynamic Modeling with Hard-to-Change Factors,2020.0,0,10.2514/1.i010813,INCLUDE,1.0,L
+W4415042162,Adaptive Gaussian Process-Based strategies for Solving the NASA-DNV UQ Challenge 2025,2025.0,0,10.3850/978-981-94-3281-3_esrel-sra-e2025-p7226-cd,INCLUDE,1.0,C
+W4386874871,Adaptive Sample Sharing for Multi Agent Linear Bandits,2023.0,0,10.48550/arxiv.2309.08710,INCLUDE,1.0,L
+W7169794493,AdaRisk-Agent: LLM-Orchestrated Adaptive Risk Calibration for Cost-Sensitive Active Learning in UAV Weed Detection,2026.0,0,10.3390/drones10070547,INCLUDE,1.0,L
+W2998256644,ALLStars: Overcoming Multi-Survey Selection Bias using Crowd-Sourced Active Learning,2012.0,0,,INCLUDE,1.0,L
+W7171510624,Anytime-Valid Confirmation of Covariate Balance for Prespecified Corrections,2026.0,0,10.48550/arxiv.2607.23157,INCLUDE,1.0,P
+W7164201857,APOSM: Pairwise preference learning improves generative small-molecule design,2026.0,0,10.64898/2026.06.06.730554,INCLUDE,1.0,L
+W7172386953,Assessing Conformal Prediction for Remote Sensing: Application to Local Climate Zone Classification,2026.0,0,10.1109/tgrs.2026.3719780,INCLUDE,1.0,C
+W7127085704,"Asymptotic Theory of Iterated Empirical Risk Minimization, with Applications to Active Learning",2026.0,0,10.48550/arxiv.2601.23031,INCLUDE,1.0,P
+W7221046455,ATLAS-AL: Adaptive Trust-Region for Latent Adversarial Searches via Active Learning,2026.0,0,10.48550/arxiv.2610.07323,INCLUDE,1.0,L
+W7166732682,B3O: Scalable Boltzmann Batch Bayesian Optimization,2026.0,0,10.48550/arxiv.2606.30228,INCLUDE,1.0,L
+W4221142047,BASIL: Balanced Active Semi-supervised Learning for Class Imbalanced Datasets,2022.0,0,10.48550/arxiv.2203.05651,INCLUDE,1.0,L
+W7165660307,Bayesian Adaptation Gym: A Benchmark for the Bayesian Low-Rank Adaptation of Multi-Modal Language Models,2026.0,0,10.48550/arxiv.2606.22188,INCLUDE,1.0,C
+W7163579504,Bayesian Algorithm for Collaborative Optimisation With Application to Aircraft Design,2026.0,0,10.2514/6.2026-4803,INCLUDE,1.0,L
+W7127126192,Bayesian Interpolating Neural Network (B-INN): a scalable and reliable Bayesian model for large-scale physical systems,2026.0,0,10.48550/arxiv.2601.22860,INCLUDE,1.0,C
+W7215344089,Bayesian Model Calibration Using Temporal Process Features and Streamlined Active Learning,2026.0,0,,INCLUDE,1.0,L
+W7154136207,Bayesian optimization for uncertainty-aware prediction of rainfall-induced deformation in embankment dams,2026.0,0,10.1038/s41598-026-46994-w,INCLUDE,1.0,C
+W7125686231,Bayesian Optimization with executableDigital Twins: Fast controller tuning with multi-source information,2026.0,0,10.2139/ssrn.6074472,INCLUDE,1.0,L
+W2618767597,Bayesian Pool-based Active Learning With Abstention Feedbacks,2017.0,0,10.48550/arxiv.1705.08481,INCLUDE,1.0,L
+W7165364813,Bayesian probability density evolution method for reliability analysis with stepwise uncertainty reduction,2026.0,0,10.1016/j.ress.2026.112967,INCLUDE,1.0,L
+W4399453896,BEACON: A Bayesian Optimization Inspired Strategy for Efficient Novelty Search,2024.0,0,10.48550/arxiv.2406.03616,INCLUDE,1.0,L
+W7214440621,Beyond Diagnostic Accuracy: Calibration and Predictive Uncertainty of Artificial Intelligence Models for Oral and Dental Disease Diagnosis,2026.0,0,10.6084/m9.figshare.34003842,INCLUDE,1.0,C
+W7127393315,"Beyond the Loss Curve: Scaling Laws, Active Learning, and the Limits of Learning from Exact Posteriors",2026.0,0,10.48550/arxiv.2602.00315,INCLUDE,1.0,L
+W4415014310,BLIPs: Bayesian Learned Interatomic Potentials,2025.0,0,10.48550/arxiv.2508.14022,INCLUDE,1.0,L
+W7214523798,Boundary Conditions for Trustworthy Uncertainty Quantification in Materials AI: A Framework for Decision-Ready Confidence,2024.0,0,10.68159/u068715058,INCLUDE,1.0,C
+W4321855251,Calibrated Regression Against An Adversary Without Regret,2023.0,0,10.48550/arxiv.2302.12196,INCLUDE,1.0,C
+W4296605406,Calibrating Ensembles for Scalable Uncertainty Quantification in Deep Learning-based Medical Segmentation,2022.0,0,10.48550/arxiv.2209.09563,INCLUDE,1.0,C
+W7214066567,Calibration as a First-Class Criterion in LLM Evaluation,2026.0,0,10.48550/arxiv.2609.26489,INCLUDE,1.0,C
+W7165403742,Can In-Context Learning Support Intrinsic Curiosity?,2026.0,0,10.48550/arxiv.2606.19476,INCLUDE,1.0,L
+W7169775851,ChemGNN: Graph Neural Network Surrogate Guided Design of Carbon Nanotube Membranes for High-Efficiency Desalination,2026.0,0,10.26434/chemrxiv.15006282/v1,INCLUDE,1.0,L
+W7164011694,Closed-loop reliability-aware surrogate-assisted optimization of water hammer protection in long-distance water conveyance systems via active learning,2026.0,0,10.1016/j.ress.2026.113014,INCLUDE,1.0,L
+W3166331719,Cold Posteriors Improve Bayesian Medical Image Post-Processing,2021.0,0,,INCLUDE,1.0,C
+W7164914267,Conformal Candidate Certification for Offline Model-Based Optimization,2026.0,0,10.48550/arxiv.2606.15217,INCLUDE,1.0,C
+W7156727019,Conformal PM2.5 Mapping Under Spatial Covariate Shift: Satellite-Reanalysis Fusion for Africa's Green Industrial Transition,2026.0,0,10.48550/arxiv.2604.22787,INCLUDE,1.0,C
+W7128448751,Conformal Prediction in Clinical Artificial Intelligence,2026.0,0,10.1016/j.chest.2025.07.4116,INCLUDE,1.0,C
+W4387634930,Conformal prediction with local weights: randomization enables local guarantees,2023.0,0,10.48550/arxiv.2310.07850,INCLUDE,1.0,C
+W7129475532,Coverage Guarantees for Pseudo-Calibrated Conformal Prediction under Distribution Shift,2026.0,0,10.48550/arxiv.2602.14913,INCLUDE,1.0,C
+W7204010383,Coverage properties of conformal prediction under OWA fusion of heterogeneous uncertainty scores,2026.0,0,10.2139/ssrn.7331507,INCLUDE,1.0,C
+W3037798223,Debiased Offline Evaluation of Active Learning in Recommender Systems.,2020.0,0,,INCLUDE,1.0,P
+W4395113536,Deep active learning with KD-Tree based greedy sampling in structural simulation,2024.0,0,10.1201/9781003508762-51,INCLUDE,1.0,L
+W2905247850,Design of experiments for learning personalized visual preferences of occupants in private offices.,2018.0,0,,INCLUDE,1.0,L
+W7167683926,Determinantal point process sampling for bioacoustic active learning,2026.0,0,10.48550/arxiv.2607.06063,INCLUDE,1.0,L
+W7160384047,Discovering Reaction Mechanisms with Transition Path Sampling-Based Active Learning of Machine-Learned Potentials,2026.0,0,10.48550/arxiv.2605.03737,INCLUDE,1.0,L
+W4403301532,Discovery of Unconventional and Non-intuitive Self-assembling Peptide Materials using Experiment Driven Machine Learning,2024.0,0,10.21203/rs.3.rs-5100605/v1,INCLUDE,1.0,L
+W7204598468,Discussion on candidate screening in Bayesian optimization based on two types of pareto-optimal solutions for the mean and standard deviation of predi,2026.0,0,10.1016/j.nexres.2026.102369,INCLUDE,1.0,L
+W7213607118,Distance to Class Prototypes: Active Learning for Object Detection,2026.0,0,10.48550/arxiv.2609.20248,INCLUDE,1.0,L
+W7169671212,Distributional shift safety margin for machine learning models in structural engineering,2026.0,0,10.1007/s42452-026-09140-9,INCLUDE,1.0,C
+W7172201343,Domain knowledge-integrated active learning for synergistic optimization of strength and ductility in AlCoCrFeNiTa high-entropy alloys,2026.0,0,10.1016/j.pnsc.2026.06.012,INCLUDE,1.0,L
+W7160277445,Effect of Different Machine Learning Surrogate Models for Bayesian Optimization on the Thrust-to-Power Ratio of Physical Electrohydrodynamic Ion Thrus,2026.0,0,10.31224/6969,INCLUDE,1.0,L
+W7213444058,Efficient discovery and property optimization of quantum materials via reinforcement-inspired active learning: a case study of MXene semiconductors,2026.0,0,10.1039/d6cp00434b,INCLUDE,1.0,L
+W7154916790,Efficient exploration of peptide libraries using active learning with AlphaFold-based screening,2026.0,0,10.64898/2026.04.16.718999,INCLUDE,1.0,L
+W7161626787,Efficient Optimization of Genotype Pairs for Intercropping using Genomic Prediction and Bayesian Optimization,2026.0,0,10.64898/2026.05.15.725387,INCLUDE,1.0,L
+W7163035951,Efficient Structural Reliability Analysis via Adaptive Hidden Neuron Screening in Extreme Learning Machines,2026.0,0,10.32604/cmes.2026.082594,INCLUDE,1.0,L
+W7214662354,Efficient system reliability analysis of landslide-pipeline interaction via active learning Kriging with sequential importance sampling,2026.0,0,10.1007/s00477-026-03369-x,INCLUDE,1.0,L
+W4392340591,Efficiently Computable Safety Bounds for Gaussian Processes in Active Learning,2024.0,0,10.48550/arxiv.2402.18260,INCLUDE,1.0,L
+W7204500117,Enhancing Bayesian Optimization and Active Learning Through Kernel Diversity,2026.0,0,10.48550/arxiv.2608.24721,INCLUDE,1.0,L
+W4384928497,Estimation of Limit State Probabilities of Consolidation Settlement by Adaptive Gaussian Process Regression and Importance Sampling,2023.0,0,10.1061/9780784484975.031,INCLUDE,1.0,L
+W4320018049,Evaluating Zero-Cost Active Learning for Object Detection,2023.0,0,10.1007/978-3-031-26236-4_4,INCLUDE,1.0,L
+W4417003821,"Excel-in-the-Loop Active Learning on KoMaP for Consumer Electronics Materials, with Extension to Battery Electrode AI Autonomous Manufacturing",2025.0,0,10.1109/icce-asia67487.2025.11263717,INCLUDE,1.0,L
+W7165938158,Explainable parameter calibration via importance-driven sequential design with an application to building energy systems,2026.0,0,10.1214/26-aoas2148,INCLUDE,1.0,L
+W7167014253,FeO content classification of sinter ore: deep active learning based on conformal prediction,2026.0,0,10.1080/23307706.2026.2649808,INCLUDE,1.0,L
+W7214736480,FIDAL: Diversity-Aware Federated Active Learning Under Real-World Distribution Shifts,2026.0,0,10.48550/arxiv.2609.31637,INCLUDE,1.0,L
+W7136888862,Foundation-Model Surrogates Enable Data-Efficient Active Learning for Materials Discovery,2026.0,0,10.48550/arxiv.2603.12567,INCLUDE,1.0,L
+W7207775434,Foundation Models for Process Parameters Optimization: Evaluating TabPFN for Bayesian Optimization in HMLV Manufacturing,2026.0,0,10.1016/j.procir.2026.03.291,INCLUDE,1.0,L
+W7160269991,Gradient-Discrepancy Acquisition for Pool-Based Active Learning,2026.0,0,10.48550/arxiv.2605.02609,INCLUDE,1.0,L
+W7215087163,Hodge-Guided Active Preference Elicitation for Efficient Pairwise Ranking,2026.0,0,10.14569/ijacsa.2026.01709102,INCLUDE,1.0,L
+W7116777888,HYBRID BO GA OPTIMIZATION OF XGBOOST FOR CALIBRATED AND ROBUST HYPERTENSION PREDICTION: A MULTI-COHORT VALIDATION STUDY,2025.0,0,10.21474/ijar01/22295,INCLUDE,1.0,C
+W1983429559,Importance weighted passive learning,2012.0,0,10.1145/2396761.2398611,INCLUDE,1.0,P
+W4283466507,Improving decision-making via risk-based active learning: Probabilistic discriminative classifiers,2022.0,0,10.48550/arxiv.2206.11616,INCLUDE,1.0,L
+W7167418598,Improving Generalizability in Whole-Cell Antibiotic Discovery Through Active Learning,2026.0,0,10.64898/2026.07.04.736489,INCLUDE,1.0,L
+W7203561259,Information-Based Calibration of Uncertainty Quantification in Product-of-Experts Gaussian Process Models,2026.0,0,10.1613/jair.1.20374,INCLUDE,1.0,C
+W7214767261,Informativeness is Not Enough: Rethinking Sample Selection with MCMargin,2026.0,0,10.2139/ssrn.7541438,INCLUDE,1.0,L
+W4409264515,Lapd: Langevin-Assisted Bayesian Active Learning for Physical Discovery,2025.0,0,10.2139/ssrn.5209674,INCLUDE,1.0,L
+W2996224705,Learning Arbitrary Quantities of Interest from Expensive Black-Box Functions through Bayesian Sequential Optimal Design,2019.0,0,10.48550/arxiv.1912.07366,INCLUDE,1.0,L
+W7166833920,Learning on Imbalanced Noisy Data via Debiased Sample Selection and LLM-Driven Annotation,2026.0,0,10.18653/v1/2026.findings-acl.1526,INCLUDE,1.0,P
+W7167481051,Learning power flow with confidence: A probabilistic guarantee framework for voltage risk,2026.0,0,10.1016/j.epsr.2026.113619,INCLUDE,1.0,C
+W7213935056,Learning to Move Cities: Deep Meta-Models and Reinforcement Policies for Calibration and Control in Urban Networks,2026.0,0,10.48550/arxiv.2609.21945,INCLUDE,1.0,L
+W7214077571,Less Is More in the Long Tail: Stage-Adaptive Sample Selection for Annotation-Efficient Dense Prediction,2026.0,0,10.48550/arxiv.2609.25850,INCLUDE,1.0,L
+W7134928660,Machine Learning‐Assisted Design of BaTiO 3 ‐Based Superparaelectric High‐Entropy Ceramics with Superior Energy Storage,2026.0,0,10.1002/eem2.70311,INCLUDE,1.0,L
+W4308090287,Machine learning for accurate and fast bandgap prediction of solid-state materials,2022.0,0,10.1109/hpec55821.2022.9926355,INCLUDE,1.0,L
+W7119529372,Material exploration through active learning -- METAL,2026.0,0,10.48550/arxiv.2601.03933,INCLUDE,1.0,L
+W4405899485,Materials-Discovery Workflows Guided by Symbolic Regression: Identifying Acid-Stable Oxides for Electrocatalysis,2024.0,0,10.48550/arxiv.2412.05947,INCLUDE,1.0,L
+W4410787156,Maximally Separated Active Learning,2025.0,0,10.1007/978-3-031-91585-7_19,INCLUDE,1.0,L
+W4396913676,Maximizing Information Gain in Privacy-Aware Active Learning of Email Anomalies,2024.0,0,10.48550/arxiv.2405.07440,INCLUDE,1.0,L
+W4403283370,MelissaDL x Breed: Towards Data-Efficient On-line Supervised Training of Multi-parametric Surrogates with Active Learning,2024.0,0,10.1109/scw63240.2024.00012,INCLUDE,1.0,L
+W7126242962,Memory-Efficient and Trustworthy Neural Networks via Random Seed-Based Design,2026.0,0,10.1109/access.2026.3659474,INCLUDE,1.0,C
+W7115584716,Meta-Bayesian Active Explorer: Hierarchical bayesian meta-learning for sample-efficient manufacturing optimization with similarity-weighted transfer,2025.0,0,10.2139/ssrn.5928354,INCLUDE,1.0,L
+W4283709378,Mitigating sampling bias in risk-based active learning via an EM algorithm,2022.0,0,10.48550/arxiv.2206.12598,INCLUDE,1.0,L
+W7154864372,Multi-objective active learning for the design of fully 3D-printed thermoplastic polyurethane Miura-origami flexible pressure sensors,2026.0,0,10.1016/j.sna.2026.117854,INCLUDE,1.0,L
+W2563422833,New statistical estimation methodology for active learning and classification,2015.0,0,10.25560/32013,INCLUDE,1.0,L
+W4282938614,On the reusability of samples in active learning,2022.0,0,10.48550/arxiv.2206.06276,INCLUDE,1.0,P
+W7214220900,On the Sample Complexity of Active Learning with Membership Queries,2026.0,0,10.48550/arxiv.2609.27241,INCLUDE,1.0,L
+W7165141875,OPENING THE LOOP: COMPOSABLE WORKFLOWS FOR SELF-DRIVING LABORATORIES VIA MULTI-AGENT REINFORCEMENT LEARNING,2026.0,0,10.26434/chemrxiv.15004907/v1,INCLUDE,1.0,L
+W7214405574,Optimal Recovery Meets Bayesian Learning: Where Worst-Case Bounds Pay Off,2026.0,0,10.48550/arxiv.2609.29622,INCLUDE,1.0,C
+W7203660235,Package-Conditioned Active Learning for Thermally Conductive Insulators,2026.0,0,10.54254/2755-2721/2026.36210,INCLUDE,1.0,L
+W7169682679,Parallelized Multi-Objective Bayesian Optimization of Enhanced GeothermalEnergy System Models,2026.0,0,10.2139/ssrn.7139620,INCLUDE,1.0,L
+W4390723571,PB Hindi ASR dataset,2024.0,0,10.48550/arxiv.2401.03251,INCLUDE,1.0,C
+W7202170258,Physics-informed design of drug-excipient nanoparticles via free energy calculation and yoked deep learning,2026.0,0,10.1038/s41524-026-02262-z,INCLUDE,1.0,L
+W4401813409,Pool-Based Active Classification Based on Expected Error Reduction with Uncertainty Subsampling,2024.0,0,10.1007/978-981-97-7225-4_19,INCLUDE,1.0,L
+W3181595108,Posterior Temperature Optimization in Variational Inference.,2021.0,0,,INCLUDE,1.0,C
+W3216146255,Posterior Temperature Optimization in Variational Inference for Inverse Problems,2021.0,0,10.48550/arxiv.2106.07533,INCLUDE,1.0,C
+W3120455066,PowerEvaluationBALD: Efficient Evaluation-Oriented Deep (Bayesian) Active Learning with Stochastic Acquisition Functions,2021.0,0,10.48550/arxiv.2101.03552,INCLUDE,1.0,L
+W7155202815,PRA–MFCS: Performance Reliability Analysis Based on Multi–Fidelity Simulation and Clustering Surrogate Model Under Multiple Failure Modes,2026.0,0,10.1142/s0218539326500221,INCLUDE,1.0,L
+W7202376826,Process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and surrogate-based sensitivity analysis,2026.0,0,10.48550/arxiv.2608.11594,INCLUDE,1.0,L
+W7161774135,Progressive Autonomy as Preference Learning: A Formalization of Trust Calibration for Agentic Tool Use,2026.0,0,10.48550/arxiv.2605.19151,INCLUDE,1.0,L
+W7128313965,Proprioceptive AI: Self-Compounding Behavioral Probes for Autonomous Model Improvement and Probe-Guided Compression,2026.0,0,10.5281/zenodo.18523712,INCLUDE,1.0,L
+W4414968634,Quantile-Scaled Bayesian Optimization Using Rank-Only Feedback,2025.0,0,10.48550/arxiv.2510.03277,INCLUDE,1.0,L
+W7160280858,Quantum-Inspired Active Learning for Accelerated Materials Discovery,2026.0,0,10.1109/nqcomp68334.2026.11497667,INCLUDE,1.0,L
+W7120003752,ReactionForge: Temporal Graph Networks with Cross-Attention and Evidential Learning Surpass State-of-the-Art in Suzuki-Miyaura Yield Prediction,2026.0,0,10.26434/chemrxiv-2026-lrn7z,INCLUDE,1.0,C
+W7130534115,RELEAP: reinforcement-enhanced label-efficient active phenotyping for electronic health records,2026.0,0,10.1093/jamiaopen/ooag019,INCLUDE,1.0,L
+W7164750273,Reliability-oriented cyclic-equivariant active learning for high-cycle fatigue life-quantile prediction of mistuned bladed disks,2026.0,0,10.1016/j.ress.2026.113012,INCLUDE,1.0,L
+W7128395597,Remote audiogram and notched-noise tests using Gaussian processes,2026.0,0,10.1121/10.0042400,INCLUDE,1.0,L
+W4404344695,Residual Deep Gaussian Processes on Manifolds,2024.0,0,10.48550/arxiv.2411.00161,INCLUDE,1.0,C
+W7134840687,Revisiting Unknowns: Towards Effective and Efficient Open-Set Active Learning,2026.0,0,10.48550/arxiv.2603.07898,INCLUDE,1.0,L
+W7133245730,RewardUQ: A Unified Framework for Uncertainty-Aware Reward Models,2026.0,0,10.48550/arxiv.2602.24040,INCLUDE,1.0,C
+W7163507652,Risk-sensitive collaborative parameter tuning via calibrated deep surrogates for rare-earth electrolysis energy efficiency,2026.0,0,10.1038/s41598-026-55197-2,INCLUDE,1.0,C
+W4292120309,Robust Contrastive Active Learning with Feature-guided Query Strategies,2021.0,0,10.48550/arxiv.2109.06873,INCLUDE,1.0,C
+W7146957166,"Robustness, Active Learning, and Governance for Structured Language Systems: Align-100 7/7",2026.0,0,10.5281/zenodo.19354035,INCLUDE,1.0,L
+W4405354928,Safe Active Learning for Gaussian Differential Equations,2024.0,0,10.48550/arxiv.2412.09053,INCLUDE,1.0,L
+W7167596911,Sampling Bias Compensation for Robust Evaluation of Audio Classification Systems with Partially Labeled Evaluation Datasets,2026.0,0,10.48550/arxiv.2607.04463,INCLUDE,1.0,P
+W7214030052,"SCALE: Simulation-Calibrated Amortized Learning for Energy Materials (A hybrid architecture connecting deterministic modeling, real-world data, and tr",2026.0,0,10.48550/arxiv.2609.22233,INCLUDE,1.0,L
+W7127570542,Selective Information Borrowing for Region-Specific Treatment Effect Inference under Covariate Mismatch in Multi-Regional Clinical Trials,2026.0,0,10.48550/arxiv.2602.02703,INCLUDE,1.0,P
+W4416773377,Semi-supervised Object Segmentation via Active Learning for Efficient Ecological Monitoring,2025.0,0,10.1007/978-3-032-11733-5_21,INCLUDE,1.0,L
+W2050429837,Sequential Fault Monitoring,2014.0,0,10.1109/iccac.2014.17,INCLUDE,1.0,L
+W7204092040,Sequential Optimal Experimental Design for Efficient Training of Reduced Order Models of Reactor Pin Power Distributions,2026.0,0,10.2139/ssrn.7347378,INCLUDE,1.0,L
+W4417250522,Single-View Cotraining and Active Learning for Concurrent Medical Activity Labeling,2025.0,0,10.1109/bibe66822.2025.00060,INCLUDE,1.0,L
+W7154613812,Sleep Disorder Classification Using Ensemble Stacking and Genetic Algorithm-Based Feature Selection,2026.0,0,10.1109/isiber68248.2026.11469881,INCLUDE,1.0,C
+W7125905220,SmartBPS: Automated Blast Parameter Prediction in Structural Layouts via Bayesian Deep Active Learning and AutoML,2025.0,0,10.1109/srse67406.2025.11357368,INCLUDE,1.0,L
+W7203789345,SmartSim: An Uncertainty-Guided Active Learning System for Reducing Expensive Simulator Evaluations,2026.0,0,10.5281/zenodo.22013439,INCLUDE,1.0,L
+W7109948000,Spectrally-Driven Active Learning Enables Femtojoule-Efficient Discovery of Photocatalysts in Under One Hour: The LuminaFemto AI Platform,2025.0,0,10.2139/ssrn.5688382,INCLUDE,1.0,L
+W4402914862,Stimulus distributions affect uncertainty sampling approaches to adaptive estimation of classification images,2024.0,0,10.1167/jov.24.10.869,INCLUDE,1.0,L
+W4416980689,Structural Reliability Sensitivity Analysis of Rare Events by Parallel Adaptive Bayesian Probabilistic Integration,2025.0,0,10.1061/ajrua6.rueng-1748,INCLUDE,1.0,L
+W7208763134,Subspace Inference Enables Efficient Active Reward Learning from Preferences,2026.0,0,10.48550/arxiv.2609.04066,INCLUDE,1.0,L
+W7164485729,SymQNet: Amortized Acquisition for Low-Latency Adaptive Hamiltonian Learning,2026.0,0,10.48550/arxiv.2606.12808,INCLUDE,1.0,L
+W4381572150,Taming Small-sample Bias in Low-budget Active Learning,2023.0,0,10.48550/arxiv.2306.11056,INCLUDE,1.0,L
+W7141495362,Thermal Decomposition Simulations of Hydroxylamine Pentazolate With Deep Neural Network Potential,2026.0,0,10.1002/jcc.70362,INCLUDE,1.0,L
+W7203717787,Thermal reliability analysis of radiation-coupled heat transfer systems: An adaptive multi-layer importance sampling active learning kriging method,2026.0,0,10.1016/j.applthermaleng.2026.132814,INCLUDE,1.0,L
+W2954838386,Thompson Sampling Based Active Learning in Probabilistic Programs with Application to Travel Time Estimation,2019.0,0,10.1007/978-3-030-22999-3_7,INCLUDE,1.0,L
+W7161108931,Towards distribution-aware active learning for data-efficient neural architecture predictor,2026.0,0,10.1016/j.ipm.2026.104892,INCLUDE,1.0,L
+W7212018209,"Train Smarter, Not Harder: Switching Signal-Guided Training in Active Learning",2026.0,0,10.48550/arxiv.2609.06806,INCLUDE,1.0,L
+W7162402454,Trajectory-Based Difficulty Scoring for Reliable Learning on Tabular Data,2026.0,0,10.48550/arxiv.2605.24680,INCLUDE,1.0,C
+W4414900242,Two-stage design for failure probability estimation with Gaussian process surrogates,2025.0,0,10.1080/00224065.2025.2562868,INCLUDE,1.0,L
+W7162530580,Uncertainty-aware adaptive Bayesian inference method for structural time-dependent reliability analysis,2026.0,0,10.1016/j.ymssp.2026.114476,INCLUDE,1.0,L
+W7155071864,Uncertainty-aware phase fraction prediction and active-learning-guided out-of-domain discovery of refractory multi-principal element alloys,2026.0,0,10.48550/arxiv.2604.18322,INCLUDE,1.0,L
+W7162799873,Unveiling bootstrap uncertainty bias: understanding bagging efficiency over Gaussian processes in materials active learning,2026.0,0,10.1038/s41524-026-02157-z,INCLUDE,1.0,L
+W4398202932,Use of Prediction Bias in Active Learning and Its Application to Large Variable Annuity Portfolios,2024.0,0,10.3390/risks12060085,INCLUDE,1.0,L
+W4414066544,Using Expected Improvement of Gradients for Robotic Exploration of Ocean Salinity Fronts,2025.0,0,10.1002/env.70037,INCLUDE,1.0,L
+W4406261164,Using Optimal Control to Guide Neural-Network Interpolation of Continuously-Parameterized Gates,2024.0,0,10.1109/qce60285.2024.00159,INCLUDE,1.0,L
+W7141131517,Variational Bayesian-Based Reliability Evaluation of Nonlinear Structures by Active Learning Gaussian Process Modeling,2026.0,0,10.3390/infrastructures11040118,INCLUDE,1.0,L
+W7161007650,VNDUQE: Information-Theoretic Novelty Detection using Deep Variational Information Bottleneck,2026.0,0,10.48550/arxiv.2605.11551,INCLUDE,1.0,C
+W4406786055,Wasserstein-regularized Conformal Prediction under General Distribution Shift,2025.0,0,10.48550/arxiv.2501.13430,INCLUDE,1.0,C
+W7167206598,When to Explore and When to Exploit: Adaptive Decisions in Bayesian Optimization,2026.0,0,10.3390/make8070193,INCLUDE,1.0,L
+W7213250152,ZAPS: Zero-Cost Active Proxy Search for Neural Architecture Search,2026.0,0,10.48550/arxiv.2609.14184,INCLUDE,1.0,L
+W2031295804,A combined Importance Sampling and Kriging reliability method for small failure probabilities with time-demanding numerical models,2012.0,692,10.1016/j.ress.2012.10.008,INCLUDE,0.0,NONE
+W2873705236,A Tutorial on Bayesian Optimization,2018.0,358,10.48550/arxiv.1807.02811,INCLUDE,0.0,NONE
+W3028499909,Uncertainty Quantification Using Neural Networks for Molecular Property Prediction,2020.0,340,10.1021/acs.jcim.0c00502,INCLUDE,0.0,NONE
+W2981406437,BANANAS: Bayesian Optimization with Neural Architectures for Neural Architecture Search,2021.0,264,10.1609/aaai.v35i12.17233,INCLUDE,0.0,NONE
+W3215518215,Benchmarking the performance of Bayesian optimization across multiple experimental materials science domains,2021.0,225,10.1038/s41524-021-00656-9,INCLUDE,0.0,NONE
+W3185456481,Evidential Deep Learning for Guided Molecular Property Prediction and Discovery,2021.0,225,10.1021/acscentsci.1c00546,INCLUDE,0.0,NONE
+W2995495731,Methods for comparing uncertainty quantifications for material property predictions,2020.0,208,10.1088/2632-2153/ab7e1a,INCLUDE,0.0,NONE
+W3120951225,Evolutionary Optimization of High-Dimensional Multiobjective and Many-Objective Expensive Problems Assisted by a Dropout Neural Network,2021.0,201,10.1109/tsmc.2020.3044418,INCLUDE,0.0,NONE
+W2041478093,Active and Semisupervised Learning for the Classification of Remote Sensing Images,2014.0,165,10.1109/tgrs.2014.2305805,INCLUDE,0.0,NONE
+W584332710,"Conformal Prediction for Reliable Machine Learning: Theory, Adaptations and Applications",2014.0,159,,INCLUDE,0.0,NONE
+W2991240192,Greed Is Good: Exploration and Exploitation Trade-offs in Bayesian Optimisation,2021.0,127,10.1145/3425501,INCLUDE,0.0,NONE
+W3174894125,Sequential Graph Convolutional Network for Active Learning,2021.0,126,10.1109/cvpr46437.2021.00946,INCLUDE,0.0,NONE
+W4408829264,Prediction of phase-separation propensities of disordered proteins from sequence,2025.0,103,10.1073/pnas.2417920122,INCLUDE,0.0,NONE
+W2793351526,Bayesian optimization of pump operations in water distribution systems,2018.0,102,10.1007/s10898-018-0641-2,INCLUDE,0.0,NONE
+W1609705025,A hybrid algorithm for reliability analysis combining Kriging and subset simulation importance sampling,2015.0,95,10.1007/s12206-015-0717-6,INCLUDE,0.0,NONE
+W3089635645,Uncertainty-aware Self-training for Few-shot Text Classification,2020.0,86,,INCLUDE,0.0,NONE
+W2978269572,"Surrogates: Gaussian Process Modeling, Design, and Optimization for the Applied Sciences",2020.0,72,10.1201/9780367815493,INCLUDE,0.0,NONE
+W1593120400,Topics in probabilistic location estimation in wireless networks,2005.0,68,10.1109/pimrc.2004.1373859,INCLUDE,0.0,NONE
+W2886730169,A flexible transfer learning framework for Bayesian optimization with convergence guarantee,2018.0,59,10.1016/j.eswa.2018.08.023,INCLUDE,0.0,NONE
+W4295308382,Semi-Active Convolutional Neural Networks for Hyperspectral Image Classification,2022.0,58,10.1109/tgrs.2022.3206208,INCLUDE,0.0,NONE
+W2918236962,A perspective on Gaussian processes for Earth observation,2019.0,55,10.1093/nsr/nwz028,INCLUDE,0.0,NONE
+W2765800996,Active learning for classifying data streams with unknown number of classes,2017.0,50,10.1016/j.neunet.2017.10.004,INCLUDE,0.0,NONE
+W3094538362,Active learning and active subspace enhancement for PDEM-based high-dimensional reliability analysis,2020.0,47,10.1016/j.strusafe.2020.102026,INCLUDE,0.0,NONE
+W2997129641,Maximizing Overall Diversity for Improved Uncertainty Estimates in Deep Ensembles,2020.0,46,10.1609/aaai.v34i04.5849,INCLUDE,0.0,NONE
+W4386070925,Evaluation of uncertainty quantification methods in multi-label classification: A case study with automatic diagnosis of electrocardiogram,2023.0,44,10.1016/j.inffus.2023.101978,INCLUDE,0.0,NONE
+W2972464503,Multifidelity and Multiscale Bayesian Framework for High-Dimensional Engineering Design and Calibration,2019.0,43,10.1115/1.4044598,INCLUDE,0.0,NONE
+W2980723354,Special Issue: Machine Learning for Engineering Design,2019.0,43,10.1115/1.4044690,INCLUDE,0.0,NONE
+W4386501718,Bayesian optimization with Gaussian process surrogate model for source localization,2023.0,42,10.1121/10.0020839,INCLUDE,0.0,NONE
+W2533488116,A Bi-Criteria Active Learning Algorithm for Dynamic Data Streams,2016.0,41,10.1109/tnnls.2016.2614393,INCLUDE,0.0,NONE
+W4378977505,Calibrating ensembles for scalable uncertainty quantification in deep learning-based medical image segmentation,2023.0,41,10.1016/j.compbiomed.2023.107096,INCLUDE,0.0,NONE
+W3133075091,Transient-optimized real-bogus classification with Bayesian convolutional neural networks – sifting the GOTO candidate stream,2021.0,40,10.1093/mnras/stab633,INCLUDE,0.0,NONE
+W4386735187,A Model Ensemble Approach Enables Data-Driven Property Prediction for Chemically Deconstructable Thermosets in the Low-Data Regime,2023.0,39,10.1021/acscentsci.3c00502,INCLUDE,0.0,NONE
+W4362692043,Active Learning of the Conformational Ensemble of Proteins Using Maximum Entropy VAMPNets,2023.0,38,10.1021/acs.jctc.3c00040,INCLUDE,0.0,NONE
+W4319342019,High-Dimensional Multi-Objective Bayesian Optimization With Block Coordinate Updates: Case Studies in Intelligent Transportation System,2023.0,38,10.1109/tits.2023.3241069,INCLUDE,0.0,NONE
+W4391123242,Towards reliable uncertainty quantification via deep ensemble in multi-output regression task,2024.0,36,10.1016/j.engappai.2024.107871,INCLUDE,0.0,NONE
+W4224291578,Continuous black-box optimization with an Ising machine and random subspace coding,2022.0,34,10.1103/physrevresearch.4.023062,INCLUDE,0.0,NONE
+W4213458919,A Gentle Introduction to Bayesian Optimization,2021.0,33,10.1109/wsc52266.2021.9715413,INCLUDE,0.0,NONE
+W4362457735,Recalibration of neuromodulation parameters in neural implants with adaptive Bayesian optimization,2023.0,33,10.1088/1741-2552/acc975,INCLUDE,0.0,NONE
+W4393140019,Surrogate-Assisted Evolutionary Multi-Objective Optimization of Medium-Scale Problems by Random Grouping and Sparse Gaussian Modeling,2024.0,33,10.1109/tetci.2024.3372378,INCLUDE,0.0,NONE
+W3089621169,When to Stop Reviewing in Technology-Assisted Reviews,2020.0,32,10.1145/3411755,INCLUDE,0.0,NONE
+W2561021793,Budgeted stream-based active learning via adaptive submodular maximization,2016.0,29,,INCLUDE,0.0,NONE
+W2790580464,Bayesian optimization for computationally extensive probability distributions,2018.0,28,10.1371/journal.pone.0193785,INCLUDE,0.0,NONE
+W2899462220,Global optimization in machine learning: the design of a predictive analytics application,2018.0,28,10.1007/s00500-018-3597-8,INCLUDE,0.0,NONE
+W4229048514,Hybrid Machine Learning Approach for Evapotranspiration Estimation of Fruit Tree in Agricultural Cyber–Physical Systems,2022.0,28,10.1109/tcyb.2022.3164542,INCLUDE,0.0,NONE
+W4406139332,Benchmarking uncertainty quantification for protein engineering,2025.0,26,10.1371/journal.pcbi.1012639,INCLUDE,0.0,NONE
+W4402618021,Active learning inspired multi-fidelity probabilistic modelling of geomaterial property,2024.0,25,10.1016/j.cma.2024.117373,INCLUDE,0.0,NONE
+W3048577892,Bayesian3 Active Learning for the Gaussian Process Emulator Using Information Theory,2020.0,25,10.3390/e22080890,INCLUDE,0.0,NONE
+W9909578,Probabilistic Methods for Location Estimation in Wireless Networks,2006.0,25,10.1007/0-387-23072-6_11,INCLUDE,0.0,NONE
+W2161470549,Co-Validation: Using Model Disagreement on Unlabeled Data to Validate Classification Algorithms,2004.0,24,,INCLUDE,0.0,NONE
+W4396600063,Improving interpretability of deep active learning for flood inundation mapping through class ambiguity indices using multi-spectral satellite imagery,2024.0,24,10.1016/j.rse.2024.114213,INCLUDE,0.0,NONE
+W2616638094,Efficient Active Learning of Halfspaces: an Aggressive Approach,2012.0,23,10.48550/arxiv.1208.3561,INCLUDE,0.0,NONE
+W4285298706,Uncertainty Estimation and Reduction of Pre-trained Models for Text Regression,2022.0,23,10.1162/tacl_a_00483,INCLUDE,0.0,NONE
+W3091648941,Gaussian Process Molecule Property Prediction with FlowMO,2020.0,22,10.48550/arxiv.2010.01118,INCLUDE,0.0,NONE
+W4311934431,"Quantification of MR spectra by deep learning in an idealized setting: Investigation of forms of input, network architectures, optimization by ensembl",2022.0,22,10.1002/mrm.29561,INCLUDE,0.0,NONE
+W2980370611,Bayesian Optimization Allowing for Common Random Numbers,2022.0,20,10.1287/opre.2021.2208,INCLUDE,0.0,NONE
+W3089369081,MetaBox+: A New Region based Active Learning Method for Semantic Segmentation using Priority Maps,2021.0,20,10.5220/0010227500510062,INCLUDE,0.0,NONE
+W2979306407,Visual Saliency Detection via Kernelized Subspace Ranking With Active Learning,2019.0,20,10.1109/tip.2019.2945679,INCLUDE,0.0,NONE
+W3201408086,"A Survey on Cost Types, Interaction Schemes, and Annotator Performance Models in Selection Algorithms for Active Learning in Classification",2021.0,19,10.1109/access.2021.3135514,INCLUDE,0.0,NONE
+W3181697131,Risky Driver Recognition with Class Imbalance Data and Automated Machine Learning Framework,2021.0,19,10.3390/ijerph18147534,INCLUDE,0.0,NONE
+W4399084575,Technical note: Challenges in detecting free tropospheric ozone trends in a sparsely sampled environment,2024.0,19,10.5194/acp-24-6197-2024,INCLUDE,0.0,NONE
+W4323046987,Time-variant reliability global sensitivity analysis with single-loop Kriging model combined with importance sampling,2023.0,19,10.1016/j.probengmech.2023.103441,INCLUDE,0.0,NONE
+W4407841273,Designing Target-specific Data Sets for Regioselectivity Predictions on Complex Substrates,2025.0,18,10.1021/jacs.4c15902,INCLUDE,0.0,NONE
+W2070845047,Pool-based active learning with optimal sampling distribution and its information geometrical interpretation,2007.0,18,10.1016/j.neucom.2006.11.024,INCLUDE,0.0,NONE
+W2942927996,Active Learning Through Multi-Standard Optimization,2019.0,17,10.1109/access.2019.2914263,INCLUDE,0.0,NONE
+W2970469787,Reliable training and estimation of variance networks,2019.0,17,,INCLUDE,0.0,NONE
+W3131203871,Active learning to classify macromolecular structures in situ for less supervision in cryo-electron tomography,2021.0,16,10.1093/bioinformatics/btab123,INCLUDE,0.0,NONE
+W4407867101,Multi-criteria optimization of nanofluid-based solar collector for enhanced performance: An explainable machine learning-driven approach,2025.0,16,10.1016/j.energy.2025.135212,INCLUDE,0.0,NONE
+W2769697561,Empirical studies of Gaussian process based Bayesian optimization using evolutionary computation for materials informatics,2017.0,15,10.1016/j.eswa.2017.11.026,INCLUDE,0.0,NONE
+W4414376705,HiLAB: A Hybrid Inverse‐Design Framework,2025.0,15,10.1002/smtd.202500975,INCLUDE,0.0,NONE
+W4220897052,Lost in Optimization of Water Distribution Systems: Better Call Bayes,2022.0,15,10.3390/w14050800,INCLUDE,0.0,NONE
+W3099396425,What do you mean?,2020.0,15,10.1145/3377929.3398118,INCLUDE,0.0,NONE
+W2146715576,Active learning using a Variational Dirichlet Process model for pre-clustering and classification of underwater stereo imagery,2011.0,14,10.1109/iros.2011.6095178,INCLUDE,0.0,NONE
+W4304757197,Automatic structural elucidation of vacancies in materials by active learning,2022.0,14,10.1039/d2cp02585j,INCLUDE,0.0,NONE
+W4312121112,Batch Sequential Black-Box Optimization with Embedding Alignment Cells for Logic Synthesis,2022.0,14,10.1145/3508352.3549363,INCLUDE,0.0,NONE
+W7119522317,Materials Informatics: Emergence to Autonomous Discovery in the Age of AI,2026.0,14,10.1002/adma.202515941,INCLUDE,0.0,NONE
+W2466409304,A sequential Monte Carlo approach to Thompson sampling for Bayesian optimization,2016.0,13,10.48550/arxiv.1604.00169,INCLUDE,0.0,NONE
+W1580689286,Evolutionary Regression Modeling with Active Learning: An Application to Rainfall Runoff Modeling,2009.0,13,10.1007/978-3-642-04921-7_56,INCLUDE,0.0,NONE
+W4323649956,Surrogate-assisted Multi-objective Optimization via Genetic Programming Based Symbolic Regression,2023.0,13,10.1007/978-3-031-27250-9_13,INCLUDE,0.0,NONE
+W4210656524,A reliability analysis strategy for main shaft of wind turbine using importance sampling and Kriging model,2022.0,12,10.1108/ijsi-01-2022-0006,INCLUDE,0.0,NONE
+W2419570712,Active Batch Learning with Stochastic Query-by-Forest (SQBF),2011.0,12,,INCLUDE,0.0,NONE
+W2128905604,Active Learning with Adaptive Heterogeneous Ensembles,2009.0,12,10.1109/icdm.2009.63,INCLUDE,0.0,NONE
+W3033693317,Random Hypervolume Scalarizations for Provable Multi-Objective Black Box Optimization,2020.0,12,10.48550/arxiv.2006.04655,INCLUDE,0.0,NONE
+W3173844806,Top-k Ranking Bayesian Optimization,2021.0,12,10.1609/aaai.v35i10.17103,INCLUDE,0.0,NONE
+W1978328358,An efficient heuristic method for active feature acquisition and its application to protein-protein interaction prediction,2012.0,11,10.1186/1753-6561-6-s7-s2,INCLUDE,0.0,NONE
+W2125986969,Active Learning Using Smooth Relative Regret Approximations with Applications,2011.0,10,10.48550/arxiv.1110.2136,INCLUDE,0.0,NONE
+W7128905081,"Epistemic and aleatoric uncertainty in optical vegetation trait retrieval: Concepts, Methods, and Outlook",2026.0,10,10.1016/j.isprsjprs.2026.02.020,INCLUDE,0.0,NONE
+W3100488384,Hierarchical Gaussian Process Priors for Bayesian Neural Network Weights,2020.0,10,10.48550/arxiv.2002.04033,INCLUDE,0.0,NONE
+W4386947808,Scalable Bayesian optimization with randomized prior networks,2023.0,10,10.1016/j.cma.2023.116428,INCLUDE,0.0,NONE
+W4404563056,A Bayesian Optimization Method for Finding the Worst-Case Scenarios of Autonomous Vehicles,2024.0,9,10.1109/tits.2024.3490616,INCLUDE,0.0,NONE
+W4306722833,A novel Bayesian approach for multi-objective stochastic simulation optimization,2022.0,9,10.1016/j.swevo.2022.101192,INCLUDE,0.0,NONE
+W4231343303,A Quantitative Uncertainty Metric Controls Error in Neural Network-Driven Chemical Discovery,2019.0,9,10.26434/chemrxiv.7900277,INCLUDE,0.0,NONE
+W4384927996,Batch Active Learning for Multispectral and Hyperspectral Image Segmentation Using Similarity Graphs,2023.0,9,10.1007/s42967-023-00284-8,INCLUDE,0.0,NONE
+W4385294974,Linear-Scaling Kernels for Protein Sequences and Small Molecules Outperform Deep Learning While Providing Uncertainty Quantitation and Improved Interp,2023.0,9,10.1021/acs.jcim.3c00601,INCLUDE,0.0,NONE
+W4319981052,Training a Neural-Network-Based Surrogate Model for Aerodynamic Optimisation Using a Gaussian Process,2022.0,9,10.1080/10618562.2022.2138863,INCLUDE,0.0,NONE
+W2980655501,Achieving robustness to aleatoric uncertainty with heteroscedastic Bayesian optimisation,2021.0,8,10.1088/2632-2153/ac298c,INCLUDE,0.0,NONE
+W4283788687,Cooperative Multi-Agent Trajectory Generation with Modular Bayesian Optimization,2022.0,8,10.15607/rss.2022.xviii.060,INCLUDE,0.0,NONE
+W2981509222,Data integration for accelerated materials design via preference learning,2020.0,8,10.1088/1367-2630/ab82b9,INCLUDE,0.0,NONE
+W7128960394,Ensemble machine learning strategies for mineral prospectivity mapping under data scarcity,2026.0,8,10.1038/s41598-026-40125-1,INCLUDE,0.0,NONE
+W4403682236,Graph neural processes for molecules: an evaluation on docking scores and strategies to improve generalization,2024.0,8,10.1186/s13321-024-00904-2,INCLUDE,0.0,NONE
+W4409729737,Molecular property prediction using pretrained-BERT and Bayesian active learning: a data-efficient approach to drug design,2025.0,8,10.1186/s13321-025-00986-6,INCLUDE,0.0,NONE
+W4387552307,No-regret constrained Bayesian optimization of noisy and expensive hybrid models using differentiable quantile function approximations,2023.0,8,10.1016/j.jprocont.2023.103085,INCLUDE,0.0,NONE
+W4385372842,Physics-based corrosion reliability analysis of miter gates using multi-scale simulations and adaptive surrogate modeling,2023.0,8,10.1016/j.ymssp.2023.110619,INCLUDE,0.0,NONE
+W1987569881,Querying representative points from a pool based on synthesized queries,2012.0,8,10.1109/ijcnn.2012.6252607,INCLUDE,0.0,NONE
+W4365149607,UAV Hyperspectral Characterization of Vegetation Using Entropy-Based Active Sampling for Partial Least Square Regression Models,2023.0,8,10.3390/app13084812,INCLUDE,0.0,NONE
+W2102331280,Aspects of Semi-supervised and Active Learning in Conditional Random Fields,2011.0,7,10.1007/978-3-642-23808-6_18,INCLUDE,0.0,NONE
+W4413953302,Bayesian Optimization Methods for Nonlinear Model Calibration,2025.0,7,10.1021/acs.iecr.4c03468,INCLUDE,0.0,NONE
+W3132801604,Data-driven blended equations of state for condensed-phase explosives,2021.0,7,10.1080/13647830.2021.1887524,INCLUDE,0.0,NONE
+W4367175065,Leveraging uncertainty estimates and derivative information in Gaussian process regression for efficient collection and use of molecular simulation da,2023.0,7,10.1063/5.0148488,INCLUDE,0.0,NONE
+W4317584387,On Uncertainty Quantification in Materials Modeling and Discovery: Applications of GE's BHM and IDACE,2023.0,7,10.2514/6.2023-0528,INCLUDE,0.0,NONE
+W2781793879,PHOENICS: A universal deep Bayesian optimizer,2018.0,7,10.48550/arxiv.1801.01469,INCLUDE,0.0,NONE
+W4401581349,Prediction of parameters in the Ibarra–Medina–Krawinkler model for reinforced concrete columns using random forest and active learning,2024.0,7,10.1016/j.soildyn.2024.108902,INCLUDE,0.0,NONE
+W4408358227,Active Supervised Cross-Modal Retrieval,2025.0,6,10.1109/tpami.2025.3550526,INCLUDE,0.0,NONE
+W4396652795,Improving the Efficiency of Training Physics-Informed Neural Networks Using Active Learning,2024.0,6,10.1007/s00354-024-00253-6,INCLUDE,0.0,NONE
+W3158575931,Latent Derivative Bayesian Last Layer Networks,2021.0,6,,INCLUDE,0.0,NONE
+W4283699390,Making Look-Ahead Active Learning Strategies Feasible with Neural Tangent Kernels,2022.0,6,10.48550/arxiv.2206.12569,INCLUDE,0.0,NONE
+W3008544856,More Machine Learning for Less: Comparing Data Generation Strategies in Mechanical Engineering and Manufacturing,2019.0,6,10.1109/ssci44817.2019.9002663,INCLUDE,0.0,NONE
+W3141609478,Optimal Sampling Gaps for Adaptive Submodular Maximization,2022.0,6,10.1609/aaai.v36i8.20821,INCLUDE,0.0,NONE
+W3192130614,Quality of uncertainty estimates from neural network potential ensembles,2022.0,6,10.1103/physreve.105.015311,INCLUDE,0.0,NONE
+W2081988714,Semi-supervised correction of biased comment ratings,2012.0,6,10.1145/2187836.2187862,INCLUDE,0.0,NONE
+W3041956858,Active feature acquisition on data streams under feature drift,2020.0,5,10.1007/s12243-020-00775-2,INCLUDE,0.0,NONE
+W4309866813,Adaptive confidence bound based Bayesian optimization via potentially optimal Lipschitz conditions,2022.0,5,10.1080/0305215x.2022.2144273,INCLUDE,0.0,NONE
+W3100250056,Altering Gaussian process to Student-t process for maximum distribution construction,2020.0,5,10.1080/00207721.2020.1838663,INCLUDE,0.0,NONE
+W4405784902,Coactive Preference-Guided Multi-Objective Bayesian Optimization: An Application to Policy Learning in Personalized Plasma Medicine,2024.0,5,10.1109/lcsys.2024.3521965,INCLUDE,0.0,NONE
+W4415895893,Machine learning for in-situ composition mapping in a self-driving magnetron sputtering system,2025.0,5,10.1016/j.matdes.2025.115087,INCLUDE,0.0,NONE
+W4205610123,Multifidelity Gaussian processes for failure boundary andprobability estimation,2022.0,5,10.2514/6.2022-0390,INCLUDE,0.0,NONE
+W4382239200,Normalizing Flow Ensembles for Rich Aleatoric and Epistemic Uncertainty Modeling,2023.0,5,10.1609/aaai.v37i6.25834,INCLUDE,0.0,NONE
+W4403973515,Potential evaluation of AI-based surrogate models to find the robust and optimal method for thermal performance assessment of desiccant air-conditioni,2024.0,5,10.1016/j.ecmx.2024.100782,INCLUDE,0.0,NONE
+W2604283391,Quantifying prediction uncertainty in reservoir modelling using streamline simulation,2002.0,5,,INCLUDE,0.0,NONE
+W4388962405,Random Postprocessing for Combinatorial Bayesian Optimization,2023.0,5,10.7566/jpsj.92.123801,INCLUDE,0.0,NONE
+W4411468838,Transitional active learning of small probabilities,2025.0,5,10.1016/j.cma.2025.118144,INCLUDE,0.0,NONE
+W3173823351,Visual Transformer for Task-aware Active Learning,2021.0,5,10.48550/arxiv.2106.03801,INCLUDE,0.0,NONE
+W2130917410,A Bayesian adaptive blinded sample size adjustment method for risk differences,2015.0,4,10.1002/pst.1708,INCLUDE,0.0,NONE
+W3016539020,A BAYESIAN APPROACH BASED ON ACQUISITION FUNCTION FOR OPTIMAL SELECTION OF DEEP LEARNING HYPERPARAMETERS: A CASE STUDY WITH ENERGY MANAGEMENT DATA,2020.0,4,10.31580/sps.v2i1.1232,INCLUDE,0.0,NONE
+W4408105661,A Confidence-based Acquisition Model for Self-supervised Active Learning and Label Correction,2025.0,4,10.1162/tacl_a_00734,INCLUDE,0.0,NONE
+W3039500187,A Machine Learning Modeling Approach for High Pressure Direct Injection Dual Fuel Compressed Natural Gas Engines,2020.0,4,10.4271/2020-01-2017,INCLUDE,0.0,NONE
+W7125634879,A Mini Review on Evolution of High‐Entropy Alloy Design: From Experimental Approaches to Machine Learning Integration,2025.0,4,10.1002/rar2.70048,INCLUDE,0.0,NONE
+W4212980171,Bayesian Optimization: Model Comparison With Different Benchmark Functions,2021.0,4,10.1109/conf-spml54095.2021.00071,INCLUDE,0.0,NONE
+W3036155259,Bayesian Optimization with Missing Inputs,2021.0,4,10.1007/978-3-030-67661-2_41,INCLUDE,0.0,NONE
+W7168026068,Bgolearn: a unified Bayesian optimization framework for accelerating materials discovery,2026.0,4,10.1038/s41524-026-02226-3,INCLUDE,0.0,NONE
+W4391910098,CURATOR: Building Robust Machine Learning Potentials for Atomistic Simulations Autonomously with Batch Active Learning,2024.0,4,10.26434/chemrxiv-2024-p5t3l,INCLUDE,0.0,NONE
+W4306780108,DRE: density-based data selection with entropy for adversarial-robust deep learning models,2022.0,4,10.1007/s00521-022-07812-2,INCLUDE,0.0,NONE
+W4415329245,Enhancing Monte Carlo Dropout performance for uncertainty quantification,2026.0,4,10.1007/s00521-026-12165-1,INCLUDE,0.0,NONE
+W4297989991,High Dimensional Optimization for Electronic Design,2022.0,4,10.1109/mlcad55463.2022.9900104,INCLUDE,0.0,NONE
+W2623883710,Initialization of Bayesian Optimization Viewed as Part of a Larger Algorithm Portfolio,2017.0,4,,INCLUDE,0.0,NONE
+W4387151523,Parallel Multi-Objective Hyperparameter Optimization with Uniform Normalization and Bounded Objectives,2023.0,4,10.48550/arxiv.2309.14936,INCLUDE,0.0,NONE
+W3046174433,Quantity vs. Quality: On Hyperparameter Optimization for Deep Reinforcement Learning,2020.0,4,10.48550/arxiv.2007.14604,INCLUDE,0.0,NONE
+W2964011727,Robustness of Bayesian Pool-Based Active Learning Against Prior Misspecification,2016.0,4,10.1609/aaai.v30i1.10233,INCLUDE,0.0,NONE
+W4252780959,Uncertain Times Call for Quantitative Uncertainty Metrics: Controlling Error in Neural Network Predictions for Chemical Discovery,2019.0,4,10.26434/chemrxiv.7900277.v1,INCLUDE,0.0,NONE
+W2795669629,Active Covariance Estimation by Random Sub-Sampling of Variables,2018.0,3,10.1109/icassp.2018.8462134,INCLUDE,0.0,NONE
+W3201144520,Active Learning for Argument Strength Estimation,2021.0,3,10.18653/v1/2021.insights-1.20,INCLUDE,0.0,NONE
+W4417080985,Active learning surrogates in system reliability analysis: a review,2025.0,3,10.1108/ijsi-08-2025-0195,INCLUDE,0.0,NONE
+W3124534837,Autonomous synthesis of metastable materials,2021.0,3,10.48550/arxiv.2101.07385,INCLUDE,0.0,NONE
+W3011747095,Batch Active Learning With Two-Stage Sampling,2020.0,3,10.1109/access.2020.2979315,INCLUDE,0.0,NONE
+W4391215200,Comprehensive epitope mutational scan database enables accurate T cell receptor cross-reactivity prediction,2024.0,3,10.1101/2024.01.22.576714,INCLUDE,0.0,NONE
+W4385568448,Deep Bayesian Active Learning for Accelerating Stochastic Simulation,2023.0,3,10.1145/3580305.3599300,INCLUDE,0.0,NONE
+W4380446608,Deep semi-supervised label propagation for SAR image classification,2023.0,3,10.1117/12.2663665,INCLUDE,0.0,NONE
+W4403834402,Development of Machine Learning Atomistic Potential for Molecular Simulation of Hematite–Water Interfaces,2024.0,3,10.3390/cryst14110930,INCLUDE,0.0,NONE
+W4392904430,Dynamic Random Feature Gaussian Processes for Bayesian Optimization of Time-Varying Functions,2024.0,3,10.1109/icassp48485.2024.10447767,INCLUDE,0.0,NONE
+W3090655019,Efficient Rollout Strategies for Bayesian Optimization,2020.0,3,10.48550/arxiv.2002.10539,INCLUDE,0.0,NONE
+W4221067709,How Much a Model be Trained by Passive Learning Before Active Learning?,2022.0,3,10.1109/access.2022.3162253,INCLUDE,0.0,NONE
+W4376654182,Mastering the exploration-exploitation trade-off in Bayesian Optimization,2023.0,3,10.48550/arxiv.2305.08624,INCLUDE,0.0,NONE
+W7125680902,Model accuracy and data heterogeneity shape uncertainty quantification in machine learning interatomic potentials,2026.0,3,10.1088/2632-2153/ae3d80,INCLUDE,0.0,NONE
+W4405022162,NeRF-DA: Neural Radiance Fields Deblurring With Active Learning,2024.0,3,10.1109/lsp.2024.3511350,INCLUDE,0.0,NONE
+W4396819478,Optimal Initialization of Batch Bayesian Optimization,2024.0,3,10.48550/arxiv.2404.17997,INCLUDE,0.0,NONE
+W4280633168,Probabilistic learning for pulsar classification,2022.0,3,10.1088/1475-7516/2022/10/016,INCLUDE,0.0,NONE
+W7168165780,Reliability-aware compressive-strength prediction and inverse mix design of fly ash–GGBFS geopolymer concrete via conformal prediction,2026.0,3,10.1007/s12289-026-02054-2,INCLUDE,0.0,NONE
+W4297380388,Robust Adaptive Submodular Maximization,2022.0,3,10.1287/ijoc.2022.1239,INCLUDE,0.0,NONE
+W4410400416,Trustworthy Deep Learning Acceleration with Customizable Design Flow Automation,2025.0,3,10.1145/3728179.3728198,INCLUDE,0.0,NONE
+W4206758177,A Refined Kriging Surrogate Model for Subset Simulation,2022.0,2,10.2514/6.2022-1868,INCLUDE,0.0,NONE
+W2980412307,A structured perspective of volumes on active learning,2019.0,2,10.1016/j.neucom.2019.10.056,INCLUDE,0.0,NONE
+W7140272171,A user's guide to your first self-driving liquid handling lab,2026.0,2,10.1039/d5dd00525f,INCLUDE,0.0,NONE
+W4413087717,Active Learning‐Driven Inverse Design of Polyurethane Foams for EV Battery Applications,2025.0,2,10.1002/pol.20250250,INCLUDE,0.0,NONE
+W4416572166,"AI-Driven and Quantum-Informed Design of Functional Nanomaterials: Bridging Catalysis, Drug Discovery, and Sustainable Environmental Remediation",2025.0,2,10.36347/sjpms.2025.v12i09.002,INCLUDE,0.0,NONE
+W7147682588,AL-X0: Cost-Aware Active Learning for Cloud-Scale NLP via Zero-Shot Proxy Valuation,2026.0,2,10.1109/icaiic68212.2026.11454245,INCLUDE,0.0,NONE
+W4283027172,Application of Adaptive Kriging Method in Bridge Girder Reliability Analysis,2022.0,2,10.1007/978-981-19-0511-7_45,INCLUDE,0.0,NONE
+W3176500072,Attentive Neural Processes and Batch Bayesian Optimization for Scalable Calibration of Physics-Informed Digital Twins,2021.0,2,10.48550/arxiv.2106.15502,INCLUDE,0.0,NONE
+W3148222937,Bayesian Optimization Searching for Robust Solutions,2020.0,2,10.1109/wsc48552.2020.9383978,INCLUDE,0.0,NONE
+W4384786881,Combined Bayesian optimization and global sensitivity analysis for the optimization of simulation-based pharmaceutical processes,2023.0,2,10.1016/b978-0-443-15274-0.50061-5,INCLUDE,0.0,NONE
+W4313180816,Contrastive Representation based Active Learning for Time Series,2022.0,2,10.1109/dasc/picom/cbdcom/cy55231.2022.9927927,INCLUDE,0.0,NONE
+W7163547851,From equation-centric modeling to transferable representation learning in battery lifetime prediction,2026.0,2,10.1016/j.jechem.2026.05.054,INCLUDE,0.0,NONE
+W3153216943,Hyperspherical Weight Uncertainty in Neural Networks,2021.0,2,10.1007/978-3-030-74251-5_1,INCLUDE,0.0,NONE
+W3119045843,Improved Gaussian Process Acquisition for Targeted Bayesian Optimization,2021.0,2,10.7763/ijmo.2021.v11.771,INCLUDE,0.0,NONE
+W3183467098,Offline Preference-Based Apprenticeship Learning,2021.0,2,10.48550/arxiv.2107.09251,INCLUDE,0.0,NONE
+W4407667943,Optimizing deep learning models from multi-objective perspective via Bayesian optimization,2025.0,2,10.11591/ijai.v14.i2.pp1420-1429,INCLUDE,0.0,NONE
+W4409796136,Pool-based Active Learning with Decision Trees: Incorporate the Tree Structure to Explore and Exploit,2025.0,2,10.1109/citrex64975.2025.10974940,INCLUDE,0.0,NONE
+W2620583870,Probabilistic Analysis of Strip Footings Resting on Spatially Varying Soils Using Importance Sampling and Kriging Metamodeling,2017.0,2,10.1061/9780784480717.042,INCLUDE,0.0,NONE
+W4280588647,Probability Distribution of Hypervolume Improvement in Bi-objective Bayesian Optimization,2022.0,2,10.48550/arxiv.2205.05505,INCLUDE,0.0,NONE
+W7125395749,Regularized GLISp for sensor-guided human-in-the-loop optimization,2026.0,2,10.1016/j.ifacsc.2026.100368,INCLUDE,0.0,NONE
+W2891123013,Reliability Based Design Optimization by Using Metamodels,2018.0,2,10.1007/978-3-319-97773-7_22,INCLUDE,0.0,NONE
+W4200630710,Robust Active Learning: Sample-Efficient Training of Robust Deep Learning Models,2021.0,2,10.48550/arxiv.2112.02542,INCLUDE,0.0,NONE
+W4414326586,Stream-Based Active Learning for Process Monitoring,2025.0,2,10.1080/00401706.2025.2561744,INCLUDE,0.0,NONE
+W4396717629,Uncertainty Driven Active Learning for Image Segmentation in Underwater Inspection,2024.0,2,10.1007/978-3-031-59057-3_5,INCLUDE,0.0,NONE
+W4402113842,Uplift Modeling Under Limited Supervision,2024.0,2,10.1007/978-3-031-70365-2_8,INCLUDE,0.0,NONE
+W7164202759,A Multi-task Bayesian Optimization framework to identify a Gurson–Tvergaard–Needleman constitutive model for an MS1500 steel in hydrogen environment,2026.0,1,10.1016/j.ijhydene.2026.155696,INCLUDE,0.0,NONE
+W7160252556,Active Learning‐Driven Inkless Additive Nanomanufacturing for Printed Electronics,2026.0,1,10.1002/admt.71023,INCLUDE,0.0,NONE
+W4417302299,Active Learning on Synthons for Molecular Design,2025.0,1,10.48550/arxiv.2505.12913,INCLUDE,0.0,NONE
+W4406461959,Active Learning with Alternating Acquisition Functions: Balancing the Exploration-Exploitation Dilemma,2024.0,1,10.1109/bigdata62323.2024.10825625,INCLUDE,0.0,NONE
+W4416795795,AL-ViT: Label-efficient Robusta coffee-bean defect detection in Thailand using active learning vision transformers,2025.0,1,10.1016/j.iswa.2025.200612,INCLUDE,0.0,NONE
+W3137295116,An Adaptive Sampling Procedure for Training a Neural Network Based On a Gaussian Process,2021.0,1,10.23967/wccm-eccomas.2020.054,INCLUDE,0.0,NONE
+W3129405420,An Approach to Bayesian Optimization in Optimizing Weighted Tchebycheff Multi-Objective Black-Box Functions,2020.0,1,10.1115/imece2020-23414,INCLUDE,0.0,NONE
+W4417241375,An Enhanced Bayesian Optimization Method for Tuning of Hybrid and High-dimensional Hyperparameters of CNNs in Brain Tumor Detection and Classification,2025.0,1,10.64149/j.ver.8.19s.294-320,INCLUDE,0.0,NONE
+W4411446536,ASAP: Accelerating Corner-Based Timing Analysis With Bayesian Active Self-Attention Neural Process,2025.0,1,10.1109/tcad.2025.3581474,INCLUDE,0.0,NONE
+W4226515712,Automatic tuning of hyper-parameters of reinforcement learning algorithms using Bayesian optimization with behavioral cloning,2021.0,1,10.48550/arxiv.2112.08094,INCLUDE,0.0,NONE
+W7154615523,Autonomous AI‐Driven Design for Skin Product Formulations,2026.0,1,10.1002/aidi.202500239,INCLUDE,0.0,NONE
+W4416371016,Bayesian E(3)-Equivariant Interatomic Potential with Iterative Restratification of Many-body Message Passing,2025.0,1,10.48550/arxiv.2510.03046,INCLUDE,0.0,NONE
+W4389102010,Bayesian Optimisation of Existing Object Detection Methods for New Contexts,2023.0,1,10.1109/sensors56945.2023.10325317,INCLUDE,0.0,NONE
+W7154105542,Benchmarking the performance of uncertainty quantification methods for neural network-based interatomic potentials,2026.0,1,10.1186/s13321-026-01193-7,INCLUDE,0.0,NONE
+W4407355710,Centrum: Model-based Database Auto-tuning with Minimal Distributional Assumptions,2025.0,1,10.1145/3709671,INCLUDE,0.0,NONE
+W4320473438,Combinatorial Bayesian Optimization with Random Mapping Functions to Convex Polytopes,2020.0,1,10.48550/arxiv.2011.13094,INCLUDE,0.0,NONE
+W7165519902,Composition-aware optimization of interatomic potentials for glasses toward experimental properties,2026.0,1,10.1016/j.commatsci.2026.114865,INCLUDE,0.0,NONE
+W3157417829,Continuous black-box optimization with quantum annealing and random subspace coding,2021.0,1,10.48550/arxiv.2104.14778,INCLUDE,0.0,NONE
+W4402643684,Deep Bayesian Experimental Design for Drug Discovery,2024.0,1,10.1007/978-3-031-72381-0_12,INCLUDE,0.0,NONE
+W4416419697,Efficient online quantum circuit learning with no upfront training,2025.0,1,10.1038/s42005-025-02423-4,INCLUDE,0.0,NONE
+W4385754533,Empirical study of evolutionary computation-based multi-objective Bayesian optimization for materials discovery,2023.0,1,10.1007/s00500-023-09058-z,INCLUDE,0.0,NONE
+W7127904936,Generalized Bayesian subset simulation for the evaluation of failure probability,2026.0,1,10.1016/j.jcp.2026.114744,INCLUDE,0.0,NONE
+W4415043896,Gradient-based federated Bayesian optimization,2025.0,1,10.1016/j.knosys.2025.114588,INCLUDE,0.0,NONE
+W4385557905,Improved Causal Bayesian Optimization Algorithm with Counter-noise Acquisition Function and Supervised Prior Estimation,2023.0,1,10.1088/1742-6596/2547/1/012017,INCLUDE,0.0,NONE
+W7125505971,Improving Model Generalizability in Materials Informatics via Active Learning with Integrated Posterior Variance Sampling,2025.0,1,10.26434/chemrxiv-2025-wc5jm,INCLUDE,0.0,NONE
+W7122508477,Integration of active learning and MCMC sampling for efficient Bayesian calibration of mechanical properties,2026.0,1,10.1016/j.euromechsol.2026.106015,INCLUDE,0.0,NONE
+W7155191877,Machine-learning-driven optimization of CMT welding for joint–base-metal property equivalence in thin 5052 aluminum alloy sheets,2026.0,1,10.1016/j.revmat.2026.100198,INCLUDE,0.0,NONE
+W7133660234,Machine learning framework for prediction of plasma-based carbon dioxide conversion: Balancing computational efficiency with experimental efforts,2026.0,1,10.1016/j.enconman.2026.121210,INCLUDE,0.0,NONE
+W7131214264,MD-BAX: A general-purpose Bayesian design framework for molecular dynamics simulations with input-dependent noise,2026.0,1,10.1063/5.0310019,INCLUDE,0.0,NONE
+W4360779960,Monte Carlo Acquisition Function with Sobol Sequences and Random Restart,2023.0,1,10.1007/978-1-4842-9063-7_5,INCLUDE,0.0,NONE
+W4401458410,Monte Carlo Dropout Based Active Learning for Deep Learning in Structural Simulation,2024.0,1,10.1115/omae2024-126087,INCLUDE,0.0,NONE
+W4408642770,"Multi-Method Material Selection for Adsorption using Inducing Points, Active Learning, and Bayesian Optimization Approaches",2025.0,1,10.26434/chemrxiv-2025-34m4w,INCLUDE,0.0,NONE
+W4221155593,Multi-step dual control for exploration and exploitation in autonomous search with convergence guarantee,2022.0,1,10.48550/arxiv.2203.06440,INCLUDE,0.0,NONE
+W3097574897,PAL : Pretext-based Active Learning,2021.0,1,10.5244/c.35.299,INCLUDE,0.0,NONE
+W7163689538,Parameterizing DFT+ U corrections for III–V semiconductor alloys,2026.0,1,10.1063/5.0323748,INCLUDE,0.0,NONE
+W4308242360,PI is back! Switching Acquisition Functions in Bayesian Optimization,2022.0,1,10.48550/arxiv.2211.01455,INCLUDE,0.0,NONE
+W3092629077,"Preface to the Papers on ‘Causal Inference from Non-experimental Studies: Challenges, Developments and Applications’",2020.0,1,10.1111/rssa.12608,INCLUDE,0.0,NONE
+W4407934948,Real-time EEG noise removal for enhanced brain-state monitoring in closed-loop TMS−EEG applications,2025.0,1,10.1016/j.brs.2024.12.104,INCLUDE,0.0,NONE
+W4391424957,Reliability Analysis of Structural Elements with Active Learning Kriging Using a New Learning Function: KO Function,2024.0,1,10.1007/978-3-031-35471-7_9,INCLUDE,0.0,NONE
+W7168347807,Robust surrogate-assisted batch-to-batch optimization of consolidated bioprocessing under plant–model mismatch,2026.0,1,10.1016/j.ces.2026.124663,INCLUDE,0.0,NONE
+W2386615864,Small Sample Incremental Biased Learning Algorithm for Sketch Retrieval,2009.0,1,,INCLUDE,0.0,NONE
+W4220752567,Stochastic multi-fidelity surrogate modeling of dendritic crystal growth,2022.0,1,10.1016/j.cma.2022.114799,INCLUDE,0.0,NONE
+W4403406933,Tailoring Datasets for Regioselectivity Predictions on Complex Substrates,2024.0,1,10.26434/chemrxiv-2024-skgxb,INCLUDE,0.0,NONE
+W4409654224,Targeted Variance Reduction: Effective Bayesian Optimization of Black-Box Simulators with Noise Parameters,2025.0,1,10.1080/00401706.2025.2495298,INCLUDE,0.0,NONE
+W4392576543,Targeted Variance Reduction: Robust Bayesian Optimization of Black-Box Simulators with Noise Parameters,2024.0,1,10.48550/arxiv.2403.03816,INCLUDE,0.0,NONE
+W7123263250,The Kernel Manifold: A Geometric Approach to Gaussian Process Model Selection,2026.0,1,10.48550/arxiv.2601.05371,INCLUDE,0.0,NONE
+W7117562273,UQ-VarQA: Benchmarking and Characterizing NISQ Computers Through Uncertainty Quantification of Variational Quantum Algorithms,2025.0,1,10.1109/iccd65941.2025.00058,INCLUDE,0.0,NONE
+W7126024586,A Bayesian optimization approach for reliability-based design of prestressed concrete structures,2026.0,0,10.1017/dce.2026.10037,INCLUDE,0.0,NONE
+W7196929366,A BRAVE Alloy Design Campaign(Bayesian Risk-aware Alloy discoVery and Exploration),2026.0,0,10.2139/ssrn.7242879,INCLUDE,0.0,NONE
+W7125724924,A Cascaded Batch Bayesian Yield Optimization Method for Analog Circuits via Deep Transfer Learning,2026.0,0,10.3390/electronics15030516,INCLUDE,0.0,NONE
+W4404703900,A Component-based Systematic Review of Pool-based Active Learning for 2D Object Detection,2024.0,0,10.11113/ijic.v14n2.448,INCLUDE,0.0,NONE
+W7214558616,"A Decade of Data-Driven Materials Engineering: Progress, Remaining Gaps, and Unlearned Lessons",2026.0,0,10.68159/n873145769,INCLUDE,0.0,NONE
+W4412380831,A Feature-Driven Acquisition Strategy Using Scale-Invariant Descriptors for Deep Active Learning in Preclinical CT Segmentation,2025.0,0,10.1007/978-3-031-98694-9_10,INCLUDE,0.0,NONE
+W7214553366,A Multi-Fidelity Learning Framework for High-Entropy Alloy Design with Sparse DFT and Abundant CALPHAD Data,2025.0,0,10.68159/z219413545,INCLUDE,0.0,NONE
+W7161303825,A Mutual Information Lower Bound for Multimodal Regression Active Learning,2026.0,0,10.48550/arxiv.2605.14917,INCLUDE,0.0,NONE
+W3192612116,A New Bayesian Optimization Algorithm for Complex High-Dimensional Disease Epidemic Systems,2021.0,0,10.48550/arxiv.2108.00062,INCLUDE,0.0,NONE
+W2981068132,"A Novel Seismic Structural Testing Protocol Based on Hybrid Simulation, Kriging and Active Learning: Methodology and Numerical Examples",2019.0,0,10.3929/ethz-b-000319633,INCLUDE,0.0,NONE
+W7219881836,A Reliability-Aware Distributionally Invariant and Uncertainty-Selective Framework for Multi-Regional Crop Yield Classification,2026.0,0,10.67440/ahj.vi.2450,INCLUDE,0.0,NONE
+W4385954384,A stepwise Bayesian updating approach by enhancing an active learning Gaussian process regression model,2023.0,0,10.4203/ccc.5.2.5,INCLUDE,0.0,NONE
+W7130616093,"A Systems-Level Framework Integrating Geometry-Controlled Plasmonics, AI-Driven Molecular Kinetics, and Organoid Validation for Next-Generation Biosen",2026.0,0,10.64898/2026.02.17.706264,INCLUDE,0.0,NONE
+W7170094022,A transfer learning-enabled Bayesian optimization framework for small-sample formulation development of BCS Class II drugs: An in silico validation st,2026.0,0,10.2139/ssrn.7139809,INCLUDE,0.0,NONE
+W7211901246,A Two-Criterion Framework for Reaction-Set Reduction in Geochemical Simulation of CO2 Mineral Trapping in Basaltic Formations: Integrating Mineral Tra,2026.0,0,10.3390/geosciences16090359,INCLUDE,0.0,NONE
+W3040861483,A Version Space Perspective on Differentially Private Pool-Based Active Learning,2019.0,0,,INCLUDE,0.0,NONE
+W3081660518,Accelerating engineering design by automatic selection of simulation cases through Pool-Based Active Learning,2020.0,0,10.48550/arxiv.2009.01420,INCLUDE,0.0,NONE
+W7220735269,Active-DiNTS: Active Differentiable Network Topology Search,2026.0,0,10.48550/arxiv.2610.04787,INCLUDE,0.0,NONE
+W7154734633,Active Learning for Budget-Constrained TCR–pMHC Wet-Lab Validation,2026.0,0,10.64898/2026.04.14.718510,INCLUDE,0.0,NONE
+W7165910021,Active Learning for Optimal Experimental Design in Machine Learning-Based Building Energy System Identification,2026.0,0,10.48550/arxiv.2606.25301,INCLUDE,0.0,NONE
+W7162399647,Active Learning for Planet Habitability Classification Under Extreme Class Imbalance,2026.0,0,10.1088/1538-3873/ae6acf,INCLUDE,0.0,NONE
+W4415248528,Active Learning for Predicting Polymer/Plasticizer Phase Behaviour,2025.0,0,10.48550/arxiv.2505.03620,INCLUDE,0.0,NONE
+W4286234986,Active Learning in Deep Bayesian Framework for Detecting Changes in Urban/Suburban Satellite Image Targets of High-resolution,2022.0,0,10.9734/bpi/rdst/v10/3322b,INCLUDE,0.0,NONE
+W4417476130,Active learning of a crystal plasticity flow rule from discrete dislocation dynamics simulations,2025.0,0,10.1088/1361-651x/ae2eee,INCLUDE,0.0,NONE
+W4406031614,Active Learning of General Halfspaces: Label Queries vs Membership Queries,2024.0,0,10.48550/arxiv.2501.00508,INCLUDE,0.0,NONE
+W4388349692,Active Learning of SNAP Potentials using Bayesian Uncertainty Estimation.,2022.0,0,10.2172/2005291,INCLUDE,0.0,NONE
+W7123414861,Active Learning Strategies for Efficient Machine-Learned Interatomic Potentials Across Diverse Material Systems,2026.0,0,10.48550/arxiv.2601.06916,INCLUDE,0.0,NONE
+W4414826822,Active learning strategies for the estimation of a feasible set defined from a vector output black-box simulator,2026.0,0,10.5802/smai-jcm.151,INCLUDE,0.0,NONE
+W7135021353,Active Learning Using Aggregated Acquisition Functions: Accuracy and Sustainability Analysis,2026.0,0,10.1109/jstsp.2026.3673105,INCLUDE,0.0,NONE
+W4407123728,Active Learning with Bayesian Multi-Fidelity Laplace Neural Operators for Oscillatory Parametric PDEs,2025.0,0,10.48550/arxiv.2502.00550,INCLUDE,0.0,NONE
+W7146944604,Active Preference Learning over Latent Preference Archetypes for Many-Objective Bayesian Optimization,2026.0,0,10.48550/arxiv.2603.28410,INCLUDE,0.0,NONE
+W4414804786,Adaptive data collection for post-disaster rapid damage assessment: A multi-objective optimization approach,2025.0,0,10.1016/j.ijdrr.2025.105851,INCLUDE,0.0,NONE
+W4321277163,Adaptive Selective Sampling for Online Prediction with Experts,2023.0,0,10.48550/arxiv.2302.08397,INCLUDE,0.0,NONE
+W7137120518,Advancing Simulation-Based Optimization with LLMs for Traffic Problems,2025.0,0,10.1109/itsc60802.2025.11423663,INCLUDE,0.0,NONE
+W7125804569,"Agentic AI for Self-Driving Laboratories in Soft Matter: Taxonomy, Benchmarks,and Open Challenges",2026.0,0,10.48550/arxiv.2601.17920,INCLUDE,0.0,NONE
+W7161939472,AIMBio-Mat: An AI-Native FAIR Platform for Closed-Loop Materials Discovery and Biomedical Translation,2026.0,0,10.48550/arxiv.2605.21083,INCLUDE,0.0,NONE
+W7114929003,ALFA: Elevation-Guided 3D Flood Map Annotation on Earth Imagery by Consistency-Enhanced Active Learning,2025.0,0,10.1145/3748636.3762786,INCLUDE,0.0,NONE
+W4407934936,Alpha rhythm subharmonics underlie responsiveness to theta burst stimulation via selective calcium plasticity,2025.0,0,10.1016/j.brs.2024.12.106,INCLUDE,0.0,NONE
+W4417179305,Architectures for Data-Aware LLMs: Models that Reason About Their Own Training Signal,2025.0,0,10.20944/preprints202512.0566.v1,INCLUDE,0.0,NONE
+W7204783620,Artificial Intelligence in Medicinal Chemistry Decision-Making: From Virtual Screening to Lead Optimization,2026.0,0,10.2174/0113895575489426260810060725,INCLUDE,0.0,NONE
+W7221154083,ATLAS: Adaptive TDA-guided Landscape-Aware Transistor Sizing,2026.0,0,10.48550/arxiv.2610.10985,INCLUDE,0.0,NONE
+W7170172988,Autonomous laboratories for sustainable nanomaterials discovery,2026.0,0,10.1016/j.nxmate.2026.102883,INCLUDE,0.0,NONE
+W7155406830,AUTONOMOUS POLYMER MATERIALS DISCOVERY: ARTIFICIAL INTELLIGENCE ARCHITECTURES FOR GENERATIVE DESIGN AND CLOSED-LOOP ENGINEERING,2026.0,0,10.36868/ejmse.2026.11.01.003,INCLUDE,0.0,NONE
+W7168078112,Balancing Uncertainty and Diversity in Active Learning through Multi-Stage Cluster-Representative Selection,2026.0,0,10.1007/978-981-92-3447-9_41,INCLUDE,0.0,NONE
+W4382490843,BatchGFN: Generative Flow Networks for Batch Active Learning,2023.0,0,10.48550/arxiv.2306.15058,INCLUDE,0.0,NONE
+W7172323013,Bayesian equivariant interatomic potential with iterative restratification of many-body message passing,2026.0,0,10.1038/s41524-026-02258-9,INCLUDE,0.0,NONE
+W7119182668,Bayesian experimental design in production engineering: a comprehensive performance and robustness study,2026.0,0,10.3389/fmtec.2025.1614335,INCLUDE,0.0,NONE
+W7167715002,Bayesian Neural Architecture Search with Uncertainty Quantification for Robust Model Selection,2026.0,0,10.1016/j.procs.2026.05.096,INCLUDE,0.0,NONE
+W4415315146,Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models,2026.0,0,10.1061/ajrua6.rueng-1854,INCLUDE,0.0,NONE
+W4415069620,Bayesian Optimization with Inexact Acquisition: Is Random Grid Search Sufficient?,2025.0,0,10.48550/arxiv.2506.11831,INCLUDE,0.0,NONE
+W7165124393,Bayesian safe-operating map construction from multimodal reverse-bias diagnostics in perovskite/silicon tandem solar cells,2026.0,0,10.1016/j.solmat.2026.114508,INCLUDE,0.0,NONE
+W7214474558,Benchmarking model-based design of experiment approaches with a pharmaceutical crystallisation emulator,2026.0,0,10.1038/s41524-026-02336-y,INCLUDE,0.0,NONE
+W7167921539,Bi-objective Stochastic Simulation Optimization on Integer Lattices via Scalarization,2026.0,0,10.1145/3795095.3805200,INCLUDE,0.0,NONE
+W4416021910,Bifidelity Karhunen-Loève Expansion Surrogate with Active Learning for Random Fields,2025.0,0,10.48550/arxiv.2511.03756,INCLUDE,0.0,NONE
+W4321392959,Black-Box Batch Active Learning for Regression,2023.0,0,10.48550/arxiv.2302.08981,INCLUDE,0.0,NONE
+W4417476155,Calibration of climate model parameterizations using Bayesian experimental design,2025.0,0,10.1088/3049-4753/ae2edb,INCLUDE,0.0,NONE
+W7204756164,CALPHAD-Informed MAP Priors for Cold-Start Composition-Space Partitioning in Active Alloy Design,2026.0,0,10.32604/cmc.2026.086475,INCLUDE,0.0,NONE
+W7171619607,Citrine Informatics: Chemical & Materials Development Platform,2026.0,0,10.48550/arxiv.2607.25039,INCLUDE,0.0,NONE
+W3110096993,Combinatorial Bayesian Optimization with Random Mapping Functions to Convex Polytope.,2020.0,0,,INCLUDE,0.0,NONE
+W4415348574,ConBatch-BAL: Batch Bayesian Active Learning under Budget Constraints,2025.0,0,,INCLUDE,0.0,NONE
+W7164920664,"Conformal Prediction in Machine Learning: Theory, Algorithms, and Emerging Applications",2025.0,0,10.61424/hspq6z35,INCLUDE,0.0,NONE
+W4415532548,Contrastive prior enhances the performance of Bayesian neural network-based molecular property prediction,2025.0,0,10.1016/j.eswa.2025.130019,INCLUDE,0.0,NONE
+W7155158990,Controlled Benchmarking of Active Learning for Low-Label ADME Classification Under Scaffold Split,2026.0,0,10.21203/rs.3.rs-9310145/v1,INCLUDE,0.0,NONE
+W7220586769,Correlation Sensitivity Analysis of Reliability of Passive System of small reactor,2026.0,0,,INCLUDE,0.0,NONE
+W7160049659,Cost-Aware Multi-Fidelity Bayesian Optimization with Runtime-Gated Cascading Tiers for Autonomous in silico Dermatology Discovery,2026.0,0,10.5281/zenodo.20018355,INCLUDE,0.0,NONE
+W7212023910,"Cross-Machine Transfer Learning for a Compact Spherical-Tokamak Breeder: A Disruption Model Pre-Trained on TCV, DIII-D, and NSTX with Honest Transfer ",2026.0,0,10.5281/zenodo.22645820,INCLUDE,0.0,NONE
+W4413923634,D–MOPH–25: diverse MOF–molecule pairs for Henry’s constants prediction *,2025.0,0,10.1088/2632-2153/ae0241,INCLUDE,0.0,NONE
+W7151255500,D3-AK: Domain-Distance-Driven Adaptive Kriging Approach for Time-Dependent Reliability Analysis,2026.0,0,10.1061/ajrua6.rueng-1851,INCLUDE,0.0,NONE
+W7172393146,"Data-driven design of carbon dots: Property prediction, optimization, and prospects for autonomous discovery",2026.0,0,10.1016/j.ceja.2026.101404,INCLUDE,0.0,NONE
+W7220079611,Data-Driven Optimization of Aqueous Tape Casting for High-Performance Functional Ceramic Films,2026.0,0,,INCLUDE,0.0,NONE
+W7161965175,Data-Efficient Neural Operator Training via Physics-Based Active Learning,2026.0,0,10.48550/arxiv.2605.21348,INCLUDE,0.0,NONE
+W7167639588,Deciphering key factors of active learning performance in biomolecular design,2026.0,0,10.1093/bioinformatics/btag248,INCLUDE,0.0,NONE
+W7221267488,"Decision Reliability for Real-Time Release in Pharmaceutical Manufacturing: Modeling Sensor Drift, Sampling Error, and Time-to-Release Under Quality C",2025.0,0,,INCLUDE,0.0,NONE
+W7165401406,Deep Kernel Learning with Kolmogorov–Arnold Networks for Bayesian Optimization,2026.0,0,10.69997/sct.169600,INCLUDE,0.0,NONE
+W7211962853,Delegated Experimentation: Decision Authority Transfer in Closed-Loop Materials Engineering,2025.0,0,10.68159/d226776771,INCLUDE,0.0,NONE
+W4402595369,Designing a Robust Network Traffic Annotator and Classifier Using Active Learning Technique,2024.0,0,10.1109/apcit62007.2024.10673636,INCLUDE,0.0,NONE
+W7214061352,Distribution Shift Detection and Robust Prediction in Real-World Tabular Machine Learning Systems,2026.0,0,10.2139/ssrn.7493098,INCLUDE,0.0,NONE
+W4320020457,Diverse Bayesian Active Learning with Simulated Annealing for Probabilistic Sampling,2022.0,0,10.36227/techrxiv.21774761.v1,INCLUDE,0.0,NONE
+W4416359512,DIVIDE: A Framework for Learning from Independent Multi-Mechanism Data Using Deep Encoders and Gaussian Processes,2025.0,0,10.48550/arxiv.2511.12745,INCLUDE,0.0,NONE
+W4414116826,Document Re-Ranking With Evidential Neural Networks,2025.0,0,10.1109/access.2025.3609194,INCLUDE,0.0,NONE
+W3135843202,Effective Version Space Reduction for Convolutional Neural Networks,2021.0,0,10.1007/978-3-030-67661-2_6,INCLUDE,0.0,NONE
+W4412462398,Efficient Characterization of Human Color Discrimination Thresholds Using Adaptive Sampling and a Wishart Process Model,2025.0,0,10.1167/jov.25.9.2480,INCLUDE,0.0,NONE
+W7161812912,Efficient Conditioning Why Pseudo Observation Batch Bayesian Optimization Works When It Does not,2026.0,0,10.48550/arxiv.2605.18819,INCLUDE,0.0,NONE
+W4403518850,Efficient Initial Data Selection and Labeling for Multi-Class Classification Using Topological Analysis,2024.0,0,10.3233/faia240800,INCLUDE,0.0,NONE
+W3171234265,"Efficient polynomial chaos approximations: Active, local and basis-adapted",2021.0,0,10.21914/anziamj.v62.15833,INCLUDE,0.0,NONE
+W4409490958,Empirical Evaluation of Acquisition Functions for Bayesian Optimization-Based Configuration Tuning of Apache Spark Applications,2025.0,0,10.1587/transinf.2024edl8071,INCLUDE,0.0,NONE
+W4416441425,Emulation of Proton-Deuteron Scattering via the Reduced Basis Method and Active Learning: Detailed Description,2025.0,0,10.48550/arxiv.2511.10420,INCLUDE,0.0,NONE
+W7214092178,Engineering safe structures: recent advances in structural reliability modelling,2026.0,0,10.48550/arxiv.2609.26440,INCLUDE,0.0,NONE
+W7171480038,Enhanced Seismic Response Prediction of Multivariate Rocking Bridges using Active Learning,2026.0,0,,INCLUDE,0.0,NONE
+W4394907068,Epistemic Uncertainty Quantification For Pre-trained Neural Network,2024.0,0,10.48550/arxiv.2404.10124,INCLUDE,0.0,NONE
+W7163224156,Evidence-Gated LLM Priors for Multi-Objective Bayesian Optimization,2026.0,0,10.48550/arxiv.2606.01730,INCLUDE,0.0,NONE
+W4406964817,Exploration of the Global Minimum and Conical Intersection with Bayesian Optimization,2025.0,0,10.1002/minf.202400041,INCLUDE,0.0,NONE
+W7220974622,"Explore, Then Commit: Measurement-Efficient Scientific Law Discovery with Language Models",2026.0,0,10.48550/arxiv.2610.07620,INCLUDE,0.0,NONE
+W4399115504,"Fast Emulation, Modular Calibration, and Active Learning for Simulators with Functional Response",2024.0,0,10.48550/arxiv.2405.16298,INCLUDE,0.0,NONE
+W4403622740,Few-shot Scooping Under Domain Shift via Simulated Maximal Deployment Gaps,2024.0,0,10.48550/arxiv.2408.02949,INCLUDE,0.0,NONE
+W4403622117,FIRAL: An Active Learning Algorithm for Multinomial Logistic Regression,2024.0,0,10.48550/arxiv.2409.07379,INCLUDE,0.0,NONE
+W4389116120,From Prediction to Action: Critical Role of Performance Estimation for Machine-Learning-Driven Materials Discovery,2023.0,0,10.48550/arxiv.2311.15549,INCLUDE,0.0,NONE
+W4405715123,Function Space Diversity for Uncertainty Prediction via Repulsive Last-Layer Ensembles,2024.0,0,10.48550/arxiv.2412.15758,INCLUDE,0.0,NONE
+W7171452779,Fundamentals of AI-driven Automation in Chemical Research,2026.0,0,10.1039/9781837072163-00013,INCLUDE,0.0,NONE
+W7214375018,Gas turbine fault probability prediction method based on classification-regression coupled model,2026.0,0,10.1177/16878132261489713,INCLUDE,0.0,NONE
+W7167633384,GAUSSIAN PROCESS REGRESSION MODEL FOR PERFORMANCE PREDICTION OF ENTERPRISE WEB SYSTEMS UNDER CONFIGURABLE WORKLOADS,2026.0,0,10.31673/2412-4338.2026.029118,INCLUDE,0.0,NONE
+W7204877367,Gaussian processes with prior-model-informed kernel for dynamical system modeling,2026.0,0,10.1016/j.neunet.2026.109569,INCLUDE,0.0,NONE
+W4415996387,Generative Surrogates in Ansys: Reliability-Driven Multiphysics Optimization,2023.0,0,10.62311/nesx/rp-30032023-143-161,INCLUDE,0.0,NONE
+W7126045852,Hardness Sampling: Exploring Instance Hardness in Pool-Based Active Learning,2026.0,0,10.1007/978-3-032-15984-7_1,INCLUDE,0.0,NONE
+W7213982236,Heteroscedastic Bayesian Optimization of Jetting Stability for Autonomous Electrohydrodynamic Inkjet Printing,2026.0,0,10.2139/ssrn.7504722,INCLUDE,0.0,NONE
+W3188009563,High dimensional Bayesian Optimization Algorithm for Complex System in Time Series,2021.0,0,10.48550/arxiv.2108.02289,INCLUDE,0.0,NONE
+W4402114746,High-Dimensional Bayesian Optimization via Random Projection of Manifold Subspaces,2024.0,0,10.1007/978-3-031-70371-3_17,INCLUDE,0.0,NONE
+W7167588384,How Many Initial Points Does Bayesian Optimization Need?,2026.0,0,10.48550/arxiv.2607.04356,INCLUDE,0.0,NONE
+W7168384480,Human-efficient annotation system via active semi-supervised learning and selective review,2026.0,0,10.1016/j.iswa.2026.200701,INCLUDE,0.0,NONE
+W7214731211,"Implementing a Digital Transformation in Process Chemistry: Integrated Automation, Machine Learning, and Real-Time Analytics from Lab to Pilot Scale",2026.0,0,10.2533/chimia.2026.583,INCLUDE,0.0,NONE
+W114402340,Improved sample size re-estimation in adaptive clinical trials without unblinding,2011.0,0,,INCLUDE,0.0,NONE
+W4403117451,Improving Bayesian optimization via hierarchical variation modeling for combinatorial experiments given limited runs guided by process knowledge,2024.0,0,10.1016/j.knosys.2024.112596,INCLUDE,0.0,NONE
+W7164015076,Improving Bayesian Optimization via Training-Aware Conditional Diffusion Models,2026.0,0,10.48550/arxiv.2606.08438,INCLUDE,0.0,NONE
+W7160929830,Improving search efficiency via adaptive acquisition function selection in discrete black-box optimization,2026.0,0,10.48550/arxiv.2605.10856,INCLUDE,0.0,NONE
+W7214071502,In-Context Guidance: Learning Inter-Task Synergies via Numerical Foundational Models for Few-Shot Multitask Optimization,2026.0,0,10.48550/arxiv.2609.25836,INCLUDE,0.0,NONE
+W7214050683,JAREX: An Acquisition Function for Multi-Objective Algorithmic Process Characterization,2026.0,0,10.48550/arxiv.2609.24954,INCLUDE,0.0,NONE
+W7148224025,Machine Learning Applications for Atmospheric Retrieval from Earth Observing Spectroscopy with Robust Uncertainty Quantification,2025.0,0,,INCLUDE,0.0,NONE
+W7204683671,Machine learning–assisted inverse design of PEMFC cathode ORR catalysts: A two-level framework from performance targets to device validation,2026.0,0,10.1016/j.ijhydene.2026.157352,INCLUDE,0.0,NONE
+W7119534947,Machine learning-augmented photocatalysis: forecasting formaldehyde degradation efficiency with bayesian optimization-enhanced XGBoost in a POFs-activ,2026.0,0,10.2139/ssrn.6036387,INCLUDE,0.0,NONE
+W7155540687,Memory-Guided Trust-Region Bayesian Optimization (MG-TuRBO) for High Dimensions,2026.0,0,10.2139/ssrn.6614218,INCLUDE,0.0,NONE
+W4416112584,Mixed Likelihood Variational Gaussian Processes,2025.0,0,10.48550/arxiv.2503.04138,INCLUDE,0.0,NONE
+W7203830253,Molecular active learning approaches for predicting skin cytotoxicity,2026.0,0,10.1007/s11030-026-11689-x,INCLUDE,0.0,NONE
+W4415665430,Multi-criteria dynamic weighting for batch mode active learning in aero-engine remaining useful life prediction,2025.0,0,10.2139/ssrn.5678125,INCLUDE,0.0,NONE
+W3091662450,Neural Bootstrapper,2020.0,0,10.48550/arxiv.2010.01051,INCLUDE,0.0,NONE
+W7161939461,Neural Network-Accelerated Molecular Dynamics Simulations for Next-Generation Energy Materials Discovery: An Integrated AI-Physics Framework,2026.0,0,10.1021/acs.jpcc.6c00741,INCLUDE,0.0,NONE
+W7134934366,O³-AL: Optimized Overconfidence-Overcoming Active Learning,2026.0,0,10.2139/ssrn.6105986,INCLUDE,0.0,NONE
+W4390306289,Optimal Decision Tree and Adaptive Submodular Ranking with Noisy Outcomes,2023.0,0,10.48550/arxiv.2312.15357,INCLUDE,0.0,NONE
+W7204497162,Optimisation of 2d hydrodynamic model roughness with multi-output Gaussian process emulators and Bayesian active learning,2026.0,0,10.1080/28375807.2026.2725221,INCLUDE,0.0,NONE
+W7211999651,Out-of-Distribution Detection and Epistemic Gating for Autonomous Fusion Control: A Machine-Readable Extrapolation Ledger That Throttles Model Authori,2026.0,0,10.5281/zenodo.22645818,INCLUDE,0.0,NONE
+W7166832458,Output-Space Search: Targeting LLM Generations in a Frozen Encoder-Defined Output Space,2026.0,0,10.18653/v1/2026.surgellm-1.4,INCLUDE,0.0,NONE
+W4288099471,Partial-Monotone Adaptive Submodular Maximization,2022.0,0,10.48550/arxiv.2207.12840,INCLUDE,0.0,NONE
+W7157250629,Physics-Informed Active Learning for Calibrating Mesoscopic Dynamic Parameters of Multiphase Concrete in DEM Simulations,2026.0,0,10.3390/buildings16091713,INCLUDE,0.0,NONE
+W7155221253,Physics-informed active learning for the design of thermally conductive composite microstructures with controlled anisotropy,2026.0,0,10.1016/j.compscitech.2026.111668,INCLUDE,0.0,NONE
+W4391591269,Poisson Process for Bayesian Optimization,2024.0,0,10.48550/arxiv.2402.02687,INCLUDE,0.0,NONE
+W7127963153,Pool-based Active Learning as Noisy Lossy Compression: Characterizing Label Complexity via Finite Blocklength Analysis,2026.0,0,10.48550/arxiv.2602.05333,INCLUDE,0.0,NONE
+W4405253807,Post-hoc Probabilistic Vision-Language Models,2024.0,0,10.48550/arxiv.2412.06014,INCLUDE,0.0,NONE
+W7202277823,Predicting Uranium and Thorium from Well Logs for Radiogenic Helium Screening in the Ordos Basin,2026.0,0,10.5281/zenodo.21897145,INCLUDE,0.0,NONE
+W7160412051,Pretrained Model Representations as Acquisition Signals for Active Learning of MLIPs,2026.0,0,10.48550/arxiv.2605.03964,INCLUDE,0.0,NONE
+W4415136433,Probabilistic Factorial Experimental Design for Combinatorial Interventions,2025.0,0,10.48550/arxiv.2506.03363,INCLUDE,0.0,NONE
+W7214389157,Prompt and Probe: Data-Efficient Adaptation of Black-Box Foundation Models via Unified Active Visual Prompting,2026.0,0,10.1007/978-3-032-38062-3_46,INCLUDE,0.0,NONE
+W7134806975,PromptGate: Client-Adaptive Vision–Language Gating for Open-Set Federated Active Learning,2026.0,0,10.1007/978-3-032-38062-3_47,INCLUDE,0.0,NONE
+W4406763705,Quantified active learning Kriging-based Bayesian updating for high-dimensional models using convolutional autoencoders,2024.0,0,10.23967/eccomas.2024.277,INCLUDE,0.0,NONE
+W7127368056,Quantifying Epistemic Predictive Uncertainty in Conformal Prediction,2026.0,0,10.48550/arxiv.2602.01667,INCLUDE,0.0,NONE
+W4387947105,Random Exploration in Bayesian Optimization: Order-Optimal Regret and Computational Efficiency,2023.0,0,10.48550/arxiv.2310.15351,INCLUDE,0.0,NONE
+W7167731097,Recalibration strategies for real-time crash prediction: adaptive drift detection vs. cumulative retraining under rare-event class imbalance,2026.0,0,10.1080/19427867.2026.2689732,INCLUDE,0.0,NONE
+W7161115215,ReForge: Refining Merged Models with Anchor-Regularized Regression,2026.0,0,10.48550/arxiv.2605.12843,INCLUDE,0.0,NONE
+W7220490084,Reliability analysis of passive safety system of small reactor under different Monte Carlo methods,2026.0,0,,INCLUDE,0.0,NONE
+W7131661307,Research on Compilation Option Setting Method Based on Bayesian Optimization,2025.0,0,10.1109/cei66465.2025.11398667,INCLUDE,0.0,NONE
+W3179280654,RISAN: Robust Instance Specific Abstention Network,2021.0,0,10.48550/arxiv.2107.03090,INCLUDE,0.0,NONE
+W3179767201,RISAN: Robust Instance Specific Deep Abstention Network,2021.0,0,,INCLUDE,0.0,NONE
+W2808504547,Robustness of Bayesian Pool-based Active Learning Against Prior Misspecification: Supplementary Material,2016.0,0,,INCLUDE,0.0,NONE
+W7160966492,SACK : Safe Active Continual Koopman Learning for Uncertain Systems with Contractive Guarantees,2026.0,0,10.48550/arxiv.2605.09659,INCLUDE,0.0,NONE
+W4321018189,Scalable Bayesian optimization with high-dimensional outputs using randomized prior networks,2023.0,0,10.48550/arxiv.2302.07260,INCLUDE,0.0,NONE
+W7165797145,Sequential-sampling Gaussian-process prediction of ventilated cavity length for high-speed underwater vehicles,2026.0,0,10.1016/j.oceaneng.2026.126666,INCLUDE,0.0,NONE
+W7139919713,Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model,2026.0,0,10.48550/arxiv.2603.18342,INCLUDE,0.0,NONE
+W7169769139,Simulation Model Parameter Calibration via Knowledge-Driven Improved Bayesian Optimization,2026.0,0,10.1007/978-981-92-3450-9_47,INCLUDE,0.0,NONE
+W7211901478,"Small-Data and Sparse-Regime Learning in Materials AI — Methods, Assumptions, and Limits",2026.0,0,10.68159/z932480750,INCLUDE,0.0,NONE
+W7163048707,Spectral Anatomy of Quantum Gaussian Process Kernels,2026.0,0,10.48550/arxiv.2605.30952,INCLUDE,0.0,NONE
+W4377130693,STREAMLINE: Streaming Active Learning for Realistic Multi-Distributional Settings,2023.0,0,10.48550/arxiv.2305.10643,INCLUDE,0.0,NONE
+W7204636471,Surrogate Modeling of Wind Pressure Statistics of Two Adjacent Buildings with Active Learning,2026.0,0,10.2139/ssrn.7370859,INCLUDE,0.0,NONE
+W7160832612,The evolution of sampling in epidemiology: from classical probability models to AI-enhanced recruitment and active learning,2026.0,0,10.4178/epih.e2026019,INCLUDE,0.0,NONE
+W7202393293,The Knowledge Ratchet: Physical Feedback as an Endogenous Driver of AI-Driven Scientific Discovery A Unified Stochastic Framework with Reinforcement L,2026.0,0,10.2139/ssrn.7253239,INCLUDE,0.0,NONE
+W7214428186,"THEORETICAL FOUNDATIONS AND COMPUTATIONAL PARADIGMS IN MACHINE LEARNING OPTIMIZATION: REGULARIZATION, BAYESIAN SEARCH, EVOLUTIONARY ALGORITHMS, AND MU",2026.0,0,10.58532/nbennur3169c6,INCLUDE,0.0,NONE
+W7168282844,tidyHEBO: Robust General-Purpose Bayesian Optimization with Model-Consistent Warping and Pareto Search,2026.0,0,10.48550/arxiv.2607.10669,INCLUDE,0.0,NONE
+W4402345182,Towards Dynamic Feature Acquisition on Medical Time Series by Maximizing Conditional Mutual Information,2024.0,0,10.48550/arxiv.2407.13429,INCLUDE,0.0,NONE
+W4361806032,Towards Reliable Uncertainty Quantification via Deep Ensembles in Multi-output Regression Task,2023.0,0,10.48550/arxiv.2303.16210,INCLUDE,0.0,NONE
+W7171506473,Transfer Learning Architectures for Scalable Multi-Fidelity Bayesian Optimization,2026.0,0,10.48550/arxiv.2607.23404,INCLUDE,0.0,NONE
+W7166685474,Transformer-Based Active Learning for Data-Efficient Vaccine Epitope Selection in PRRS,2026.0,0,10.48550/arxiv.2606.28659,INCLUDE,0.0,NONE
+W7207598845,Uncertainty-Aware Reactive Force Field Potentials for Materials via Physics-Informed Bayesian Optimization,2026.0,0,10.1021/acs.jctc.6c01100,INCLUDE,0.0,NONE
+W7203514548,Uncertainty characterization of thermal shock performance of aerospace composites with physics-informed neural networks,2026.0,0,,INCLUDE,0.0,NONE
+W7172422735,Uncertainty-guided active learning for surrogate prediction of stream-finishing wear fields,2026.0,0,10.48550/arxiv.2608.00593,INCLUDE,0.0,NONE
+W7165139615,Uncertainty Quantification Driven Benchmarking and Characterization of Noisy Quantum Backends: A VQE Case Study,2026.0,0,10.1145/3787109.3816378,INCLUDE,0.0,NONE
+W7214517480,"Uncertainty Quantification for ML Interatomic Potentials: A Review of Methods, Hidden Assumptions, and Unresolved Questions",2022.0,0,10.68159/p918703755,INCLUDE,0.0,NONE
+W7161122606,Uncertainty quantification-informed machine learning models for compressor performance mapping,2026.0,0,10.1016/j.applthermaleng.2026.131326,INCLUDE,0.0,NONE
+W4402701555,Understanding Uncertainty-based Active Learning Under Model Mismatch,2024.0,0,10.48550/arxiv.2408.13690,INCLUDE,0.0,NONE
+W7165393898,Using Active Learning to Efficiently Calibrate Foundation Models on Raman Spectra in Upstream Bioprocess Fermentations,2026.0,0,10.69997/sct.147199,INCLUDE,0.0,NONE
+W4417403793,Weakly-Supervised Chromosome Segmentation via SAM and Uncertainty-Guided Pseudo-Labeling,2025.0,0,10.1109/icbip66535.2025.11284451,INCLUDE,0.0,NONE
+W4404901096,When Uncertainty-Based Active Learning May Fail?,2024.0,0,10.1007/978-3-031-78107-0_6,INCLUDE,0.0,NONE
+W4416685146,Why Pool When You Can Flow? Active Learning with GFlowNets,2025.0,0,10.48550/arxiv.2509.00704,INCLUDE,0.0,NONE
+W4417224456,Why risk matters for protein binder design,2025.0,0,10.48550/arxiv.2504.00146,INCLUDE,0.0,NONE
+W7124242207,Worst-Case Adaptive Submodular Cover,2023.0,0,10.65109/prdk3486,INCLUDE,0.0,NONE
