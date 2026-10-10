@@ -89,12 +89,15 @@ def run_campaign(pool, arm: dict, seed: int, cfg: dict, n_steps: int,
 
         # 2. evaluator ground truth, under the same surrogate, before anything acts
         if record_evaluation:
+            # y_all, not pool.y: the evaluator must score against the same label
+            # vector the oracle holds, or the permutation test in
+            # tests/test_leakage.py would be comparing against a different world.
             truth = {"step": step, "n_unlabeled": int(unlabeled.size),
-                     "pool_coverage": pool_coverage(pool.y[unlabeled], mu_obs_pool,
+                     "pool_coverage": pool_coverage(y_all[unlabeled], mu_obs_pool,
                                                     sd_obs_pool, alpha)}
             for a in secondary:
                 truth[f"pool_coverage_{a:g}"] = pool_coverage(
-                    pool.y[unlabeled], mu_obs_pool, sd_obs_pool, a)
+                    y_all[unlabeled], mu_obs_pool, sd_obs_pool, a)
             evaluation.append(truth)
 
         # 3-4. the reading, and what the controller does with it
