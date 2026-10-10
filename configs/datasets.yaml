@@ -1,0 +1,72 @@
+# Dataset registry. Every entry is fixed by PREREGISTRATION.md Section 4 and the
+# column names are the ones verified in docs/data_access_report.md. Nothing here
+# is discovered at run time: if a loader returns different columns, that is an
+# error, not something to adapt to.
+#
+# direction: "max" means larger is better; "min" targets are negated at load so
+# the whole codebase optimizes for a maximum (PREREGISTRATION.md Section 5).
+# expect_n is the row count observed in the data-access report, before pool
+# construction (duplicate collapse, non-finite drop, 3000-cap).
+
+pool:
+  featurizer: magpie            # matminer ElementProperty.from_preset("magpie")
+  n_features_raw: 132
+  ignore_errors: false          # validity test 7; never true, anywhere
+  dedup: reduced_formula        # collapse duplicates, keep the median target
+  max_pool: 3000
+  subsample_seed: 20261010      # numpy.random.default_rng(20261010)
+  standardize_features: true
+  pca_variance: 0.95
+  pca_max_components: 20
+  standardize_targets: true
+
+datasets:
+  matbench_steels:
+    role: tuning
+    loader: matminer
+    formula_column: composition
+    target_column: yield strength
+    direction: max
+    kind: experimental
+    expect_n: 312
+    units: MPa
+
+  dielectric_constant:
+    role: tuning
+    loader: matminer
+    formula_column: formula
+    target_column: poly_electronic
+    direction: max
+    kind: dft
+    expect_n: 1056
+    units: dimensionless
+
+  matbench_expt_gap:
+    role: evaluation
+    loader: matminer
+    formula_column: composition
+    target_column: gap expt
+    direction: max
+    kind: experimental
+    expect_n: 4604
+    units: eV
+
+  elastic_tensor_2015:
+    role: evaluation
+    loader: matminer
+    formula_column: formula
+    target_column: K_VRH
+    direction: max
+    kind: dft
+    expect_n: 1181
+    units: GPa
+
+  heusler_magnetic:
+    role: evaluation
+    loader: matminer
+    formula_column: formula
+    target_column: e_form
+    direction: min            # formation energy: more negative is more stable
+    kind: dft
+    expect_n: 1153
+    units: eV/atom
