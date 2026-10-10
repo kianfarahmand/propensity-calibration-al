@@ -148,6 +148,28 @@ jobs:
       - name: Merge
         run: python scripts/merge_results.py results/raw/smoke results/processed/smoke.csv
 
+
+      - name: Report the smoke measurement through the API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### smoke measurement"
+            echo ""
+            echo "No scientific result. One tuning dataset, two seeds, twenty steps."
+            echo ""
+            echo '```'
+            tail -n 12 ci-output.txt
+            echo '```'
+            echo ""
+            echo '```csv'
+            cat results/processed/smoke.csv
+            echo '```'
+          } > ci-summary.md
+          gh api --method POST \
+            "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+            -F body=@ci-summary.md
+
       - uses: actions/upload-artifact@v4
         with:
           name: smoke-results
