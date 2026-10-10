@@ -38,6 +38,27 @@ def _jsonable(obj):
     raise TypeError(f"not JSON serializable: {type(obj)!r}")
 
 
+def _parse_set(pairs) -> dict:
+    """--set acquisition.c=1.0 -> {"acquisition.c": 1.0}
+
+    The S05 tuning sweep needs to run the same grid at five values of c. Doing
+    that with a command-line override keeps the sweep out of the code and keeps
+    the override visible in the run record, where config_echo reports the value
+    that actually applied.
+    """
+    out = {}
+    for pair in pairs or []:
+        if "=" not in pair:
+            raise ValueError(f"--set expects key=value, got {pair!r}")
+        key, raw = pair.split("=", 1)
+        try:
+            value = json.loads(raw)
+        except json.JSONDecodeError:
+            value = raw
+        out[key.strip()] = value
+    return out
+
+
 def _seed_list(spec: str | None, grid: dict) -> list[int]:
     if spec:
         if ":" in spec:
@@ -57,6 +78,7 @@ def cmd_pool(args) -> int:
 def cmd_run(args) -> int:
     grid = load_yaml(args.config)
     policies = apply_overrides(load_policies(), grid.get("overrides"))
+    policies = apply_overrides(policies, _parse_set(args.set_values))
     datasets = [args.dataset] if args.dataset else list(grid["datasets"])
     arms = [int(args.arm)] if args.arm else [int(a) for a in grid["arms"]]
     seeds = _seed_list(args.seeds, grid)
@@ -121,6 +143,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_run.add_argument("--n-steps", dest="n_steps", default=None, type=int)
     p_run.add_argument("--out", default=None)
     p_run.add_argument("--cache-dir", default=".cache/pcal")
+    p_run.add_argument("--set", dest="set_values", action="append", default=[],
+                       metavar="KEY=VALUE",
+                       help="dotted config override, e.g. --set acquisition.c=1.0")
     p_run.set_defaults(func=cmd_run)
     return parser
 
