@@ -5,10 +5,16 @@ GitHub Actions caps a job at six hours, so the grid is cut by dataset, arm and
 seed block and each shard becomes one job. The block size lives in the grid
 config, not here.
 
-    python scripts/make_shards.py configs/grid_eval.yaml > shards.json
+    python scripts/make_shards.py configs/grid_eval.yaml
+    python scripts/make_shards.py configs/grid_eval.yaml --dataset heusler_magnetic --arm 7
+
+Filtering happens here rather than in the workflow, because a matrix job cannot
+skip itself after it has started: an `exit 0` inside a step ends that step, not
+the job.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -18,27 +24,35 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pcal.config import load_yaml  # noqa: E402
 
 
-def shards(grid: dict) -> list[dict]:
+def shards(grid: dict, dataset: str | None = None, arm: int | None = None) -> list[dict]:
     seeds = grid["seeds"]
     start, count = int(seeds["start"]), int(seeds["count"])
     block = int(grid.get("shard", {}).get("seed_block_size", count)) or count
+    datasets = [d for d in grid["datasets"] if dataset in (None, "", d)]
+    arms = [int(a) for a in grid["arms"] if arm in (None, "") or int(a) == int(arm)]
     out = []
-    for dataset in grid["datasets"]:
-        for arm in grid["arms"]:
+    for name in datasets:
+        for a in arms:
             for lo in range(start, start + count, block):
                 hi = min(lo + block, start + count)
-                out.append({"dataset": dataset, "arm": int(arm),
-                            "seeds": f"{lo}:{hi}",
-                            "name": f"{dataset}-a{int(arm):02d}-s{lo}-{hi}"})
+                out.append({"dataset": name, "arm": a, "seeds": f"{lo}:{hi}",
+                            "name": f"{name}-a{a:02d}-s{lo}-{hi}"})
     return out
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print(__doc__)
-        return 2
-    grid = load_yaml(sys.argv[1])
-    print(json.dumps({"include": shards(grid)}))
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("config")
+    parser.add_argument("--dataset", default=None)
+    parser.add_argument("--arm", default=None)
+    args = parser.parse_args()
+    grid = load_yaml(args.config)
+    arm = int(args.arm) if args.arm not in (None, "") else None
+    matrix = shards(grid, dataset=args.dataset or None, arm=arm)
+    if not matrix:
+        print(json.dumps({"include": []}))
+        return 1
+    print(json.dumps({"include": matrix}))
     return 0
 
 
