@@ -218,7 +218,63 @@ Both measure calibration on the selected sample without raising the selection-
 bias question, which makes them the naive-monitor arm this project benchmarks
 against rather than competitors.
 
-## 5. Limitations
+## 6. The adjacent families the proposal named (added after the main pass)
+
+Section 6 of `docs/proposal_v2.md` named four families the audit was required to
+position against by name. They sit outside the P/C/L strata above, so they were
+checked separately.
+
+**CA-SMART could not be located.** No OpenAlex record matches that acronym, and
+targeted searches for its described behaviour (switching acquisition on whether
+an observation falls outside a 95% prediction interval, in sequential design)
+return nothing. The proposal calls it "structurally the closest competitor".
+Until a citation is produced it must be treated as unverified: either source it
+or strike it. It is not cited in the pre-registration.
+
+**Acquisition portfolios are confirmed and unthreatening.** GP-Hedge is Hoffman,
+Brochu and de Freitas, *Portfolio allocation for Bayesian optimization* (2011,
+117 citations); No-PASt-BO is Ferreira et al. (ICTAI 2019,
+doi:10.1109/ictai.2019.00084). Both switch among acquisition functions on
+observed reward, with no uncertainty-reliability signal and no bias correction.
+They belong in the arm list as policy-switching controls, not as prior art for
+the estimand.
+
+**Pion and Vazquez is a fourth claim to surrender, and it is the sharpest one.**
+*Design-marginal calibration of Gaussian process predictive distributions:
+Bayesian and conformal approaches* (2025, arXiv:2512.05611) formalises exactly
+the target quantity this project calls pool-marginal coverage: they condition on
+the data, average over a **design measure**, and define mu-coverage for central
+intervals and mu-probabilistic calibration. They also build their estimators on
+**standardized leave-one-out residuals** - the same device Section 5.3 of the
+proposal introduces to separate model drift from selection bias.
+
+So the estimand has a name in the literature, and so does the residual
+construction. Neither is ours to claim. What Pion and Vazquez do not do is the
+part that remains: their design measure is given and their residuals come from
+cross-validation on an existing design, not from an adaptive campaign that chose
+its own points. They never confront the problem that the sample available for
+estimating mu-coverage was drawn by the acquisition rule, and nothing in their
+setting logs a selection probability.
+
+### The claim, after four surrenders
+
+Not the correction device (Beygelzimer, Ganti and Gray, Farquhar). Not the
+recognition of design-induced shift (Fannjiang). Not loop closure on a
+shift-corrected uncertainty object (Stanton). Not the design-marginal
+calibration functional itself, nor leave-one-out standardized residuals (Pion
+and Vazquez).
+
+What is left: **estimating the design-marginal calibration of a surrogate from
+the adaptively selected sample, using propensities that are known because the
+acquisition was deliberately randomized, during the campaign, and letting that
+estimate close the control loop** - together with the measurement that the naive
+selected-sample reading is biased with a sign that flips with the acquisition
+policy, which is what makes an uncorrected controller unsound rather than merely
+imprecise.
+
+That is a narrower paper than the proposal describes, and it is the honest one.
+
+## 7. Limitations
 
 OpenAlex only. No Semantic Scholar or Google Scholar cross-check, no citation
 snowballing beyond the landmark list, and abstracts were missing for
@@ -226,5 +282,8 @@ snowballing beyond the landmark list, and abstracts were missing for
 (title-only screening for those). Screening is model-applied at 0.80 measured
 precision on the decisive band, not hand-applied to all 2357 records.
 A work that frames the same contribution in unusual vocabulary and sits outside
-all 25 strata would be missed; the landmark recall check is the only
-evidence against that, and it failed once before the C strata were added.
+all 25 strata would be missed; the landmark recall check is the only evidence
+against that, and it failed once before the C strata were added. Section 6 is
+the direct demonstration of that failure mode: Pion and Vazquez (2025) is the
+single most consequential paper in this audit and no stratum found it - it
+surfaced only because the proposal named the authors.
