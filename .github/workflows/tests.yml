@@ -1,0 +1,107 @@
+name: tests
+
+# The fast job is the contract: the pre-registered validity tests must pass on a
+# clean ubuntu-latest machine built from environment.yml alone. Those pins were
+# solved on win-64, so this job is also the first real test of whether they
+# resolve on linux-64 - which is why build strings were deliberately omitted
+# from environment.yml.
+#
+# The smoke job is not a scientific result. It exists to prove the machinery
+# runs end to end and to measure wall-clock per step, so shard sizing for the
+# evaluation grid comes from a measurement.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff==0.14.0
+      - run: ruff check src tests scripts
+
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: pcal
+          miniforge-version: latest
+          auto-activate-base: false
+
+      - name: Record the solved environment
+        run: |
+          conda list
+          python -c "import numpy, scipy, sklearn, matminer, pymatgen; print(numpy.__version__, scipy.__version__, sklearn.__version__)"
+
+      - name: Install the package
+        run: pip install -e . --no-deps --no-build-isolation
+
+      - name: Validity tests (no network)
+        run: pytest -m "not slow" -v
+
+  smoke:
+    # One dataset, two seeds, twenty steps. No scientific result is produced
+    # here and none may be reported from it.
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    needs: tests
+    timeout-minutes: 90
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: pcal
+          miniforge-version: latest
+          auto-activate-base: false
+
+      - run: pip install -e . --no-deps --no-build-isolation
+
+      - name: Cache the featurized pool
+        uses: actions/cache@v4
+        with:
+          path: .cache/pcal
+          key: magpie-${{ hashFiles('configs/datasets.yaml') }}
+
+      - name: Pool construction on real data
+        run: pcal pool --dataset matbench_steels
+
+      - name: Real-data validity checks
+        run: pytest -m slow -v
+
+      - name: Smoke campaign
+        run: pcal run --config configs/smoke.yaml
+
+      - name: Merge
+        run: python scripts/merge_results.py results/raw/smoke results/processed/smoke.csv
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: smoke-results
+          path: |
+            results/raw/smoke/
+            results/processed/
+          retention-days: 14
