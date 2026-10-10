@@ -10,6 +10,12 @@ name: tests
 # runs end to end and to measure wall-clock per step, so shard sizing for the
 # evaluation grid comes from a measurement.
 
+# The "report the failure" steps exist because this project is driven through
+# the GitHub API: job logs are served from blob storage that the driving agent
+# cannot reach, so a failure that only appears in the log is invisible. Posting
+# the captured output as a commit comment puts it behind api.github.com, where
+# it can be read. Lint uses GitHub annotation format for the same reason.
+
 on:
   push:
     branches: [main]
@@ -29,11 +35,13 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install ruff==0.14.0
-      - run: ruff check src tests scripts
+      - run: ruff check --output-format=github src tests scripts
 
   tests:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    permissions:
+      contents: write
     defaults:
       run:
         shell: bash -el {0}
@@ -56,7 +64,25 @@ jobs:
         run: pip install -e . --no-deps --no-build-isolation
 
       - name: Validity tests (no network)
-        run: pytest -m "not slow" -v
+        run: |
+          set -o pipefail
+          pytest -m "not slow" -v 2>&1 | tee ci-output.txt
+
+      - name: Report the failure through the API
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### ${{ github.workflow }} / ${{ github.job }} failed"
+            echo ""
+            echo '```'
+            tail -c 50000 ci-output.txt 2>/dev/null || echo "no captured output"
+            echo '```'
+          } > ci-comment.md
+          gh api --method POST \
+            "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+            -F body=@ci-comment.md
 
   smoke:
     # One dataset, two seeds, twenty steps. No scientific result is produced
@@ -65,6 +91,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: tests
     timeout-minutes: 90
+    permissions:
+      contents: write
     defaults:
       run:
         shell: bash -el {0}
@@ -87,13 +115,35 @@ jobs:
           key: magpie-${{ hashFiles('configs/datasets.yaml') }}
 
       - name: Pool construction on real data
-        run: pcal pool --dataset matbench_steels
+        run: |
+          set -o pipefail
+          pcal pool --dataset matbench_steels 2>&1 | tee ci-output.txt
 
       - name: Real-data validity checks
-        run: pytest -m slow -v
+        run: |
+          set -o pipefail
+          pytest -m slow -v 2>&1 | tee -a ci-output.txt
 
       - name: Smoke campaign
-        run: pcal run --config configs/smoke.yaml
+        run: |
+          set -o pipefail
+          pcal run --config configs/smoke.yaml 2>&1 | tee -a ci-output.txt
+
+      - name: Report the failure through the API
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### ${{ github.workflow }} / ${{ github.job }} failed"
+            echo ""
+            echo '```'
+            tail -c 50000 ci-output.txt 2>/dev/null || echo "no captured output"
+            echo '```'
+          } > ci-comment.md
+          gh api --method POST \
+            "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+            -F body=@ci-comment.md
 
       - name: Merge
         run: python scripts/merge_results.py results/raw/smoke results/processed/smoke.csv
