@@ -1,0 +1,85 @@
+name: experiments
+
+# The evaluation grid, sharded by dataset, arm and seed block so no single job
+# approaches the six-hour cap. Manual dispatch only: an experiment run is a
+# deliberate act, never a side effect of a push.
+#
+# Raw per-run records are build artifacts, not repository content
+# (PREREGISTRATION.md Section 15). They are downloaded and merged by the
+# figures workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      config:
+        description: grid config to run
+        required: true
+        default: configs/grid_eval.yaml
+      dataset:
+        description: single dataset, or blank for all in the config
+        required: false
+        default: ""
+      arm:
+        description: single arm id, or blank for all in the config
+        required: false
+        default: ""
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.shards.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml
+      - id: shards
+        run: echo "matrix=$(python scripts/make_shards.py ${{ inputs.config }})" >> "$GITHUB_OUTPUT"
+      - run: python scripts/make_shards.py ${{ inputs.config }} | head -c 2000
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - if: inputs.dataset != '' && inputs.dataset != matrix.dataset
+        run: echo "skipping ${{ matrix.name }}" && exit 0
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: pcal
+          miniforge-version: latest
+          auto-activate-base: false
+
+      - run: pip install -e . --no-deps --no-build-isolation
+
+      - name: Cache the featurized pool
+        uses: actions/cache@v4
+        with:
+          path: .cache/pcal
+          key: magpie-${{ hashFiles('configs/datasets.yaml') }}
+
+      - name: Run shard
+        run: |
+          pcal run --config ${{ inputs.config }} \
+            --dataset ${{ matrix.dataset }} \
+            --arm ${{ matrix.arm }} \
+            --seeds ${{ matrix.seeds }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ matrix.name }}
+          path: results/raw/
+          retention-days: 30
