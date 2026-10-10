@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: >-
+  What an active learner can know about its own uncertainty:
+  propensity-corrected calibration monitoring in pool-based
+  materials optimization
+message: >-
+  If you refer to the pre-registered analysis plan, please cite the
+  archived release, which pins the frozen plan at the commit it was
+  frozen at.
+type: software
+authors:
+  - family-names: Farahmand
+    given-names: Kian
+repository-code: https://github.com/kianfarahmand/propensity-calibration-al
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23287243
+    description: >-
+      Version DOI for release prereg-v1.0.1, identical in content to the
+      frozen pre-registration tag prereg-v1. Cite this one.
+  - type: doi
+    value: 10.5281/zenodo.23287242
+    description: Concept DOI, always resolves to the latest archived version.
+license: BSD-3-Clause

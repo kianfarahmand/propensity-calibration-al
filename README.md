@@ -1,5 +1,7 @@
 # propensity-calibration-al
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23287242.svg)](https://doi.org/10.5281/zenodo.23287242)
+
 **What an active learner can know about its own uncertainty: propensity-corrected
 calibration monitoring in pool-based materials optimization.**
 
