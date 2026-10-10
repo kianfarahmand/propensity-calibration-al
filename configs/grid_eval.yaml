@@ -1,0 +1,13 @@
+# Evaluation grid. PREREGISTRATION.md Sections 9 and 10. Not runnable until
+# acquisition.c is fixed in configs/policies.yaml by S05: the CLI refuses to
+# start an arm that needs c while c is null.
+name: evaluation
+datasets: [matbench_expt_gap, elastic_tensor_2015, heusler_magnetic]
+arms: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+seeds: {start: 0, count: 30}
+n_steps: 150
+n_init: 10
+shard:
+  by: [dataset, arm, seed_block]
+  seed_block_size: 5            # 6 blocks x 30 seeds; sized for the 6-hour cap
+out_dir: results/raw/evaluation
