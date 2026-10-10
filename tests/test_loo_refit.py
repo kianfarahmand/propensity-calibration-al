@@ -33,7 +33,7 @@ def fitted(pool, policies):
 def test_closed_form_matches_an_explicit_refit(fitted, i):
     surrogate, _ = fitted
     mu_loo, sd_loo = surrogate.loo_predict()
-    mu_ref, sd_ref, X_kept = surrogate.refit_without(i)
+    mu_ref, sd_ref, _ = surrogate.refit_without(i)
     assert mu_loo[i] == pytest.approx(mu_ref, rel=1e-6, abs=1e-8)
     assert sd_loo[i] == pytest.approx(sd_ref, rel=1e-6, abs=1e-8)
 

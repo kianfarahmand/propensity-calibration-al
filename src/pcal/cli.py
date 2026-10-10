@@ -88,7 +88,8 @@ def cmd_run(args) -> int:
                 print(json.dumps({
                     "dataset": dataset, "arm": arm_id, "arm_name": arm["name"],
                     "seed": seed, "wall_seconds": round(record["wall_seconds"], 2),
-                    "median_step_seconds": round(float(np.median(per_step)), 4) if per_step else None,
+                    "median_step_seconds": (round(float(np.median(per_step)), 4)
+                                            if per_step else None),
                     "summary": record["summary"],
                 }, default=_jsonable), flush=True)
 
