@@ -44,6 +44,7 @@ class WindowPoint:
     sd: float = np.nan
     mu_current: float = np.nan   # under the current surrogate, point held out
     sd_current: float = np.nan
+    x: np.ndarray | None = None  # pool features, for the localized monitor only
 
 
 class Monitor:
@@ -195,7 +196,6 @@ class LocalizedConformalMonitor(Monitor):
         z = self.residuals(alpha, lam)
         if self.pool_X is None or self.pool_X.shape[0] == 0:
             return float(np.mean(z)), float(z.size)
-        Xw = np.asarray([self.pool_X[0] * 0.0 for _ in self.window]) if False else None
         Xw = self._window_features()
         if Xw is None:
             return float(np.mean(z)), float(z.size)
