@@ -42,13 +42,17 @@ _TINY = 1e-12
 def build_kernel(cfg: dict):
     """The pre-registered kernel, built from configs/policies.yaml."""
     s = cfg["surrogate"]
+    def pair(key):
+        lo, hi = s[key]
+        return (float(lo), float(hi))
+
     return (
-        ConstantKernel(1.0, tuple(s["constant_bounds"]))
+        ConstantKernel(1.0, pair("constant_bounds"))
         * Matern(length_scale=float(s["length_scale_init"]),
-                 length_scale_bounds=tuple(s["length_scale_bounds"]),
+                 length_scale_bounds=pair("length_scale_bounds"),
                  nu=float(s["nu"]))
         + WhiteKernel(noise_level=float(s["noise_level_init"]),
-                      noise_level_bounds=tuple(s["noise_level_bounds"]))
+                      noise_level_bounds=pair("noise_level_bounds"))
     )
 
 
