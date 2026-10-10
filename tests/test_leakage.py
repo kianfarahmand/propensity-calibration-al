@@ -23,9 +23,19 @@ def campaign(pool, arm, seed=0, **kwargs):
                         n_steps=N_STEPS, n_init=N_INIT, **kwargs)
 
 
-def strip_timing(trajectory):
-    """Wall clock is the one field that legitimately differs between runs."""
-    return [{k: v for k, v in step.items() if k != "seconds"} for step in trajectory]
+def comparable(trajectory):
+    """Everything in a step that must be reproducible, in a comparable form.
+
+    Wall clock is dropped: it is the one field that legitimately differs. NaN is
+    mapped to a sentinel because a suppressed reading is recorded as NaN, and
+    NaN does not equal itself - without this, two identical trajectories compare
+    unequal and the test passes for the wrong reason or fails for no reason.
+    """
+    def clean(value):
+        return "nan" if isinstance(value, float) and np.isnan(value) else value
+
+    return [{k: clean(v) for k, v in step.items() if k != "seconds"}
+            for step in trajectory]
 
 
 # ---------------------------------------------------------------- test 1
@@ -52,7 +62,7 @@ def test_permuting_never_selected_labels_leaves_trajectory_identical(pool, arms)
     assert not np.allclose(y_permuted, pool.y), "the permutation changed nothing"
 
     other = campaign(pool, arms[7], y_override=y_permuted)
-    assert strip_timing(other["trajectory"]) == strip_timing(base["trajectory"])
+    assert comparable(other["trajectory"]) == comparable(base["trajectory"])
     assert other["initial_indices"] == base["initial_indices"]
 
 
