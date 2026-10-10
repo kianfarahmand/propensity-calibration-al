@@ -1,0 +1,73 @@
+name: figures
+
+# Merge raw run records into the processed tables and, once S08 has written the
+# figure script, render the figures. Manual dispatch only.
+#
+# This workflow deliberately does not invent a figure step: scripts/make_figures.py
+# is an S08 deliverable, and until it exists this job merges tables and says so
+# rather than producing an empty figures directory that looks like a result.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: workflow run id to pull raw artifacts from (blank = use results/raw in the repo)
+        required: false
+        default: ""
+      label:
+        description: name for the merged tables
+        required: true
+        default: evaluation
+
+jobs:
+  figures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: pcal
+          miniforge-version: latest
+          auto-activate-base: false
+
+      - run: pip install -e . --no-deps --no-build-isolation
+
+      - name: Download raw records from a previous run
+        if: inputs.run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: raw-*
+          merge-multiple: true
+          path: results/raw/
+
+      - name: Merge
+        run: |
+          python scripts/merge_results.py \
+            results/raw/${{ inputs.label }} \
+            results/processed/${{ inputs.label }}.csv
+
+      - name: Figures
+        run: |
+          if [ -f scripts/make_figures.py ]; then
+            python scripts/make_figures.py results/processed/${{ inputs.label }}.csv results/figures
+          else
+            echo "scripts/make_figures.py does not exist yet - it is an S08 deliverable."
+            echo "Tables were merged; no figures were produced."
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: processed-${{ inputs.label }}
+          path: |
+            results/processed/
+            results/figures/
+          retention-days: 90
+          if-no-files-found: warn
