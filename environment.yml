@@ -1,0 +1,26 @@
+# Environment for propensity-calibration-al.
+#
+# NOTE ON PINS: the bounds below are floors, not an exact lock. Step 1
+# (environment build and data-access verification) replaces this file with a
+# full `conda env export --no-builds` of the first environment that solves AND
+# successfully downloads the benchmark datasets, so that CI and a laptop run
+# resolve identically. Do not start an evaluation run against this floor file.
+name: pcal
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.11
+  - pandas>=2.1
+  - scikit-learn>=1.4
+  - statsmodels>=0.14
+  - matplotlib-base>=3.8
+  - pyyaml>=6.0
+  - pymatgen>=2024.1.1
+  - matminer>=0.9.2
+  - pytest>=7.4
+  - pytest-xdist>=3.5
+  - pip
+  - pip:
+      - -e .
