@@ -1,0 +1,37 @@
+dataset,link,arm,arm_name,reference_arm,reference_name,isolates,metric,higher_is_better,n_pairs,mean_arm,mean_reference,mean_difference,ci_lo,ci_hi,p_raw,excludes_zero,favors_arm,status
+elastic_tensor_2015,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,simple_regret,0,30,0.000000,0.000000,0.000000,nan,nan,1.000000,0,0,pre-registered secondary (H4)
+elastic_tensor_2015,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,topk_enrichment_10,1,30,0.880000,0.903333,-0.023333,-0.043333,-0.010000,0.001648,1,0,pre-registered secondary (H4)
+elastic_tensor_2015,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,topk_enrichment_50,1,30,0.600000,0.690000,-0.090000,-0.116000,-0.069333,0.000019,1,0,pre-registered secondary (H4)
+elastic_tensor_2015,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,discovery_auc,1,30,0.924062,0.935888,-0.011826,-0.028336,-0.002036,0.012216,1,0,pre-registered secondary (H4)
+elastic_tensor_2015,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,simple_regret,0,30,0.000000,0.000000,0.000000,nan,nan,1.000000,0,0,pre-registered (G4)
+elastic_tensor_2015,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,topk_enrichment_10,1,30,0.900000,0.880000,0.020000,-0.006667,0.036667,0.141820,0,1,pre-registered (G4)
+elastic_tensor_2015,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,topk_enrichment_50,1,30,0.616000,0.600000,0.016000,-0.011333,0.041333,0.246575,0,1,pre-registered (G4)
+elastic_tensor_2015,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,discovery_auc,1,30,0.923674,0.924062,-0.000388,-0.010523,0.010305,0.942226,0,0,pre-registered (G4)
+elastic_tensor_2015,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,simple_regret,0,30,0.000000,0.000000,0.000000,nan,nan,1.000000,0,0,descriptive
+elastic_tensor_2015,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,topk_enrichment_10,1,30,0.900000,0.903333,-0.003333,-0.023333,0.010000,0.460566,0,0,descriptive
+elastic_tensor_2015,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,topk_enrichment_50,1,30,0.616000,0.690000,-0.074000,-0.100000,-0.050667,0.000070,1,0,descriptive
+elastic_tensor_2015,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,discovery_auc,1,30,0.923674,0.935888,-0.012214,-0.026799,-0.003363,0.004329,1,0,descriptive
+heusler_magnetic,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,simple_regret,0,30,0.000000,0.000000,0.000000,nan,nan,1.000000,0,0,pre-registered secondary (H4)
+heusler_magnetic,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,topk_enrichment_10,1,30,0.943333,0.946667,-0.003333,-0.030000,0.016667,0.572050,0,0,pre-registered secondary (H4)
+heusler_magnetic,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,topk_enrichment_50,1,30,0.849333,0.870667,-0.021333,-0.032667,-0.012000,0.000030,1,0,pre-registered secondary (H4)
+heusler_magnetic,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,discovery_auc,1,30,0.943205,0.950339,-0.007134,-0.014463,-0.002415,0.000735,1,0,pre-registered secondary (H4)
+heusler_magnetic,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,simple_regret,0,30,0.000000,0.000000,0.000000,nan,nan,1.000000,0,0,pre-registered (G4)
+heusler_magnetic,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,topk_enrichment_10,1,30,0.933333,0.943333,-0.010000,-0.036667,0.013333,0.300958,0,0,pre-registered (G4)
+heusler_magnetic,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,topk_enrichment_50,1,30,0.845333,0.849333,-0.004000,-0.024667,0.012000,0.641033,0,0,pre-registered (G4)
+heusler_magnetic,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,discovery_auc,1,30,0.950682,0.943205,0.007477,0.001808,0.015096,0.008079,1,1,pre-registered (G4)
+heusler_magnetic,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,simple_regret,0,30,0.000000,0.000000,0.000000,nan,nan,1.000000,0,0,descriptive
+heusler_magnetic,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,topk_enrichment_10,1,30,0.933333,0.946667,-0.013333,-0.040000,0.006667,0.134632,0,0,descriptive
+heusler_magnetic,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,topk_enrichment_50,1,30,0.845333,0.870667,-0.025333,-0.040426,-0.012000,0.000489,1,0,descriptive
+heusler_magnetic,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,discovery_auc,1,30,0.950682,0.950339,0.000343,-0.004743,0.006366,0.875213,0,1,descriptive
+matbench_expt_gap,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,simple_regret,0,30,0.320667,0.303333,0.017333,-0.470000,0.621453,0.926197,0,0,pre-registered secondary (H4)
+matbench_expt_gap,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,topk_enrichment_10,1,30,0.656667,0.753333,-0.096667,-0.216667,0.033333,0.147467,0,0,pre-registered secondary (H4)
+matbench_expt_gap,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,topk_enrichment_50,1,30,0.374000,0.398667,-0.024667,-0.093283,0.036000,0.427364,0,0,pre-registered secondary (H4)
+matbench_expt_gap,randomize (5 - 2),5,boltz_ei_none,2,greedy_ei,the cost of randomizing the acquisition,discovery_auc,1,30,0.683894,0.688400,-0.004505,-0.083712,0.085403,0.933207,0,0,pre-registered secondary (H4)
+matbench_expt_gap,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,simple_regret,0,30,0.395667,0.320667,0.075000,-0.553120,0.578000,0.826132,0,0,pre-registered (G4)
+matbench_expt_gap,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,topk_enrichment_10,1,30,0.576667,0.656667,-0.080000,-0.220000,0.053333,0.237150,0,0,pre-registered (G4)
+matbench_expt_gap,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,topk_enrichment_50,1,30,0.358000,0.374000,-0.016000,-0.072667,0.046000,0.591863,0,0,pre-registered (G4)
+matbench_expt_gap,monitor (7 - 5),7,boltz_ei_ipw,5,boltz_ei_none,what the corrected monitor buys back,discovery_auc,1,30,0.704396,0.683894,0.020502,-0.072445,0.116109,0.660169,0,1,pre-registered (G4)
+matbench_expt_gap,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,simple_regret,0,30,0.395667,0.303333,0.092333,-0.363333,0.607000,0.691514,0,0,descriptive
+matbench_expt_gap,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,topk_enrichment_10,1,30,0.576667,0.753333,-0.176667,-0.303333,-0.046667,0.008328,1,0,descriptive
+matbench_expt_gap,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,topk_enrichment_50,1,30,0.358000,0.398667,-0.040667,-0.094000,0.014667,0.151576,0,0,descriptive
+matbench_expt_gap,net (7 - 2),7,boltz_ei_ipw,2,greedy_ei,the net against a greedy campaign,discovery_auc,1,30,0.704396,0.688400,0.015997,-0.066169,0.101825,0.726831,0,1,descriptive
