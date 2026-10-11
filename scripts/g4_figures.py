@@ -171,9 +171,14 @@ def paired_effects(rows: list[dict], datasets, out: Path) -> None:
             if i == len(METRIC_ORDER) - 1:
                 ax.set_xlabel("paired difference")
             if j == 0:
-                ax.annotate(METRIC_LABEL[metric], xy=(0.0, 1.02),
-                            xycoords="axes fraction", fontsize=SIZES[1],
-                            ha="left", va="bottom", color="#333333")
+                ax.set_ylabel(METRIC_LABEL[metric], fontsize=SIZES[1],
+                              color="#333333", labelpad=6)
+    handles = [plt.Line2D([], [], color="#1f4e9c", marker="o", markersize=3.2,
+                          linewidth=1.2, label="Holm-adjusted p < 0.05"),
+               plt.Line2D([], [], color="#8c8c8c", marker="o", markersize=3.2,
+                          linewidth=1.2, label="not separated from zero")]
+    axes[0, -1].legend(handles=handles, loc="lower right",
+                       fontsize=SIZES[2] - 0.5)
     fig.tight_layout()
     fig.savefig(out)
     plt.close(fig)
