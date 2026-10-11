@@ -174,3 +174,61 @@ runs in the correction's favour - the runs that drop out are the ones where it
 was least available - so the suppression table
 (`results/processed/g3_suppression.csv`) is reported beside every comparison and
 the Gate G3 verdict is read off both together.
+
+---
+
+## S07, 2026-10-11 — the Gate G4 comparison
+
+### 9. Top-k enrichment enters Holm once, at its less favourable k
+
+Commit: the one that adds `scripts/g4_primary.py`.
+
+**What.** Section 11 lists three co-primary optimization outcomes and reports
+the second of them, top-k enrichment, at two values of k (10 and 50). Section
+12 corrects "the three co-primary outcomes" by Holm within each (comparison,
+dataset). The frozen text does not say how the two k collapse into the one
+outcome Holm counts. `scripts/g4_primary.py` takes the conservative reading:
+the outcome's p-value is the **larger** of the two k, and the outcome counts in
+the focal arm's favour only if **both** k point that way. Both k are reported
+in full in every row of `results/processed/g4_primary.csv`, so the other
+reading can be recomputed from the committed table.
+
+**When it was decided.** **Before seeing the affected result.** The rule and
+the script were committed before the G4 comparisons were computed; the arms-5,
+8, 9, 10 and 11 dispatch was still running and no comparison involving them had
+been read.
+
+**Why.** The alternatives both weaken the gate. Letting the two k enter Holm as
+separate tests makes the correction a four-test family and changes the stated
+"three co-primary outcomes" into four; picking one k and discarding the other
+is a free choice made where the result is visible. Taking the worse of the two
+and requiring agreement in sign cannot make the gate easier to pass, which is
+the property that matters for a pre-registered falsifier.
+
+**What it affects.** Every Holm-corrected row of `g4_primary.csv` and
+`g4_randomization_cost.csv`, and therefore the G4 verdict. It does not touch
+G2 or G3, which use neither enrichment nor Holm.
+
+### 10. The BCa interval and the p-value come from one bootstrap
+
+Commit: the one that adds `scripts/g4_primary.py`.
+
+**What.** Section 12 fixes the interval (95% BCa, 10000 resamples, over runs)
+but G4 also needs p-values, because Holm corrects p-values and not intervals.
+The p-value used is the achieved significance level of the same bootstrap - the
+alpha whose BCa endpoint falls exactly on zero, obtained by inverting the BCa
+endpoint equation - rather than a separate test.
+
+**When it was decided.** **Before seeing the affected result**, with the script.
+
+**Why.** A second procedure (a t-test, a sign test, a permutation test) could
+disagree with the interval the plan actually names, and then the gate would
+depend on which of the two was quoted. Inverting the interval makes that
+impossible by construction. The implementation was checked against
+`scipy.stats.bootstrap(method="BCa")` on continuous samples: identical
+endpoints to all printed digits.
+
+**What it affects.** The `p_raw`, `outcome_p` and `p_holm` columns of the two
+G4 tables. Ties at exactly zero - simple regret is identically zero for every
+expected-improvement arm on `elastic_tensor_2015` and `heusler_magnetic` -
+return p = 1 and are never read as a win.
