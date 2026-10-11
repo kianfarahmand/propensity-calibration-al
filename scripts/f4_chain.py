@@ -142,6 +142,7 @@ def figure(rows, datasets, out: Path) -> None:
                     # A degenerate difference: every pair identical, no interval.
                     ax.plot([m], [y], marker="x", color=colour, ms=4,
                             mew=1.0, zorder=3)
+            ax.locator_params(axis="x", nbins=4)
             ax.set_yticks(range(len(LINKS)))
             ax.set_yticklabels([lab for _f, _o, lab, _c in LINKS][::-1]
                                if j == 0 else [""] * len(LINKS))

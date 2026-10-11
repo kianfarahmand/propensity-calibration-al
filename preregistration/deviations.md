@@ -232,3 +232,45 @@ endpoints to all printed digits.
 G4 tables. Ties at exactly zero - simple regret is identically zero for every
 expected-improvement arm on `elastic_tensor_2015` and `heusler_magnetic` -
 return p = 1 and are never read as a win.
+
+## S08, 2026-10-11 — the post-hoc sensitivity analysis
+
+### 11. A sensitivity analysis over the estimator window and the ESS floor
+
+Commit: the one that adds `scripts/sensitivity_window.py`.
+
+**What.** Section 7 fixes the estimator at a 30-step window, weights clipped at
+the 95th percentile within the window, and an ESS floor of 10, and G3 is
+decided at that setting and only that setting. This entry adds a re-scoring of
+the same committed per-step log at windows of 30, 60 and 100 and ESS floors of
+10, 5, 3 and 0, reported in `results/processed/sensitivity_window.csv` and
+`results/figures/sensitivity_window.png`.
+
+**When it was decided.** **After seeing the affected result.** G3 and G4 had
+both been computed and had both failed, and the suppression rates behind them -
+the corrected reading is unavailable on 40.0, 57.2 and 61.4 per cent of window
+steps - are what prompted the question.
+
+**Why.** The frozen setting is the one the claim is made at, and no number in
+this file moves a gate verdict. But a reader is owed the difference between two
+readings of the G3 failure: that the propensity correction does not repay its
+variance at any reachable sample size, or that a 30-step window was simply too
+small a sample and the estimator was never given a fair test. The sensitivity
+answers which of those the data supports, and labels every row of its own table
+`post-hoc sensitivity` so it can never be quoted as a pre-registered result.
+
+**What it affects.** Nothing that is already decided. G3's verdict stands at
+window 30 and floor 10; the gate row in the results summary is unchanged. The
+sensitivity is reported beside it, as a limitation and a direction, never as a
+result.
+
+**What it cannot do.** The re-scoring is exact in the weights, the clipping and
+the ESS, and approximate in one respect: under the primary specification the
+leave-one-out refit recomputes a window point's `mu` and `sd` under the current
+surrogate at every read (Section 7.1), while the committed log holds only the
+value each point had at its own step. A longer window therefore carries older
+residuals than a re-run would. `scripts/sensitivity_window.py` refuses to write
+a table unless the rebuild reproduces the logged readings at the frozen window
+to 1e-6 on at least 99 per cent of non-suppressed steps, which bounds the
+fidelity of the base case but not of the extrapolation; the manuscript says so
+wherever the sensitivity is cited.

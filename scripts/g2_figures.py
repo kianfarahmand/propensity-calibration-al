@@ -95,10 +95,13 @@ def main() -> int:
             ax.errorbar([m], [y], xerr=[[m - lo], [hi - m]], fmt="o",
                         color=colour, ms=3.4, lw=1.2, capsize=2.0, zorder=3)
         ax.set_yticks(range(len(ARMS)))
-        ax.set_yticklabels([lab for _a, lab, _c in ARMS][::-1] if j == 0
-                           else [""] * len(ARMS))
+        # sharey=True means one shared formatter: set the labels once and hide
+        # them on the other panels, or the last assignment wins everywhere.
+        if j == 0:
+            ax.set_yticklabels([lab for _a, lab, _c in ARMS][::-1])
         ax.set_ylim(-0.6, len(ARMS) - 0.4)
-        ax.tick_params(axis="y", length=0)
+        ax.tick_params(axis="y", length=0, labelleft=(j == 0))
+        ax.locator_params(axis="x", nbins=5)
         ax.set_title(dataset, fontsize=SIZES[0])
         ax.set_xlabel("selected - pool coverage at 0.90", fontsize=SIZES[1])
     fig.suptitle("The gap an acquisition policy opens between what it sees and "
