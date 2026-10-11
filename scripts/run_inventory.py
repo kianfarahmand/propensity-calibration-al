@@ -133,7 +133,8 @@ def main() -> int:
     only_steps = sorted(set(counts) - set(runs))
     only_runs = sorted(set(runs) - set(counts))
     if only_steps:
-        problems.append(f"{len(only_steps)} runs in the per-step tables only, first {only_steps[:3]}")
+        problems.append(f"{len(only_steps)} runs in the per-step tables only, "
+                        f"first {only_steps[:3]}")
     if only_runs:
         problems.append(f"{len(only_runs)} runs with no logged steps, first {only_runs[:3]}")
     wrong = sorted(k for k, n in counts.items() if n != args.expect_steps)
