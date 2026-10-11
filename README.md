@@ -44,8 +44,9 @@ Three results, stated at the width the evidence supports:
    step rather than by the method.
 3. **The control loop does not pay at campaign scale.** The propensity-corrected
    reading beats the naive one on one dataset of three and loses on another; the
-   controller built on it beats no reference arm on any co-primary outcome on
-   any dataset. A post-hoc sweep over the estimator window and the
+   controller built on it beats all four reference arms on no co-primary
+   outcome on any dataset (1 of 48 Holm-corrected cells separates from zero in
+   its favour, and it only buys back what randomization cost). A post-hoc sweep over the estimator window and the
    effective-sample-size floor (540 extra runs) changes nothing. The mechanism
    is visible in the data: randomizing the acquisition is itself a debiasing
    step, so by the time propensities exist the bias they would correct has
