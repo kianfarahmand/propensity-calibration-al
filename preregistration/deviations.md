@@ -106,3 +106,35 @@ rather than a pool-marginal functional, so neither has an off-the-shelf estimato
 of `C_t(alpha)`. The harness needs all monitors to answer the same question for
 H2 and H3 to mean anything. The manuscript must describe these as adaptations
 and must not claim to have reproduced either paper's method.
+
+### 7. The ESS eligibility bar is read over the tuning pair pooled
+
+**What.** Section 10 selects `c` "averaged across the two tuning datasets and
+their 10 seeds, among values whose median ESS at step 100 is at least 10". It
+does not say over which population that median is taken. Read over the tuning
+pair pooled - the aggregation unit the same sentence names - all five values
+clear the bar, with a pooled median ESS at step 100 of 16.5 to 21.6, and the
+criterion selects `c = 1.0`. Read per dataset, no value clears: the median is
+30.0 on dielectric_constant and 3.2 to 4.7 on matbench_steels.
+
+Decided before any evaluation run existed, and before the Gate G2 arms were
+dispatched: the pooled reading. The per-dataset split is recorded here rather
+than smoothed over, because it is a finding in its own right.
+
+**Why.** The pooled reading is the one the sentence states. The per-dataset
+split is reported because it bears directly on Gate G3: on the 312-candidate
+matbench_steels pool the estimator is suppressed on 51 to 68 per cent of steps
+at every value of `c`, so a small pool with a peaked sampler is where the
+inverse-propensity monitor is least able to answer. It also shows that the
+pooled bar is carried by dielectric_constant, where the sampler is close to
+uniform at most steps - expected improvement there is numerically flat across
+the pool for long stretches, the median absolute deviation of the score is
+zero, and the floor in entry 4 then makes the softmax uniform. The consequence
+is that the tuning pair carries much less information about `c` than the grid
+of five values suggests: the spread of the criterion across the whole grid is
+0.0344 to 0.0437, and on dielectric_constant alone it is 0.0257 to 0.0283.
+
+**What this does not affect.** Gate G2 runs arms 1 to 4. Arms 2, 3 and 4 are
+greedy and never read `c`; arm 1 scores every candidate identically, so its
+sampling distribution is uniform for any `c`. The G2 result is invariant to
+this decision. S06 and S07, where arm 7 is the method, are not.

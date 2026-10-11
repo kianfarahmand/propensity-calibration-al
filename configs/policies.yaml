@@ -32,7 +32,14 @@ surrogate:                       # Section 5
 acquisition:                     # Section 6
   epsilon: 0.05                  # exploration floor, fixed, never tuned
   c_grid: [0.25, 0.5, 1.0, 2.0, 4.0]
-  c: null                        # set by S05 tuning; null means "not yet fixed"
+  c: 1.0                         # FROZEN by the S05 tuning sweep, 2026-10-11.
+                                 # Pre-registration Section 10, applied to
+                                 # results/processed/tuning_summary.csv: pair-mean
+                                 # absolute deviation 0.0344 at c=1.0, the minimum
+                                 # over {0.25, 0.5, 1.0, 2.0, 4.0}. Eligibility
+                                 # read over the tuning pair pooled; see
+                                 # deviations.md entry 7. The tuning datasets are
+                                 # not used again for any purpose.
   tau_rule: "c * MAD of the acquisition score over the current pool"
   mad_floor: 1.0e-12             # not pre-registered; guards a constant score
   ucb_kappa: 2.0                 # not pre-registered; see deviations.md
