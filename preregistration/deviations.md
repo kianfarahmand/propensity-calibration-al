@@ -138,3 +138,39 @@ of five values suggests: the spread of the criterion across the whole grid is
 greedy and never read `c`; arm 1 scores every candidate identically, so its
 sampling distribution is uniform for any `c`. The G2 result is invariant to
 this decision. S06 and S07, where arm 7 is the method, are not.
+
+---
+
+## S06, 2026-10-11 — the Gate G3 comparison
+
+### 8. Runs with no eligible reading are dropped from the pairing
+
+Commit: `14394deb`.
+
+**What.** Section 13 compares arms on the mean absolute deviation of the
+monitor's reading from the evaluator's `C_t(alpha)`, "over non-suppressed steps"
+in the window, paired on `(dataset, seed)`. On some runs the inverse-propensity
+estimator is suppressed at *every* step in the window, so its deviation is
+undefined. Those `(dataset, seed)` pairs are dropped from the comparison rather
+than imputed, and the surviving pair count is reported in every row of
+`results/processed/g3_estimator_error.csv`.
+
+**When it was decided.** **After seeing the results** - it is forced by them.
+Nothing in the frozen text anticipated a run that never produces a reading.
+
+**Why.** The alternatives are worse. Imputing the suppressed steps with the held
+reading would score the monitor on a value it refused to assert; scoring a
+missing deviation as zero or as the naive arm's value would invent a
+measurement. Dropping the pair keeps the comparison between two quantities that
+both exist, at the cost of conditioning on the estimator having answered at
+least once.
+
+**What it affects.** Arm 7 against arm 6: 30, 30 and 27 pairs on
+`elastic_tensor_2015`, `heusler_magnetic` and `matbench_expt_gap`. The
+ablations lose more: arm 13 (no clipping) retains 16 pairs on own support and
+10 on the common support of `matbench_expt_gap`, because unclipped weights push
+the ESS below the floor on 88 per cent of window steps there. The conditioning
+runs in the correction's favour - the runs that drop out are the ones where it
+was least available - so the suppression table
+(`results/processed/g3_suppression.csv`) is reported beside every comparison and
+the Gate G3 verdict is read off both together.
