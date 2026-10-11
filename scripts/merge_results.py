@@ -19,11 +19,11 @@ import sys
 from pathlib import Path
 
 RUN_FIELDS = ["dataset", "arm", "arm_name", "seed", "monitor", "controller",
-              "randomized", "alpha", "n_steps", "wall_seconds"]
+              "randomized", "alpha", "n_steps", "wall_seconds", "c"]
 SUMMARY_FIELDS = ["simple_regret", "topk_enrichment_10", "topk_enrichment_50",
                   "discovery_auc", "mean_absolute_deviation", "suppression_rate",
                   "mean_ess", "final_lambda"]
-STEP_FIELDS = ["dataset", "arm", "seed", "step", "reading", "ess", "suppressed",
+STEP_FIELDS = ["dataset", "arm", "seed", "c", "step", "reading", "ess", "suppressed",
                "lambda", "propensity", "pool_size", "best_y", "policy", "seconds",
                "mu", "sd", "y", "pool_coverage"]
 # mu, sd and y are the pre-observation prediction at the selected point and the
@@ -55,6 +55,9 @@ def main() -> int:
         writer.writeheader()
         for r in records:
             row = {k: r.get(k) for k in RUN_FIELDS}
+            # c is the one config value a row cannot be read without: the S05
+            # sweep runs the same (dataset, arm, seed) at five values of it.
+            row["c"] = r.get("config_echo", {}).get("c")
             row.update({k: r.get("summary", {}).get(k) for k in SUMMARY_FIELDS})
             writer.writerow(row)
 
@@ -67,6 +70,7 @@ def main() -> int:
             for s in r["trajectory"]:
                 row = {k: s.get(k) for k in STEP_FIELDS if k in s}
                 row.update({"dataset": r["dataset"], "arm": r["arm"], "seed": r["seed"],
+                            "c": r.get("config_echo", {}).get("c"),
                             "pool_coverage": truth.get(s["step"])})
                 writer.writerow(row)
 

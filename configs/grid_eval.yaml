@@ -9,5 +9,15 @@ n_steps: 150
 n_init: 10
 shard:
   by: [dataset, arm, seed_block]
-  seed_block_size: 5            # 6 blocks x 30 seeds; sized for the 6-hour cap
+  # Sized from the S05 step-1 measurement, not from the S04 smoke run: arm 7
+  # (the most expensive arm - it carries the leave-one-out refit) on
+  # dielectric_constant, 1056 candidates, 150 steps, took a median 0.101 s and
+  # a maximum 0.736 s per step, 16.4 s for the whole run. Scaling the per-step
+  # cost linearly to the 3000-candidate cap gives ~0.3 s, so 15 runs is about
+  # 11 minutes of campaign plus ~5 minutes of environment and featurization -
+  # a factor of twenty under the six-hour cap, not the factor of two the
+  # procedure asks for as a minimum. The block size is therefore set by job
+  # count rather than by the cap: 15 keeps the full 13-arm grid at 78 matrix
+  # jobs, which clears the 20-job concurrency ceiling in four waves.
+  seed_block_size: 15
 out_dir: results/raw/evaluation

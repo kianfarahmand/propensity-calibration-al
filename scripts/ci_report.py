@@ -71,23 +71,26 @@ def main() -> int:
     if wall:
         out += [f"Per-run wall seconds: median {st.median(wall):.4g}, max {max(wall):.4g}.", ""]
 
+    # Grouped by (dataset, arm, c): a sweep puts the same (dataset, arm, seed)
+    # in the table five times and only c tells the rows apart.
     ess_at = {}
     for s in steps:
         if str(s.get("step")) == str(args.ess_step):
             v = num(s, "ess")
             if v is not None:
-                ess_at.setdefault((s.get("dataset"), s.get("arm")), []).append(v)
+                ess_at.setdefault((s.get("dataset"), s.get("arm"), s.get("c")), []).append(v)
 
     groups: dict[tuple, list[dict]] = {}
     for r in runs:
-        groups.setdefault((r.get("dataset"), r.get("arm"), r.get("arm_name")), []).append(r)
+        key = (r.get("dataset"), r.get("arm"), r.get("c"), r.get("arm_name"))
+        groups.setdefault(key, []).append(r)
 
-    out += ["| dataset | arm | n | " + " | ".join(OUTCOMES) +
+    out += ["| dataset | arm | c | n | " + " | ".join(OUTCOMES) +
             f" | median ESS @{args.ess_step} |",
-            "|---" * (4 + len(OUTCOMES)) + "|"]
-    for (ds, arm, name), rows in sorted(groups.items(), key=lambda kv: str(kv[0])):
-        e = ess_at.get((ds, arm), [])
-        out.append(f"| {ds} | {arm} {name} | {len(rows)} | " +
+            "|---" * (5 + len(OUTCOMES)) + "|"]
+    for (ds, arm, c, name), rows in sorted(groups.items(), key=lambda kv: str(kv[0])):
+        e = ess_at.get((ds, arm, c), [])
+        out.append(f"| {ds} | {arm} {name} | {c or '-'} | {len(rows)} | " +
                    " | ".join(fmt(agg(rows, k)) for k in OUTCOMES) +
                    f" | {fmt(st.median(e)) if e else '-'} |")
     out.append("")
