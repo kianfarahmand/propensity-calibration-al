@@ -1,0 +1,2 @@
+dataset,arm,arm_name,seed,monitor,controller,randomized,alpha,n_steps,wall_seconds,simple_regret,topk_enrichment_10,topk_enrichment_50,discovery_auc,mean_absolute_deviation,suppression_rate,mean_ess,final_lambda
+dielectric_constant,7,boltz_ei_ipw,0,ipw,recalibration,True,0.9,150,16.409690856933594,159.20999999999998,0.4,0.38,0.29922274655986036,0.03918223172528139,0.0,21.66014695280027,0.20697526243918157
