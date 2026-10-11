@@ -24,7 +24,9 @@ import math
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
@@ -77,7 +79,7 @@ def main() -> int:
     for j, dataset in enumerate(datasets):
         ax = axes[0][j]
         ax.axvline(0.0, color="#999999", lw=0.6, zorder=0)
-        for k, (arm, label, colour) in enumerate(ARMS):
+        for k, (arm, _label, colour) in enumerate(ARMS):
             y = len(ARMS) - 1 - k
             gaps = [num(r, "gap") for r in per_run
                     if r["dataset"] == dataset and int(r["arm"]) == arm]

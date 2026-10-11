@@ -32,7 +32,9 @@ import math
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
@@ -94,7 +96,7 @@ def read_best_so_far(paths, arms) -> dict:
 def discovery_curves(curves: dict, datasets, out: Path) -> None:
     fig, axes = plt.subplots(1, len(datasets), figsize=(7.2, 2.5), sharex=True)
     axes = np.atleast_1d(axes)
-    for ax, dataset in zip(axes, datasets):
+    for ax, dataset in zip(axes, datasets, strict=True):
         for arm, label, color in ARMS:
             per_seed = curves.get((dataset, arm))
             if not per_seed:

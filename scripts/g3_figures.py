@@ -24,7 +24,9 @@ import math
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
@@ -128,7 +130,7 @@ def ess_by_step(agg: dict, dataset: str, arm: int, steps: np.ndarray):
 def figure_truth(agg, datasets, steps, out_path: Path, window, floor_frac=0.5):
     fig, axes = plt.subplots(1, len(datasets), figsize=(7.1, 2.3), sharey=True)
     axes = np.atleast_1d(axes)
-    for ax, dataset in zip(axes, datasets):
+    for ax, dataset in zip(axes, datasets, strict=True):
         ax.axvspan(window[0], window[1], color="0.93", zorder=0, lw=0)
         truth = truth_by_step(agg, dataset, 7, steps)
         ax.plot(steps, truth, color=TRUTH_COLOR, lw=1.4, zorder=1)
@@ -167,7 +169,7 @@ def figure_truth(agg, datasets, steps, out_path: Path, window, floor_frac=0.5):
 def figure_ess(agg, datasets, steps, out_path: Path, floor=10.0):
     fig, axes = plt.subplots(1, len(datasets), figsize=(7.1, 2.3), sharey=True)
     axes = np.atleast_1d(axes)
-    for ax, dataset in zip(axes, datasets):
+    for ax, dataset in zip(axes, datasets, strict=True):
         for arm in (6, 7, 12, 13):
             _label, color = ARMS[arm]
             med, q1, q3 = ess_by_step(agg, dataset, arm, steps)
@@ -217,7 +219,8 @@ def main() -> int:
     figure_truth(agg, datasets, steps, out_dir / "g3_estimator_vs_truth.png", args.window)
     figure_ess(agg, datasets, steps, out_dir / "g3_ess.png")
     n_cells = sum(len(c) for c in agg.values())
-    print(f"{n_cells} (arm, step) cells -> {out_dir}/g3_estimator_vs_truth.png, {out_dir}/g3_ess.png")
+    print(f"{n_cells} (arm, step) cells -> {out_dir}/g3_estimator_vs_truth.png, "
+          f"{out_dir}/g3_ess.png")
     return 0
 
 

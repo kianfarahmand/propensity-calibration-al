@@ -33,7 +33,9 @@ import sys
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
@@ -125,7 +127,7 @@ def figure(rows, datasets, out: Path) -> None:
         for j, dataset in enumerate(datasets):
             ax = axes[i][j]
             ax.axvline(0.0, color="#999999", lw=0.6, zorder=0)
-            for k, (focal, other, label, colour) in enumerate(LINKS):
+            for k, (focal, other, _label, colour) in enumerate(LINKS):
                 hit = [r for r in rows if r["dataset"] == dataset
                        and r["metric"] == metric and r["arm"] == focal
                        and r["reference_arm"] == other]
