@@ -23,9 +23,9 @@ RUN_FIELDS = ["dataset", "arm", "arm_name", "seed", "monitor", "controller",
 SUMMARY_FIELDS = ["simple_regret", "topk_enrichment_10", "topk_enrichment_50",
                   "discovery_auc", "mean_absolute_deviation", "suppression_rate",
                   "mean_ess", "final_lambda"]
-STEP_FIELDS = ["dataset", "arm", "seed", "c", "step", "reading", "ess", "suppressed",
-               "lambda", "propensity", "pool_size", "best_y", "policy", "seconds",
-               "mu", "sd", "y", "pool_coverage"]
+STEP_FIELDS = ["dataset", "arm", "seed", "c", "step", "index", "reading", "ess",
+               "suppressed", "lambda", "propensity", "pool_size", "best_y", "policy",
+               "seconds", "mu", "sd", "y", "pool_coverage"]
 # mu, sd and y are the pre-observation prediction at the selected point and the
 # label that came back. Gate G2 is the coverage indicator built from those three
 # against pool_coverage in the same row, so they have to survive the merge.
