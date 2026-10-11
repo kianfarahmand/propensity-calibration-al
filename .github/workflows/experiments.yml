@@ -1,12 +1,16 @@
 name: experiments
 
-# The evaluation grid, sharded by dataset, arm and seed block so no single job
+# The experiment grid, sharded by dataset, arm and seed block so no single job
 # approaches the six-hour cap. Manual dispatch only: an experiment run is a
 # deliberate act, never a side effect of a push.
 #
-# Raw per-run records are build artifacts, not repository content
-# (PREREGISTRATION.md Section 15). They are downloaded and merged by the
-# figures workflow.
+# Raw per-run records stay build artifacts (PREREGISTRATION.md Section 15). The
+# collect job merges every shard of one dispatch into the processed tables,
+# commits those (they are repository content), and posts the summary as a
+# commit comment. That last part is not decoration: job logs and build
+# artifacts are served from blob storage an API-driven agent cannot reach, so a
+# result that exists only in the log or only in an artifact is invisible to
+# whoever dispatched the run.
 
 on:
   workflow_dispatch:
@@ -15,12 +19,32 @@ on:
         description: grid config to run
         required: true
         default: configs/grid_eval.yaml
+      label:
+        description: name for the merged tables in results/processed
+        required: true
+        default: evaluation
       dataset:
         description: single dataset, or blank for all in the config
         required: false
         default: ""
       arm:
         description: single arm id, or blank for all in the config
+        required: false
+        default: ""
+      seeds:
+        description: "seed spec for every shard (0:1, or 0,3,7); blank uses the config's blocks"
+        required: false
+        default: ""
+      n_steps:
+        description: step count override, or blank for the config's value
+        required: false
+        default: ""
+      set:
+        description: "space-separated dotted overrides, e.g. acquisition.c=1.0"
+        required: false
+        default: ""
+      out:
+        description: raw output directory, or blank for the config's out_dir
         required: false
         default: ""
 
@@ -36,9 +60,14 @@ jobs:
           python-version: "3.11"
       - run: pip install pyyaml
       - id: shards
+        env:
+          CONFIG: ${{ inputs.config }}
+          DATASET: ${{ inputs.dataset }}
+          ARM: ${{ inputs.arm }}
+          SEEDS: ${{ inputs.seeds }}
         run: |
-          MATRIX=$(python scripts/make_shards.py ${{ inputs.config }} \
-            --dataset "${{ inputs.dataset }}" --arm "${{ inputs.arm }}")
+          MATRIX=$(python scripts/make_shards.py "$CONFIG" \
+            --dataset "$DATASET" --arm "$ARM" --seeds "$SEEDS")
           echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
           echo "$MATRIX" | head -c 2000
 
@@ -46,6 +75,8 @@ jobs:
     needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 350
+    permissions:
+      contents: write
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -72,14 +103,101 @@ jobs:
           key: magpie-${{ hashFiles('configs/datasets.yaml') }}
 
       - name: Run shard
+        env:
+          CONFIG: ${{ inputs.config }}
+          DATASET: ${{ matrix.dataset }}
+          ARM: ${{ matrix.arm }}
+          SEEDS: ${{ matrix.seeds }}
+          NSTEPS: ${{ inputs.n_steps }}
+          SETS: ${{ inputs.set }}
+          OUT: ${{ inputs.out }}
         run: |
-          pcal run --config ${{ inputs.config }} \
-            --dataset ${{ matrix.dataset }} \
-            --arm ${{ matrix.arm }} \
-            --seeds ${{ matrix.seeds }}
+          set -o pipefail
+          ARGS=(run --config "$CONFIG" --dataset "$DATASET" --arm "$ARM" --seeds "$SEEDS")
+          if [ -n "$NSTEPS" ]; then ARGS+=(--n-steps "$NSTEPS"); fi
+          if [ -n "$OUT" ]; then ARGS+=(--out "$OUT"); fi
+          for kv in $SETS; do ARGS+=(--set "$kv"); done
+          echo "pcal ${ARGS[*]}"
+          pcal "${ARGS[@]}" 2>&1 | tee ci-output.txt
+
+      - name: Report the failure through the API
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHARD: ${{ matrix.name }}
+        run: |
+          {
+            echo "### experiments / ${SHARD} failed"
+            echo ""
+            echo '```'
+            tail -c 40000 ci-output.txt 2>/dev/null || echo "no captured output"
+            echo '```'
+          } > ci-comment.md
+          gh api --method POST \
+            "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+            -F body=@ci-comment.md
 
       - uses: actions/upload-artifact@v4
         with:
           name: raw-${{ matrix.name }}
           path: results/raw/
           retention-days: 30
+
+  collect:
+    needs: run
+    if: ${{ always() && needs.run.result != 'cancelled' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: experiments-collect
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: raw-*
+          path: collected
+          merge-multiple: true
+
+      - name: Merge the shards
+        env:
+          LABEL: ${{ inputs.label }}
+        run: |
+          python scripts/merge_results.py collected "results/processed/${LABEL}.csv"
+          gzip -nf "results/processed/${LABEL}_steps.csv"
+          ls -l results/processed/
+
+      - name: Commit the processed tables
+        env:
+          LABEL: ${{ inputs.label }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "results/processed/${LABEL}.csv" "results/processed/${LABEL}_steps.csv.gz"
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "results: ${LABEL} merged from run ${{ github.run_id }}"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push origin HEAD:main && break
+              sleep $((RANDOM % 20 + 5))
+            done
+          fi
+
+      - name: Report the measurement through the API
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LABEL: ${{ inputs.label }}
+        run: |
+          python scripts/ci_report.py "results/processed/${LABEL}.csv" \
+            --title "${LABEL} (run ${{ github.run_id }}, config ${{ inputs.config }}, set '${{ inputs.set }}')" \
+            > ci-summary.md
+          head -c 60000 ci-summary.md > ci-summary-clipped.md
+          gh api --method POST \
+            "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+            -F body=@ci-summary-clipped.md

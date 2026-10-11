@@ -24,19 +24,28 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pcal.config import load_yaml  # noqa: E402
 
 
-def shards(grid: dict, dataset: str | None = None, arm: int | None = None) -> list[dict]:
-    seeds = grid["seeds"]
-    start, count = int(seeds["start"]), int(seeds["count"])
+def shards(grid: dict, dataset: str | None = None, arm: int | None = None,
+           seeds: str | None = None) -> list[dict]:
+    spec = grid["seeds"]
+    start, count = int(spec["start"]), int(spec["count"])
     block = int(grid.get("shard", {}).get("seed_block_size", count)) or count
     datasets = [d for d in grid["datasets"] if dataset in (None, "", d)]
     arms = [int(a) for a in grid["arms"] if arm in (None, "") or int(a) == int(arm)]
+    if seeds:
+        # An explicit seed spec overrides the layout and gives one shard per
+        # (dataset, arm). This is what the S05 timing probe dispatches on.
+        blocks = [(seeds, seeds.replace(":", "-").replace(",", "."))]
+    else:
+        blocks = []
+        for lo in range(start, start + count, block):
+            hi = min(lo + block, start + count)
+            blocks.append((f"{lo}:{hi}", f"{lo}-{hi}"))
     out = []
     for name in datasets:
         for a in arms:
-            for lo in range(start, start + count, block):
-                hi = min(lo + block, start + count)
-                out.append({"dataset": name, "arm": a, "seeds": f"{lo}:{hi}",
-                            "name": f"{name}-a{a:02d}-s{lo}-{hi}"})
+            for spec_str, tag in blocks:
+                out.append({"dataset": name, "arm": a, "seeds": spec_str,
+                            "name": f"{name}-a{a:02d}-s{tag}"})
     return out
 
 
@@ -45,10 +54,12 @@ def main() -> int:
     parser.add_argument("config")
     parser.add_argument("--dataset", default=None)
     parser.add_argument("--arm", default=None)
+    parser.add_argument("--seeds", default=None, help="0:1 or 0,3,7; overrides the blocks")
     args = parser.parse_args()
     grid = load_yaml(args.config)
     arm = int(args.arm) if args.arm not in (None, "") else None
-    matrix = shards(grid, dataset=args.dataset or None, arm=arm)
+    matrix = shards(grid, dataset=args.dataset or None, arm=arm,
+                    seeds=args.seeds or None)
     if not matrix:
         print(json.dumps({"include": []}))
         return 1

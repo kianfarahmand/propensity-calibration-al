@@ -6,6 +6,10 @@
 One row per (dataset, arm, seed) with the pre-registered outcomes, plus a
 companion per-step table so the ESS, lambda and coverage trajectories survive.
 Raw records are build artifacts; these tables are repository content.
+
+The search is recursive: one dispatch of experiments.yml downloads every shard
+artifact into a single directory, and a sweep writes each value into its own
+subdirectory (results/raw/tuning/c1.0/...).
 """
 from __future__ import annotations
 
@@ -21,12 +25,15 @@ SUMMARY_FIELDS = ["simple_regret", "topk_enrichment_10", "topk_enrichment_50",
                   "mean_ess", "final_lambda"]
 STEP_FIELDS = ["dataset", "arm", "seed", "step", "reading", "ess", "suppressed",
                "lambda", "propensity", "pool_size", "best_y", "policy", "seconds",
-               "pool_coverage"]
+               "mu", "sd", "y", "pool_coverage"]
+# mu, sd and y are the pre-observation prediction at the selected point and the
+# label that came back. Gate G2 is the coverage indicator built from those three
+# against pool_coverage in the same row, so they have to survive the merge.
 
 
 def load_records(raw_dir: Path) -> list[dict]:
     records = []
-    for path in sorted(raw_dir.glob("*.json")):
+    for path in sorted(raw_dir.rglob("*.json")):
         with open(path, encoding="utf-8") as fh:
             records.append(json.load(fh))
     return records

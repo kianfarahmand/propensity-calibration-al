@@ -19,6 +19,9 @@ name: tests
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'results/**'
+      - '**/*.md'
   pull_request:
   workflow_dispatch:
 
