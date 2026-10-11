@@ -39,6 +39,12 @@ data/
 results/raw/*
 !results/raw/.gitkeep
 
+# ...but the merged tables are. The *.csv.gz rule above is about datasets, and
+# a per-step table is large enough to be worth compressing, so it needs an
+# explicit exception or the collect job cannot add it.
+!results/processed/*.csv.gz
+!docs/*.csv.gz
+
 # matminer / pymatgen caches
 .matminer/
 .pmgrc.yaml

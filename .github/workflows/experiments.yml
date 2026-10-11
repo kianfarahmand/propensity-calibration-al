@@ -168,9 +168,24 @@ jobs:
         env:
           LABEL: ${{ inputs.label }}
         run: |
-          python scripts/merge_results.py collected "results/processed/${LABEL}.csv"
+          set -o pipefail
+          python scripts/merge_results.py collected "results/processed/${LABEL}.csv" \
+            2>&1 | tee collect-output.txt
           gzip -nf "results/processed/${LABEL}_steps.csv"
-          ls -l results/processed/
+          ls -l results/processed/ 2>&1 | tee -a collect-output.txt
+
+      - name: Report the measurement through the API
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LABEL: ${{ inputs.label }}
+        run: |
+          python scripts/ci_report.py "results/processed/${LABEL}.csv" \
+            --title "${LABEL} (run ${{ github.run_id }}, config ${{ inputs.config }}, set '${{ inputs.set }}')" \
+            > ci-summary.md
+          head -c 60000 ci-summary.md > ci-summary-clipped.md
+          gh api --method POST \
+            "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+            -F body=@ci-summary-clipped.md
 
       - name: Commit the processed tables
         env:
@@ -189,15 +204,20 @@ jobs:
             done
           fi
 
-      - name: Report the measurement through the API
+      - name: Report the failure through the API
+        if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
-          LABEL: ${{ inputs.label }}
         run: |
-          python scripts/ci_report.py "results/processed/${LABEL}.csv" \
-            --title "${LABEL} (run ${{ github.run_id }}, config ${{ inputs.config }}, set '${{ inputs.set }}')" \
-            > ci-summary.md
-          head -c 60000 ci-summary.md > ci-summary-clipped.md
+          {
+            echo "### experiments / collect failed (run ${{ github.run_id }})"
+            echo ""
+            echo '```'
+            tail -c 30000 collect-output.txt 2>/dev/null || echo "no captured output"
+            echo ""
+            git status --porcelain 2>&1 | head -40
+            echo '```'
+          } > ci-comment.md
           gh api --method POST \
             "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
-            -F body=@ci-summary-clipped.md
+            -F body=@ci-comment.md
