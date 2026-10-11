@@ -1,8 +1,19 @@
 # What an active learner can know about its own uncertainty: propensity-corrected calibration monitoring in pool-based materials optimization
 
 **Revision v2.** Supersedes *Knowledge-Adaptive Active Learning for Autonomous
-Materials Discovery* (v1). v1 is retained only as provenance; where the two
-disagree, this document governs. Section 11 lists the specific corrections.
+Materials Discovery* (v1). v1 is retained only as provenance; Section 11 lists
+the specific corrections.
+
+> **Status, 2026-10-11.** This is the design document the project was planned
+> from, corrected in session M01 so that nothing in it contradicts the novelty
+> audit or the frozen plan. It is **not** the governing document. The plan that
+> governs is [`../preregistration/PREREGISTRATION.md`](../preregistration/PREREGISTRATION.md),
+> frozen at tag `prereg-v1`, with every departure logged in
+> [`../preregistration/deviations.md`](../preregistration/deviations.md); what
+> was actually measured is in
+> [`results_summary.md`](results_summary.md). Where this file and those
+> disagree, they win. Sections 6 to 9 and 11 below were brought in line with
+> them; Sections 1 to 5 are the original argument and are unchanged.
 
 ---
 
@@ -174,60 +185,123 @@ evaluation set.
 
 ## 6. Relation to prior work — what is *not* claimed
 
-Propensity correction of an active learner's self-inflicted sampling bias is
-**established prior art**. Importance-weighted active learning (Beygelzimer et
-al.) and UPAL for the pool-based case already use inverse-propensity weighting to
-obtain unbiased risk estimates under adaptive sampling. This project presents
-IPW as a borrowed device, never as a proposed novel technique. Any draft sentence
-implying otherwise is a defect.
+The Step 2 audit ([`novelty_audit.md`](novelty_audit.md): 25 OpenAlex strata,
+2859 records, 2357 after deduplication, two-pass screen at 0.80 measured
+precision on the decisive band) found the framing survives, but only after
+**four claims are surrendered outright**. They are prior art and are never
+presented otherwise:
 
-Adjacent families that the Step 2 audit must position against explicitly:
-CA-SMART (switching on whether an observation falls outside a 95% prediction
-interval — structurally the closest competitor), adaptive acquisition portfolios
-(GP-Hedge, No-PASt-BO, LMABO), and online calibration inside BO (Deshpande et
-al., LOCBO, and Pion & Vazquez on calibration under adaptive designs).
+1. **Inverse-propensity correction of an active learner's self-inflicted
+   sampling bias.** Beygelzimer et al. (2009), Ganti and Gray (2011), and
+   Farquhar et al. (2021) own it. Their corrected functional is a *risk*.
+2. **Recognising that a design algorithm induces its own covariate shift, and
+   correcting it by weighting.** Fannjiang et al. (PNAS 2022) named this
+   feedback covariate shift; their estimand is coverage *at the designed
+   points*, in a single design round.
+3. **Closing a control loop with a shift-corrected uncertainty object.**
+   Stanton et al. (2022) feed covariate-shift-corrected conformal prediction
+   sets into the acquisition.
+4. **The design-marginal calibration functional and the standardized
+   leave-one-out residual construction of Section 5.3.** Pion and Vazquez
+   (arXiv:2512.05611) formalise the estimand this project calls pool-marginal
+   coverage, and build their estimators on the same residual device. Their
+   design measure is given and their residuals come from cross-validation on an
+   existing design.
 
-The claim that remains, stated at its actual width: the *estimand* is a
-calibration functional of the surrogate's predictive distribution over the pool,
-inside pool-based Bayesian optimization, and the debiased reading closes the
-control loop. Gate G1 (Section 8) decides whether even that survives contact with
-the literature.
+**CA-SMART is struck.** v1 and the first draft of this document called it
+"structurally the closest competitor". The audit could not locate any record
+under that name in OpenAlex, and targeted searches for the described behaviour
+returned nothing. An unverifiable baseline cannot be implemented or cited, so
+it is not an arm and is not referenced again. If a citation is ever produced it
+would enter as a new arm with a logged deviation.
+
+**Two works contest the contribution seriously enough to be mandatory
+comparators rather than related work:** Deshpande et al. (2021), *Online
+Calibrated and Conformal Prediction Improves Bayesian Optimization*, and Kim et
+al. (IEEE TSP 2025), *Robust Bayesian Optimization via Localized Online
+Conformal Prediction*. Both attack the same action-dependent-data problem with
+online learning instead of propensities, and their guarantees hold on the
+realised query stream. They enter the design as arms 8 and 9, and Gate G4 is
+hardened accordingly (Section 8). If the pool-marginal reading cannot be shown
+to beat an online-calibration reading, the contribution reduces to the
+measurement — which is what happened.
+
+**Acquisition portfolios** (GP-Hedge: Brochu, Hoffman and de Freitas 2010;
+No-PASt-BO: Vasconcelos et al. 2019) switch acquisition functions on observed
+reward with no reliability signal; they are policy-switching controls in the arm
+list, not prior art for the estimand.
+
+**Materials-side work this project builds on**, all of which measures
+calibration on the selected sample without raising the selection-bias question —
+that is, all of which uses the arm-6 reading: Thomas-Mitchell, Hawe and Popelier
+(MLST 2023), *Calibration of uncertainty in the active learning of machine
+learning force fields*; Jiang et al. (J. Mater. Inf. 2026), *Uncertainty
+estimation affects predictor selection and its calibration improves materials
+optimization*; and Li et al., *A study of the role of data and model uncertainty
+in active learning*, Comput. Mater. Sci. 247:113512 (doi
+10.1016/j.commatsci.2024.113512).
+
+The claim that remains, stated at its actual width: **estimating the
+design-marginal calibration of a surrogate from the adaptively selected sample,
+using propensities known because the acquisition was deliberately randomized,
+during the campaign, and letting that estimate close the control loop** —
+together with the measurement that the naive reading's bias flips sign with the
+acquisition policy.
 
 ## 7. Experimental design
 
 ### 7.1 Arms
 
-Roughly eleven arms, all with matched initializations:
+**Thirteen arms**, as pre-registered (PREREGISTRATION.md §9), all with matched
+initializations — the same ten seed points per (dataset, seed) pair:
 
-1. Random
-2. Expected improvement (greedy)
-3. Upper confidence bound (greedy)
-4. Max variance (greedy)
-5. **Boltzmann-EI, no monitor** — *the single most important baseline*
-6. Boltzmann-EI + naive (uncorrected) monitor controller
-7. Boltzmann-EI + propensity-corrected monitor controller — the proposed method
-8. CA-SMART
-9. GP-Hedge
-10. No-PASt-BO
-11. One-off global uncertainty scaling
-12. Online conformal recalibration
+| # | arm | role |
+|---|---|---|
+| 1 | Random | floor; unbiased monitor by construction |
+| 2 | Expected improvement, greedy | standard practice |
+| 3 | Upper confidence bound, greedy | standard practice |
+| 4 | Max variance, greedy | pure exploration control |
+| 5 | **Boltzmann-EI, no monitor** | isolates randomization from debiasing |
+| 6 | Boltzmann-EI + naive selected-sample monitor | the uncorrected controller |
+| 7 | **Boltzmann-EI + propensity-corrected monitor** | the proposed method |
+| 8 | Boltzmann-EI + online calibration (Deshpande et al. form) | no-propensity competitor |
+| 9 | Boltzmann-EI + localized online conformal (LOCBO form) | no-propensity competitor |
+| 10 | GP-Hedge portfolio | switching without a reliability signal |
+| 11 | One-off global uncertainty scaling at step 50 | static recalibration control |
+| 12 | Arm 7 with no leave-one-out refit | ablation: drift correction |
+| 13 | Arm 7 with no weight clipping | ablation: variance control |
 
-Arm 5 is load-bearing. It is the only comparison that separates the benefit of
-debiasing from the mere effect of randomizing the acquisition. A result that
-beats greedy EI but not Boltzmann-EI is a result about randomization, not about
-calibration monitoring, and must be reported as such.
+Arms 5, 8 and 9 are load-bearing. Arm 5 is the only comparison that separates
+the benefit of debiasing from the mere effect of randomizing the acquisition: a
+result that beats greedy EI but not Boltzmann-EI is a result about
+randomization, not about calibration monitoring, and must be reported as such.
+Arms 8 and 9 are the methods that solve the same problem without propensities;
+they are implemented as adaptations of their sources rather than
+reimplementations (deviations entry 6).
+
+CA-SMART and No-PASt-BO are not arms — the first because it could not be
+located in the literature, the second because GP-Hedge already supplies the
+portfolio control.
 
 ### 7.2 Datasets
 
-Zero-cost public sets via matminer/Matbench: experimental band gap, steel
-fatigue, dielectric, and JARVIS DFT properties. Composition descriptors (Magpie)
-are fixed before any comparative run. The tuning/evaluation dataset split is
-pre-registered so controller parameters are never tuned on evaluation data.
+Zero-cost public sets via matminer/Matbench, with the tuning/evaluation split
+pre-registered so no controller parameter is ever tuned on evaluation data.
 
-**At least one experimental dataset with real measurement noise is mandatory.**
-DFT targets are deterministic, so "uncertainty" on a DFT benchmark is purely
-model misspecification with no aleatoric component; a reliability story told only
-on DFT data would be telling half the story and must say so explicitly.
+- **Tuning pair** (every free parameter fixed here, then never touched again):
+  `matbench_steels` (312, experimental yield strength) and
+  `dielectric_constant` (1056, DFT `poly_electronic`).
+- **Evaluation set**: `matbench_expt_gap` (4604, experimental band gap),
+  `elastic_tensor_2015` (1181, `K_VRH`) and `heusler_magnetic` (1153,
+  `e_form`); after pool construction, 2990, 1077 and 868 candidates.
+
+Composition descriptors (Magpie, 132-d) are fixed before any comparative run.
+
+**At least one experimental dataset with real measurement noise is mandatory**,
+and both halves of the split carry one. DFT targets are deterministic, so
+"uncertainty" on a DFT benchmark is purely model misspecification with no
+aleatoric component; a reliability story told only on DFT data would be telling
+half the story and must say so explicitly.
 
 ### 7.3 Metrics
 
@@ -257,21 +331,30 @@ The prototype's four passing tests port forward, plus two new ones:
 
 ## 8. Decision gates
 
-| Gate | Test | If it fails |
-|---|---|---|
-| **G1** | Does the framing survive a systematic OpenAlex novelty audit? | Re-frame or stop before writing benchmark code |
-| **G2** | Does the selection-bias gap appear on real materials data? | The premise is synthetic-only; report that |
-| **G3** | Does the propensity-corrected estimator beat the naive monitor at usable ESS? | Q1 answered negatively; measurement paper reports why |
-| **G4** | Does the controller beat both the naive-monitor arm and the randomize-only arm? | Q2 answered negatively; still a complete paper |
+The binding statement of these rules is PREREGISTRATION.md §13; this table is a
+summary, with the verdicts added after the fact. Full numbers in
+[`results_summary.md`](results_summary.md).
 
-Passing G3 and failing G4 is an anticipated and acceptable outcome: a
-measurement-plus-negative-result contribution.
+| Gate | Test | Verdict |
+|---|---|---|
+| **G1** | Does the framing survive a systematic OpenAlex novelty audit? | **passed, narrowed** — four claims surrendered (Section 6) |
+| **G2** | Does the selection-bias gap appear on real materials data, with opposite signs for at least two policies? | **passed** — up to 0.118, sign flips by policy and by dataset |
+| **G3** | Does the propensity-corrected estimator beat the naive monitor at reachable ESS, on ≥2 of 3 datasets? | **failed** — 1 of 3, and significantly worse on 1 |
+| **G4** | Does the controller beat the naive-monitor arm, the randomize-only arm **and** the two online-calibration arms, on ≥2 co-primary outcomes on ≥2 of 3 datasets? | **failed** — 1 of 48 Holm-corrected cells |
+
+G4 is harder than the gate v1 proposed: the audit made arms 8 and 9 mandatory,
+so beating the naive monitor and the randomize-only arm is no longer sufficient.
+
+Passing G2 and failing G3 and G4 is an anticipated and acceptable outcome, and
+is the one that occurred: a measurement result plus an honest negative result
+about the control loop built on it. The manuscript was written to that shape.
 
 ## 9. Compute and cost
 
-The full grid — roughly 11 arms x 5 datasets x 30 seeds x 150 steps, with the
-leave-one-out refit multiplying per-step cost by the window length — exceeds the
-author's local machine (4 cores, 8 GB). Primary runner is **GitHub Actions on
+The full grid — as executed, 13 arms x 3 evaluation datasets x 30 seeds x 150
+steps, 1170 runs and 175 500 logged steps, plus the tuning sweep and a post-hoc
+sensitivity re-run of 540 further runs — exceeds the author's local machine
+(4 cores, 8 GB). Primary runner is **GitHub Actions on
 this public repository**: standard runners are free and unlimited there, at
 4 vCPU / 16 GB (versus 2 vCPU / 8 GB on private repos), with a 6-hour per-job
 cap, sharded by dataset and seed block. Kaggle CPU notebooks (12-hour sessions,
@@ -308,21 +391,38 @@ in the manuscript. Datasets are never committed.
    benchmark. Retitled accordingly.
 2. **Broken LaTeX** (`e*t`, `x\_{t+1}`) and `utm_source=chatgpt.com` tracking
    tags on every link are removed.
-3. **An uncited reference.** v1 cited a "2025 Computational Materials Science
-   study on data and model uncertainty in active learning" that did not surface
-   in two independent searches. Step 2 either resolves it to a real record or
-   deletes it. It is not cited again until then.
+3. **An uncited reference, now resolved.** v1 cited a "2025 Computational
+   Materials Science study on data and model uncertainty in active learning"
+   that did not surface in two independent searches. The Step 2 audit resolved
+   it: Li, Jiang, Ni, Li, Huang, Zhao, Liu and Ye, *A study of the role of data
+   and model uncertainty in active learning*, Computational Materials Science
+   247:113512, doi 10.1016/j.commatsci.2024.113512 (online 2024, in the January
+   2025 issue). The year in v1 was wrong, the paper is real, and it is cited in
+   Section 6.
 4. **Scope.** The central question is narrowed to Q1 and Q2 in Section 3.
 5. **Dropped.** The eight-week timeline and the fixed Computational Materials
    Science target are no longer part of the plan.
+6. **CA-SMART struck** (session M01). The audit could not find it; an
+   unverifiable baseline cannot be implemented or cited. See Section 6.
+7. **Arm list corrected** from eleven to the pre-registered thirteen, and Gate
+   G4 restated in the hardened form the audit forced (Sections 7.1 and 8).
 
-## 12. Immediate next steps
 
-1. **Step 1.** Build the environment; verify which materials datasets actually
-   download; freeze `environment.yml` from the solved environment. Deliverable:
-   `docs/data_access_report.md`.
-2. **Step 2.** OpenAlex novelty audit across the six query families, with full
-   texts for the decisive papers. Gate G1. Deliverables:
-   `docs/novelty_audit.md`, `docs/comparison_matrix.csv`.
-3. **Step 3.** Write and freeze `preregistration/PREREGISTRATION.md`; tag the
-   commit `prereg-v1`. No evaluation run before this tag exists.
+## 12. Where this went
+
+Every step below the line is complete; this section is kept so the plan can be
+read against what happened.
+
+1. **Environment and data access** — `data_access_report.md`. All five Matbench
+   sets and seven raw matminer sets download without credentials; OQMD and the
+   Materials Project API were dropped (403 and key-gated respectively).
+2. **Novelty audit, Gate G1** — `novelty_audit.md`, Section 6 above.
+3. **Pre-registration** — frozen at tag `prereg-v1`, commit `79d819a`, archived
+   at doi 10.5281/zenodo.23287243.
+4. **Implementation** — `src/pcal/`, seven validity tests, three CI workflows.
+5. **Gates G2, G3, G4** — 1170 runs on GitHub Actions; verdicts in Section 8.
+6. **Results and figures** — `results_summary.md`, `results/figures/`,
+   regenerated end to end by `python scripts/make_figures.py`.
+7. **Manuscript** — drafted; submission is the remaining step.
+
+The repository README carries the short version of the outcome.
