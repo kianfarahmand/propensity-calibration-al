@@ -237,13 +237,20 @@ return p = 1 and are never read as a win.
 
 ### 11. A sensitivity analysis over the estimator window and the ESS floor
 
-Commit: the one that adds `scripts/sensitivity_window.py`.
+Commits: the one that adds `scripts/sensitivity_window.py`, and the one that
+corrects it.
 
 **What.** Section 7 fixes the estimator at a 30-step window, weights clipped at
-the 95th percentile within the window, and an ESS floor of 10, and G3 is
-decided at that setting and only that setting. This entry adds a re-scoring of
-the same committed per-step log at windows of 30, 60 and 100 and ESS floors of
-10, 5, 3 and 0, reported in `results/processed/sensitivity_window.csv` and
+the 95th percentile within the window, and an ESS floor of 10. G3 is decided at
+that setting and only that setting. This entry adds a re-measurement of the
+same comparison - arm 7 against arm 6, mean absolute deviation from the
+evaluator's `C_t(0.90)` over steps 50-150 - at three settings nobody
+pre-registered: window 60, window 100, and ESS floor 3 at the frozen window.
+Each is a dispatch of arms 6 and 7 over the same three evaluation datasets and
+the same thirty seeds with `--set estimator.window=...` or
+`--set estimator.ess_floor=...`, merged into its own table and analysed by the
+same `scripts/g3_error.py` that decided G3. The result is
+`results/processed/sensitivity_window.csv` and
 `results/figures/sensitivity_window.png`.
 
 **When it was decided.** **After seeing the affected result.** G3 and G4 had
@@ -251,26 +258,28 @@ both been computed and had both failed, and the suppression rates behind them -
 the corrected reading is unavailable on 40.0, 57.2 and 61.4 per cent of window
 steps - are what prompted the question.
 
-**Why.** The frozen setting is the one the claim is made at, and no number in
-this file moves a gate verdict. But a reader is owed the difference between two
-readings of the G3 failure: that the propensity correction does not repay its
-variance at any reachable sample size, or that a 30-step window was simply too
-small a sample and the estimator was never given a fair test. The sensitivity
-answers which of those the data supports, and labels every row of its own table
+**Why.** The frozen setting is the one the claim is made at, and no number here
+moves a gate verdict. But a reader is owed the difference between two readings
+of the G3 failure: that the propensity correction does not repay its variance
+at reachable sample sizes, or that a 30-step window was simply too small a
+sample and the estimator was never given a fair test. The sensitivity answers
+which of those the data supports, and every row of its table is labelled
 `post-hoc sensitivity` so it can never be quoted as a pre-registered result.
 
 **What it affects.** Nothing that is already decided. G3's verdict stands at
-window 30 and floor 10; the gate row in the results summary is unchanged. The
-sensitivity is reported beside it, as a limitation and a direction, never as a
-result.
+window 30 and floor 10. The sensitivity is reported beside it, as a limitation
+and a direction, never as a result.
 
-**What it cannot do.** The re-scoring is exact in the weights, the clipping and
-the ESS, and approximate in one respect: under the primary specification the
-leave-one-out refit recomputes a window point's `mu` and `sd` under the current
-surrogate at every read (Section 7.1), while the committed log holds only the
-value each point had at its own step. A longer window therefore carries older
-residuals than a re-run would. `scripts/sensitivity_window.py` refuses to write
-a table unless the rebuild reproduces the logged readings at the frozen window
-to 1e-6 on at least 99 per cent of non-suppressed steps, which bounds the
-fidelity of the base case but not of the extrapolation; the manuscript says so
-wherever the sensitivity is cited.
+**A first attempt that was abandoned, and why it is recorded here.** The
+sensitivity was first written as a re-scoring of the committed per-step log at
+other windows, which would have cost no compute at all. It does not work, and
+the reason is worth keeping: under the primary specification `_refresh_window`
+recomputes every windowed residual under the CURRENT surrogate with the point
+held out (Section 7.1), while the log holds only the `mu` and `sd` each point
+had at its own step, and the monitor reads at `lam = 1.0` rather than at the
+controller's current lambda. The script carried a reproduction check - rebuild
+the frozen setting from the log and require it to match the logged readings to
+1e-6 - and that check failed at 11 to 17 per cent agreement, so it wrote
+nothing and exited non-zero. A longer window cannot be simulated from this log;
+it has to be run. The check is the reason a wrong sensitivity table was never
+committed.
