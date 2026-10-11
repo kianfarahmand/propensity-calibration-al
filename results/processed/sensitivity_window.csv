@@ -1,0 +1,25 @@
+setting,window,ess_floor,preregistered,status,dataset,support,n_pairs,mean_deviation_ipw,mean_deviation_naive,mean_difference,ci_lo,ci_hi,excludes_zero,favors_ipw,suppression_rate_ipw,mean_steps_answered_ipw,median_ess_step100_ipw,steps_table
+frozen,30,10.0,1,"pre-registered setting, as decided",elastic_tensor_2015,own,30,0.066819,0.058397,0.008422,0.001034,0.017042,1,0,0.400000,60.600000,6.953900,results/processed/evaluation-g3_steps.csv.gz
+frozen,30,10.0,1,"pre-registered setting, as decided",elastic_tensor_2015,common,30,0.066819,0.054935,0.011884,0.002950,0.021825,1,0,0.400000,60.600000,6.953900,results/processed/evaluation-g3_steps.csv.gz
+frozen,30,10.0,1,"pre-registered setting, as decided",heusler_magnetic,own,30,0.052788,0.051669,0.001119,-0.005848,0.008831,0,0,0.571617,43.267000,3.003600,results/processed/evaluation-g3_steps.csv.gz
+frozen,30,10.0,1,"pre-registered setting, as decided",heusler_magnetic,common,30,0.052788,0.052245,0.000543,-0.007735,0.009917,0,0,0.571617,43.267000,3.003600,results/processed/evaluation-g3_steps.csv.gz
+frozen,30,10.0,1,"pre-registered setting, as decided",matbench_expt_gap,own,27,0.044527,0.072320,-0.027794,-0.041751,-0.008223,1,1,0.614191,38.967000,7.647800,results/processed/evaluation-g3_steps.csv.gz
+frozen,30,10.0,1,"pre-registered setting, as decided",matbench_expt_gap,common,27,0.044527,0.075061,-0.030534,-0.052968,-0.008436,1,1,0.614191,38.967000,7.647800,results/processed/evaluation-g3_steps.csv.gz
+window60,60,10.0,0,post-hoc sensitivity,elastic_tensor_2015,own,29,0.060652,0.060821,-0.000169,-0.010070,0.012075,0,0,0.520132,48.467000,13.437600,results/processed/sens-w60_steps.csv.gz
+window60,60,10.0,0,post-hoc sensitivity,elastic_tensor_2015,common,29,0.060652,0.056145,0.004507,-0.006671,0.016400,0,0,0.520132,48.467000,13.437600,results/processed/sens-w60_steps.csv.gz
+window60,60,10.0,0,post-hoc sensitivity,heusler_magnetic,own,28,0.044007,0.040981,0.003026,-0.004600,0.010007,0,0,0.647195,35.633000,5.007200,results/processed/sens-w60_steps.csv.gz
+window60,60,10.0,0,post-hoc sensitivity,heusler_magnetic,common,28,0.044007,0.033689,0.010318,0.001797,0.017656,1,0,0.647195,35.633000,5.007200,results/processed/sens-w60_steps.csv.gz
+window60,60,10.0,0,post-hoc sensitivity,matbench_expt_gap,own,29,0.022394,0.076376,-0.053982,-0.063202,-0.043760,1,1,0.474257,53.100000,10.646600,results/processed/sens-w60_steps.csv.gz
+window60,60,10.0,0,post-hoc sensitivity,matbench_expt_gap,common,29,0.022394,0.064788,-0.042395,-0.055478,-0.030869,1,1,0.474257,53.100000,10.646600,results/processed/sens-w60_steps.csv.gz
+window100,100,10.0,0,post-hoc sensitivity,elastic_tensor_2015,own,29,0.052960,0.061148,-0.008188,-0.018243,0.005329,0,0,0.440594,56.500000,9.495800,results/processed/sens-w100_steps.csv.gz
+window100,100,10.0,0,post-hoc sensitivity,elastic_tensor_2015,common,29,0.052960,0.056993,-0.004033,-0.014592,0.010816,0,0,0.440594,56.500000,9.495800,results/processed/sens-w100_steps.csv.gz
+window100,100,10.0,0,post-hoc sensitivity,heusler_magnetic,own,27,0.056677,0.036034,0.020643,0.010800,0.033013,1,0,0.638944,36.467000,6.276500,results/processed/sens-w100_steps.csv.gz
+window100,100,10.0,0,post-hoc sensitivity,heusler_magnetic,common,27,0.056677,0.034284,0.022393,0.006822,0.036470,1,0,0.638944,36.467000,6.276500,results/processed/sens-w100_steps.csv.gz
+window100,100,10.0,0,post-hoc sensitivity,matbench_expt_gap,own,30,0.026611,0.077028,-0.050417,-0.060237,-0.033954,1,1,0.376568,62.967000,13.242800,results/processed/sens-w100_steps.csv.gz
+window100,100,10.0,0,post-hoc sensitivity,matbench_expt_gap,common,30,0.026611,0.074578,-0.047967,-0.058768,-0.031957,1,1,0.376568,62.967000,13.242800,results/processed/sens-w100_steps.csv.gz
+floor3,30,3.0,0,post-hoc sensitivity,elastic_tensor_2015,own,30,0.073135,0.058080,0.015055,0.004622,0.025457,1,0,0.167327,84.100000,6.135700,results/processed/sens-f3_steps.csv.gz
+floor3,30,3.0,0,post-hoc sensitivity,elastic_tensor_2015,common,30,0.073135,0.058293,0.014841,0.004073,0.025509,1,0,0.167327,84.100000,6.135700,results/processed/sens-f3_steps.csv.gz
+floor3,30,3.0,0,post-hoc sensitivity,heusler_magnetic,own,30,0.083509,0.051545,0.031963,0.021473,0.042587,1,0,0.175908,83.233000,3.987800,results/processed/sens-f3_steps.csv.gz
+floor3,30,3.0,0,post-hoc sensitivity,heusler_magnetic,common,30,0.083509,0.052368,0.031140,0.020350,0.042313,1,0,0.175908,83.233000,3.987800,results/processed/sens-f3_steps.csv.gz
+floor3,30,3.0,0,post-hoc sensitivity,matbench_expt_gap,own,30,0.035802,0.075361,-0.039559,-0.054874,-0.020734,1,1,0.066007,94.333000,15.078500,results/processed/sens-f3_steps.csv.gz
+floor3,30,3.0,0,post-hoc sensitivity,matbench_expt_gap,common,30,0.035802,0.072936,-0.037134,-0.052987,-0.018764,1,1,0.066007,94.333000,15.078500,results/processed/sens-f3_steps.csv.gz

@@ -1,0 +1,7 @@
+dataset,arm,arm_name,n_runs,step_lo,step_hi,suppression_rate,mean_steps_answered,mean_deviation_own,median_ess_step50,median_ess_step100,median_ess_step150
+elastic_tensor_2015,6,boltz_ei_naive,30,50,150,0.000000,101.000,0.061269,49.0000,99.0000,100.0000
+elastic_tensor_2015,7,boltz_ei_ipw,30,50,150,0.440594,56.500,0.052960,6.8667,9.4958,38.3195
+heusler_magnetic,6,boltz_ei_naive,30,50,150,0.000000,101.000,0.034733,49.0000,99.0000,100.0000
+heusler_magnetic,7,boltz_ei_ipw,30,50,150,0.638944,36.467,0.056677,5.6095,6.2765,10.9095
+matbench_expt_gap,6,boltz_ei_naive,30,50,150,0.000000,101.000,0.077028,49.0000,99.0000,100.0000
+matbench_expt_gap,7,boltz_ei_ipw,30,50,150,0.376568,62.967,0.026611,5.5979,13.2428,51.1883

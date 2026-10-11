@@ -1,0 +1,13 @@
+dataset,arm,arm_name,n_runs,step_lo,step_hi,suppression_rate,mean_steps_answered,mean_deviation_own,median_ess_step50,median_ess_step100,median_ess_step150
+elastic_tensor_2015,6,boltz_ei_naive,30,50,150,0.000000,101.000,0.058397,30.0000,30.0000,30.0000
+elastic_tensor_2015,7,boltz_ei_ipw,30,50,150,0.400000,60.600,0.066819,24.4164,6.9539,22.5171
+elastic_tensor_2015,12,ipw_no_loo,30,50,150,0.412541,59.333,0.055362,4.0026,7.0385,27.0245
+elastic_tensor_2015,13,ipw_no_clip,30,50,150,0.633333,37.033,0.054387,2.0029,2.4756,29.7287
+heusler_magnetic,6,boltz_ei_naive,30,50,150,0.000000,101.000,0.051669,30.0000,30.0000,30.0000
+heusler_magnetic,7,boltz_ei_ipw,30,50,150,0.571617,43.267,0.052788,29.9958,3.0036,11.2923
+heusler_magnetic,12,ipw_no_loo,30,50,150,0.540264,46.433,0.060670,4.5032,10.0653,13.2094
+heusler_magnetic,13,ipw_no_clip,30,50,150,0.762376,24.000,0.057321,2.0035,2.0038,11.9948
+matbench_expt_gap,6,boltz_ei_naive,30,50,150,0.000000,101.000,0.074694,30.0000,30.0000,30.0000
+matbench_expt_gap,7,boltz_ei_ipw,30,50,150,0.614191,38.967,0.044527,5.3888,7.6478,9.7850
+matbench_expt_gap,12,ipw_no_loo,30,50,150,0.612211,39.167,0.073002,4.0100,7.0966,16.3301
+matbench_expt_gap,13,ipw_no_clip,30,50,150,0.881518,11.967,0.078503,2.1394,2.1162,3.6776

@@ -1,0 +1,19 @@
+dataset,arm,arm_name,reference_arm,reference_name,isolates,support,n_pairs,step_lo,step_hi,mean_deviation_arm,mean_deviation_reference,mean_difference,ci_lo,ci_hi,excludes_zero,favors_focal
+elastic_tensor_2015,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,own,30,50,150,0.066819,0.058397,0.008422,0.001034,0.017042,1,0
+elastic_tensor_2015,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,common,30,50,150,0.066819,0.054935,0.011884,0.002950,0.021825,1,0
+elastic_tensor_2015,7,boltz_ei_ipw,12,ipw_no_loo,ablation: leave-one-out refit,own,30,50,150,0.066819,0.055362,0.011457,0.003083,0.020978,1,0
+elastic_tensor_2015,7,boltz_ei_ipw,12,ipw_no_loo,ablation: leave-one-out refit,common,29,50,150,0.066384,0.053904,0.012481,0.002371,0.025835,1,0
+elastic_tensor_2015,7,boltz_ei_ipw,13,ipw_no_clip,ablation: weight clipping,own,30,50,150,0.066819,0.054387,0.012432,0.002763,0.021742,1,0
+elastic_tensor_2015,7,boltz_ei_ipw,13,ipw_no_clip,ablation: weight clipping,common,29,50,150,0.064565,0.051794,0.012770,-0.002402,0.041011,0,0
+heusler_magnetic,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,own,30,50,150,0.052788,0.051669,0.001119,-0.005848,0.008831,0,0
+heusler_magnetic,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,common,30,50,150,0.052788,0.052245,0.000543,-0.007735,0.009917,0,0
+heusler_magnetic,7,boltz_ei_ipw,12,ipw_no_loo,ablation: leave-one-out refit,own,30,50,150,0.052788,0.060670,-0.007882,-0.018083,0.002816,0,0
+heusler_magnetic,7,boltz_ei_ipw,12,ipw_no_loo,ablation: leave-one-out refit,common,26,50,150,0.059395,0.066599,-0.007204,-0.021208,0.005463,0,0
+heusler_magnetic,7,boltz_ei_ipw,13,ipw_no_clip,ablation: weight clipping,own,27,50,150,0.051083,0.057321,-0.006238,-0.017068,0.003562,0,0
+heusler_magnetic,7,boltz_ei_ipw,13,ipw_no_clip,ablation: weight clipping,common,23,50,150,0.059968,0.059629,0.000339,-0.013478,0.020767,0,0
+matbench_expt_gap,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,own,27,50,150,0.044527,0.072320,-0.027794,-0.041751,-0.008223,1,1
+matbench_expt_gap,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,common,27,50,150,0.044527,0.075061,-0.030534,-0.052968,-0.008436,1,1
+matbench_expt_gap,7,boltz_ei_ipw,12,ipw_no_loo,ablation: leave-one-out refit,own,24,50,150,0.045483,0.079490,-0.034007,-0.100995,-0.010903,1,1
+matbench_expt_gap,7,boltz_ei_ipw,12,ipw_no_loo,ablation: leave-one-out refit,common,19,50,150,0.035347,0.077242,-0.041895,-0.096186,-0.017046,1,1
+matbench_expt_gap,7,boltz_ei_ipw,13,ipw_no_clip,ablation: weight clipping,own,16,50,150,0.050034,0.085719,-0.035685,-0.098863,-0.006410,1,1
+matbench_expt_gap,7,boltz_ei_ipw,13,ipw_no_clip,ablation: weight clipping,common,10,50,150,0.070958,0.066238,0.004720,-0.017949,0.028092,0,0

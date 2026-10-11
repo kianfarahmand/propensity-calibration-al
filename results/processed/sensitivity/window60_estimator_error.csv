@@ -1,0 +1,7 @@
+dataset,arm,arm_name,reference_arm,reference_name,isolates,support,n_pairs,step_lo,step_hi,mean_deviation_arm,mean_deviation_reference,mean_difference,ci_lo,ci_hi,excludes_zero,favors_focal
+elastic_tensor_2015,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,own,29,50,150,0.060652,0.060821,-0.000169,-0.010070,0.012075,0,0
+elastic_tensor_2015,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,common,29,50,150,0.060652,0.056145,0.004507,-0.006671,0.016400,0,0
+heusler_magnetic,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,own,28,50,150,0.044007,0.040981,0.003026,-0.004600,0.010007,0,0
+heusler_magnetic,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,common,28,50,150,0.044007,0.033689,0.010318,0.001797,0.017656,1,0
+matbench_expt_gap,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,own,29,50,150,0.022394,0.076376,-0.053982,-0.063202,-0.043760,1,1
+matbench_expt_gap,7,boltz_ei_ipw,6,boltz_ei_naive,propensity correction,common,29,50,150,0.022394,0.064788,-0.042395,-0.055478,-0.030869,1,1
