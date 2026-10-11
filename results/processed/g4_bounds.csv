@@ -1,0 +1,11 @@
+dataset,metric,higher_is_better,n_references,binding_reference_arm,binding_reference_name,bound_advantage,randomization_cost,bound_covers_cost
+elastic_tensor_2015,discovery_auc,1,4,9,locbo,0.001760,0.011826,0
+elastic_tensor_2015,topk_enrichment_10,1,4,6,boltz_ei_naive,0.010000,0.023333,0
+elastic_tensor_2015,topk_enrichment_50,1,4,5,boltz_ei_none,0.042000,0.090000,0
+heusler_magnetic,discovery_auc,1,4,9,locbo,0.009121,0.007134,1
+heusler_magnetic,topk_enrichment_10,1,4,5,boltz_ei_none,0.013333,0.003333,1
+heusler_magnetic,topk_enrichment_50,1,4,5,boltz_ei_none,0.011333,0.021333,0
+matbench_expt_gap,discovery_auc,1,4,8,online_calibration,0.113865,0.004505,1
+matbench_expt_gap,simple_regret,0,4,8,online_calibration,0.271333,0.017333,1
+matbench_expt_gap,topk_enrichment_10,1,4,5,boltz_ei_none,0.053333,0.096667,0
+matbench_expt_gap,topk_enrichment_50,1,4,8,online_calibration,0.046000,0.024667,1

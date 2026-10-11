@@ -43,7 +43,8 @@ co-primary outcomes within each (comparison, dataset).
 **Tables.** `results/processed/g4_primary.csv` (arm 7 against each of arms 5, 6,
 8, 9), `results/processed/g4_randomization_cost.csv` (H4: arm 5 against arm 2),
 `results/processed/f4_randomization_chain.csv` (the arm 2 -> 5 -> 7 chain),
-`results/processed/descriptive_arms.csv` (every arm, descriptive).
+`results/processed/descriptive_arms.csv` (every arm, descriptive),
+`results/processed/g4_bounds.csv` (what the same intervals bound).
 
 **Figures.** `results/figures/g4_discovery_curves.png`,
 `results/figures/g4_paired_effects.png`,
@@ -102,6 +103,44 @@ favour anywhere is discovery AUC on `heusler_magnetic`, +0.0075 [+0.0018,
 +0.0151], and on that dataset and metric it buys back exactly what randomization
 cost - the net against greedy EI is +0.0003 [-0.0047, +0.0064], a wash. Every
 other separating link is a cost.
+
+
+### 2.5 What the same intervals bound
+
+`results/processed/g4_bounds.csv`, written by `scripts/g4_bounds.py`. No new
+test and no new decision rule: these are the upper endpoints of the
+pre-registered BCa intervals the gate already read, reported rather than
+recomputed.
+
+G4 asked whether arm 7 beats arms 5, 6, 8 and 9. Each interval also bounds how
+large an advantage arm 7 could have held over a reference and still produced
+these data; the binding reference is the one whose interval is tightest from
+above. Against that bound sits what randomization cost on the same dataset and
+metric (the 5 - 2 link of section 2.4), so the two numbers answer one question:
+could the monitor have repaid its own entry fee?
+
+| dataset | metric | largest advantage consistent with the data | binding reference | randomization cost | bound below cost |
+|---|---|---|---|---|---|
+| `elastic_tensor_2015` | top-10 | +0.0100 | arm 6 | 0.0233 | yes |
+| `elastic_tensor_2015` | top-50 | +0.0420 | arm 5 | 0.0900 | yes |
+| `elastic_tensor_2015` | AUC | +0.0018 | arm 9 | 0.0118 | yes |
+| `heusler_magnetic` | top-10 | +0.0133 | arm 5 | 0.0033 | no |
+| `heusler_magnetic` | top-50 | +0.0113 | arm 5 | 0.0213 | yes |
+| `heusler_magnetic` | AUC | +0.0091 | arm 9 | 0.0071 | no |
+| `matbench_expt_gap` | top-10 | +0.0533 | arm 5 | 0.0967 | yes |
+| `matbench_expt_gap` | top-50 | +0.0460 | arm 8 | 0.0247 | no |
+| `matbench_expt_gap` | AUC | +0.1139 | arm 8 | 0.0045 | no |
+| `matbench_expt_gap` | simple regret | +0.2713 | arm 8 | 0.0173 | no |
+
+On `elastic_tensor_2015` the bound is below the randomization cost on all three
+co-primary outcomes, and on `heusler_magnetic` on top-50 enrichment, and on
+`matbench_expt_gap` on top-10. In those five cells the data rule out the monitor
+buying back what making it possible had already cost. The bounds are widest on
+`matbench_expt_gap`, the largest pool with the noisiest target, where the
+campaign outcomes themselves vary most between seeds.
+
+This is a reading of the pre-registered intervals and it is reported as such. It
+changes no verdict: G4 failed on its own rule and section 5 records why.
 
 ---
 
