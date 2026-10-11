@@ -20,8 +20,8 @@ the specific corrections.
 ## 1. Summary
 
 A pool-based active-learning campaign chooses where to look, then learns only
-from what it chose. Every reliability diagnostic it can compute online — interval
-coverage, standardized-residual spread, calibration error — is computed on a
+from what it chose. Every reliability diagnostic it can compute online (interval
+coverage, standardized-residual spread, calibration error) is computed on a
 sample drawn by its own acquisition rule, which deliberately selects atypical
 candidates (high predicted mean, high predicted variance, or both). The diagnostic
 therefore estimates calibration *under the acquisition distribution*, not
@@ -35,8 +35,8 @@ bias is large enough to flip sign across standard policies (Section 4), so the
 concern is not hypothetical.
 
 The proposal is to make the selection probabilities *known* rather than merely
-non-uniform — by replacing greedy argmax acquisition with a Boltzmann sampler
-carrying an exploration floor — and then to estimate the pool-level calibration
+non-uniform, by replacing greedy argmax acquisition with a Boltzmann sampler
+carrying an exploration floor, and then to estimate the pool-level calibration
 functional with a self-normalized inverse-propensity estimator over a trailing
 window of observations, with the debiased reading closing the control loop.
 
@@ -52,7 +52,7 @@ C_t(alpha) = (1 / |U_t|) * sum_{x in U_t} 1{ |y(x) - mu_t(x)| <= q_alpha * sigma
 ```
 
 where `q_alpha` is the standard-normal quantile. `C_t(alpha)` is **unobservable
-during a real campaign** — it depends on labels the campaign has not bought — but
+during a real campaign**, it depends on labels the campaign has not bought, but
 it is **exactly computable by the evaluator on a retrospective benchmark**, where
 all labels exist and are merely withheld from the learner. That asymmetry is what
 makes the question empirically answerable at zero marginal cost.
@@ -75,7 +75,7 @@ Narrowed from v1 to exactly two testable sub-questions:
 Q1 is a measurement question with a ground truth available on retrospective
 benchmarks. Q2 is a downstream-utility question. The design is deliberately
 arranged so that a positive answer to Q1 with a null answer to Q2 remains a
-complete and publishable contribution — a measurement result plus an honest
+complete and publishable contribution, a measurement result plus an honest
 negative result about the control loop built on it.
 
 ## 4. Evidence so far
@@ -183,7 +183,7 @@ Both forms are specified completely before any evaluation run. Controller
 parameters are fixed on a tuning pair of datasets and are never touched on the
 evaluation set.
 
-## 6. Relation to prior work — what is *not* claimed
+## 6. Relation to prior work: what is *not* claimed
 
 The Step 2 audit ([`novelty_audit.md`](novelty_audit.md): 25 OpenAlex strata,
 2859 records, 2357 after deduplication, two-pass screen at 0.80 measured
@@ -224,7 +224,7 @@ online learning instead of propensities, and their guarantees hold on the
 realised query stream. They enter the design as arms 8 and 9, and Gate G4 is
 hardened accordingly (Section 8). If the pool-marginal reading cannot be shown
 to beat an online-calibration reading, the contribution reduces to the
-measurement — which is what happened.
+measurement, which is what happened.
 
 **Acquisition portfolios** (GP-Hedge: Brochu, Hoffman and de Freitas 2010;
 No-PASt-BO: Vasconcelos et al. 2019) switch acquisition functions on observed
@@ -232,7 +232,7 @@ reward with no reliability signal; they are policy-switching controls in the arm
 list, not prior art for the estimand.
 
 **Materials-side work this project builds on**, all of which measures
-calibration on the selected sample without raising the selection-bias question —
+calibration on the selected sample without raising the selection-bias question,
 that is, all of which uses the arm-6 reading: Thomas-Mitchell, Hawe and Popelier
 (MLST 2023), *Calibration of uncertainty in the active learning of machine
 learning force fields*; Jiang et al. (J. Mater. Inf. 2026), *Uncertainty
@@ -244,7 +244,7 @@ in active learning*, Comput. Mater. Sci. 247:113512 (doi
 The claim that remains, stated at its actual width: **estimating the
 design-marginal calibration of a surrogate from the adaptively selected sample,
 using propensities known because the acquisition was deliberately randomized,
-during the campaign, and letting that estimate close the control loop** —
+during the campaign, and letting that estimate close the control loop**,
 together with the measurement that the naive reading's bias flips sign with the
 acquisition policy.
 
@@ -253,7 +253,7 @@ acquisition policy.
 ### 7.1 Arms
 
 **Thirteen arms**, as pre-registered (PREREGISTRATION.md §9), all with matched
-initializations — the same ten seed points per (dataset, seed) pair:
+initializations, the same ten seed points per (dataset, seed) pair:
 
 | # | arm | role |
 |---|---|---|
@@ -279,7 +279,7 @@ Arms 8 and 9 are the methods that solve the same problem without propensities;
 they are implemented as adaptations of their sources rather than
 reimplementations (deviations entry 6).
 
-CA-SMART and No-PASt-BO are not arms — the first because it could not be
+CA-SMART and No-PASt-BO are not arms, the first because it could not be
 located in the literature, the second because GP-Hedge already supplies the
 portfolio control.
 
@@ -308,7 +308,7 @@ half the story and must say so explicitly.
 Co-primary, all pre-specified:
 
 - Simple regret (retained, but known to saturate on pools with many
-  near-optimal candidates — which is precisely why it is not the sole primary)
+  near-optimal candidates, which is precisely why it is not the sole primary)
 - Top-k enrichment at k in {10, 50}
 - Normalized discovery-curve AUC
 
@@ -317,7 +317,7 @@ Secondary: policy-switch count, ESS trajectory, runtime.
 ### 7.4 Statistics
 
 Paired differences against the matched baseline, with bootstrap confidence
-intervals resampled **over runs, never over iterations** — iterations within a
+intervals resampled **over runs, never over iterations**, iterations within a
 run are dependent and bootstrapping over them would understate uncertainty by
 construction.
 
@@ -337,10 +337,10 @@ summary, with the verdicts added after the fact. Full numbers in
 
 | Gate | Test | Verdict |
 |---|---|---|
-| **G1** | Does the framing survive a systematic OpenAlex novelty audit? | **passed, narrowed** — four claims surrendered (Section 6) |
-| **G2** | Does the selection-bias gap appear on real materials data, with opposite signs for at least two policies? | **passed** — up to 0.118, sign flips by policy and by dataset |
-| **G3** | Does the propensity-corrected estimator beat the naive monitor at reachable ESS, on ≥2 of 3 datasets? | **failed** — 1 of 3, and significantly worse on 1 |
-| **G4** | Does the controller beat the naive-monitor arm, the randomize-only arm **and** the two online-calibration arms, on ≥2 co-primary outcomes on ≥2 of 3 datasets? | **failed** — 1 of 48 Holm-corrected cells |
+| **G1** | Does the framing survive a systematic OpenAlex novelty audit? | **passed, narrowed**, four claims surrendered (Section 6) |
+| **G2** | Does the selection-bias gap appear on real materials data, with opposite signs for at least two policies? | **passed**, up to 0.118, sign flips by policy and by dataset |
+| **G3** | Does the propensity-corrected estimator beat the naive monitor at reachable ESS, on ≥2 of 3 datasets? | **failed**, 1 of 3, and significantly worse on 1 |
+| **G4** | Does the controller beat the naive-monitor arm, the randomize-only arm **and** the two online-calibration arms, on ≥2 co-primary outcomes on ≥2 of 3 datasets? | **failed**, 1 of 48 Holm-corrected cells |
 
 G4 is harder than the gate v1 proposed: the audit made arms 8 and 9 mandatory,
 so beating the naive monitor and the randomize-only arm is no longer sufficient.
@@ -351,9 +351,9 @@ about the control loop built on it. The manuscript was written to that shape.
 
 ## 9. Compute and cost
 
-The full grid — as executed, 13 arms x 3 evaluation datasets x 30 seeds x 150
+The full grid, as executed, 13 arms x 3 evaluation datasets x 30 seeds x 150
 steps, 1170 runs and 175 500 logged steps, plus the tuning sweep and a post-hoc
-sensitivity re-run of 540 further runs — exceeds the author's local machine
+sensitivity re-run of 540 further runs, exceeds the author's local machine
 (4 cores, 8 GB). Primary runner is **GitHub Actions on
 this public repository**: standard runners are free and unlimited there, at
 4 vCPU / 16 GB (versus 2 vCPU / 8 GB on private repos), with a 6-hour per-job
@@ -367,7 +367,7 @@ optimization, not by pool size. A dimensionality reduction (e.g. PCA) or an
 isotropic kernel must be chosen and pre-registered rather than selected after
 seeing timings.
 
-The entire project — compute, data, and publication — costs nothing. Venue:
+The entire project, compute, data, and publication, costs nothing. Venue:
 arXiv preprint plus either TMLR (peer reviewed, open access, no APC) if the work
 lands as methods-and-measurement, or Computational Materials Science on the
 subscription route (no APC unless open access is elected) if the materials
@@ -413,16 +413,16 @@ in the manuscript. Datasets are never committed.
 Every step below the line is complete; this section is kept so the plan can be
 read against what happened.
 
-1. **Environment and data access** — `data_access_report.md`. All five Matbench
+1. **Environment and data access**, `data_access_report.md`. All five Matbench
    sets and seven raw matminer sets download without credentials; OQMD and the
    Materials Project API were dropped (403 and key-gated respectively).
-2. **Novelty audit, Gate G1** — `novelty_audit.md`, Section 6 above.
-3. **Pre-registration** — frozen at tag `prereg-v1`, commit `79d819a`, archived
+2. **Novelty audit, Gate G1**, `novelty_audit.md`, Section 6 above.
+3. **Pre-registration**, frozen at tag `prereg-v1`, commit `79d819a`, archived
    at doi 10.5281/zenodo.23287243.
-4. **Implementation** — `src/pcal/`, seven validity tests, three CI workflows.
-5. **Gates G2, G3, G4** — 1170 runs on GitHub Actions; verdicts in Section 8.
-6. **Results and figures** — `results_summary.md`, `results/figures/`,
+4. **Implementation**, `src/pcal/`, seven validity tests, three CI workflows.
+5. **Gates G2, G3, G4**, 1170 runs on GitHub Actions; verdicts in Section 8.
+6. **Results and figures**, `results_summary.md`, `results/figures/`,
    regenerated end to end by `python scripts/make_figures.py`.
-7. **Manuscript** — drafted; submission is the remaining step.
+7. **Manuscript**, drafted; submission is the remaining step.
 
 The repository README carries the short version of the outcome.

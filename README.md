@@ -8,7 +8,7 @@ calibration monitoring in pool-based materials optimization.**
 Code, pre-registration, result tables and figures for a pre-registered study of
 one question: a pool-based active-learning campaign only ever sees labels at the
 points it chose, so what is the reliability signal it computes from those points
-actually worth — and can the campaign do better from inside its own loop?
+actually worth, and can the campaign do better from inside its own loop?
 
 The study answers the first half positively and the second half negatively, and
 reports both at full length. **Every gate verdict below was fixed by a decision
@@ -21,17 +21,17 @@ archived at [10.5281/zenodo.23287243](https://doi.org/10.5281/zenodo.23287243)).
 
 | Gate | Question it decides | Verdict |
 |---|---|---|
-| **G1** | Does the framing survive a systematic novelty audit? | **passed, narrowed** — four claims surrendered as prior art |
-| **G2** | Is the selection-bias gap real on materials pools? | **passed** — up to 12 coverage points, and it flips sign |
-| **G3** | Is the propensity-corrected reading a better control input than the naive one? | **failed** — better on 1 dataset of 3, significantly worse on 1 |
-| **G4** | Does a controller consuming it beat randomization, the naive monitor, online calibration and localized conformal? | **failed** — 1 of 48 Holm-corrected cells |
+| **G1** | Does the framing survive a systematic novelty audit? | **passed, narrowed**: four claims surrendered as prior art |
+| **G2** | Is the selection-bias gap real on materials pools? | **passed**: up to 12 coverage points, and it flips sign |
+| **G3** | Is the propensity-corrected reading a better control input than the naive one? | **failed**: better on 1 dataset of 3, significantly worse on 1 |
+| **G4** | Does a controller consuming it beat randomization, the naive monitor, online calibration and localized conformal? | **failed**: 1 of 48 Holm-corrected cells |
 
 Three results, stated at the width the evidence supports:
 
 1. **The premise holds.** Interval coverage measured at the points an acquisition
    policy selected differs from coverage over the whole unlabeled pool by up to
    $0.118$ at a nominal $0.90$ level, and the sign of that difference depends on
-   both the policy and the dataset — greedy expected improvement reads $-0.047$
+   both the policy and the dataset: greedy expected improvement reads $-0.047$
    on `elastic_tensor_2015` and $+0.050$ on `heusler_magnetic`, while on
    `elastic_tensor_2015` expected improvement and max-variance sit on opposite
    sides of zero. Uniform random selection covers zero everywhere, as it must.

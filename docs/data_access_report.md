@@ -1,7 +1,7 @@
 # Data access report
 
 Step 1 of the execution plan: establish which materials datasets are actually
-reachable, at what cost, from a zero-credential environment — before any
+reachable, at what cost, from a zero-credential environment, before any
 benchmark code is written. Everything below was measured on 2026-10-10, not
 quoted from documentation.
 
@@ -16,19 +16,19 @@ Downloads do not come from where the dataset registry says they do. matminer's
 registry points at `ndownloader.figshare.com`, which 302-redirects to a
 presigned object on `s3-eu-west-1.amazonaws.com`; allowlisting only the figshare
 host leaves every figshare-backed dataset failing with a proxy error. The five
-Matbench datasets do not touch figshare at all — they are served from
+Matbench datasets do not touch figshare at all, they are served from
 `ml.materialsproject.org`.
 
 | host | role | result |
 |---|---|---|
 | `ml.materialsproject.org` | serves all 5 Matbench v0.1 `.json.gz` files | 200, all five fetched |
 | `ndownloader.figshare.com` | matminer's 30 figshare-hosted datasets | 302 redirect, resolved |
-| `s3-eu-west-1.amazonaws.com` | presigned target of that redirect — **the actual bytes** | 200 after allowlisting |
+| `s3-eu-west-1.amazonaws.com` | presigned target of that redirect, **the actual bytes** | 200 after allowlisting |
 | `figshare.com` | 2 datasets registered under the bare host | 202 |
 | `api.figshare.com` | figshare REST metadata | allowlisted; `load_dataset` never calls it |
-| `matbench.materialsproject.org` | documentation site | 200, HTML only — not a data endpoint |
+| `matbench.materialsproject.org` | documentation site | 200, HTML only, not a data endpoint |
 | `api.materialsproject.org` | Materials Project REST API | `/heartbeat` 200 (v0.87.3.dev20); data routes need a free registered API key |
-| `oqmd.org` | OQMD REST API | 403 on `/` and `/oqmdapi/...` — server-side refusal, not the sandbox proxy |
+| `oqmd.org` | OQMD REST API | 403 on `/` and `/oqmdapi/...`, server-side refusal, not the sandbox proxy |
 
 Consequence for CI: a workflow that fetches data needs egress to
 `ml.materialsproject.org`, `ndownloader.figshare.com` **and**
@@ -115,14 +115,14 @@ is entirely in building it, and it only ever has to be paid once per dataset.
 
 **The trap.** `ElementProperty.featurize_many` accepts a list of formula
 *strings* without complaint when `ignore_errors=True`, and returns a matrix
-that is entirely NaN — 4604 of 4604 rows — after spending 1763 s raising and
+that is entirely NaN, 4604 of 4604 rows, after spending 1763 s raising and
 swallowing one exception per row. Composition objects are mandatory
 (`StrToComposition`, or `pymatgen.core.Composition` directly). With proper
 Composition inputs both datasets featurize with zero NaN rows. Two guards
 follow from this and are owed to the test suite in a later step: assert
 `ignore_errors=False` at every featurization call site, and assert the
 resulting matrix has no all-NaN row before any pool is built from it. A silent
-all-NaN pool would not crash the active-learning loop — it would make every
+all-NaN pool would not crash the active-learning loop, it would make every
 surrogate prediction identical and quietly invalidate an entire run.
 
 ## 5. What this fixes in the plan
