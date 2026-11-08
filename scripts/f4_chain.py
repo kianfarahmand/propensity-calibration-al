@@ -46,6 +46,8 @@ from g4_primary import ARM_NAMES, METRICS, bca, read_runs  # noqa: E402
 LINKS = [(5, 2, "randomize (5 - 2)", "#d95f02"),
          (7, 5, "monitor (7 - 5)", "#1f4e9c"),
          (7, 2, "net (7 - 2)", "#4d4d4d")]
+# Tick labels on the figure; the CSV keeps the short link labels above.
+DISPLAY = {5: "Boltzmann EI", 7: "IPW monitor", 2: "greedy EI"}
 METRIC_LABEL = {"simple_regret": "simple regret\n(lower is better)",
                 "topk_enrichment_10": "top-10 enrichment",
                 "topk_enrichment_50": "top-50 enrichment",
@@ -146,7 +148,7 @@ def figure(rows, datasets, out: Path) -> None:
                             mew=1.0, zorder=3)
             ax.locator_params(axis="x", nbins=4)
             ax.set_yticks(range(len(LINKS)))
-            ax.set_yticklabels([lab for _f, _o, lab, _c in LINKS][::-1]
+            ax.set_yticklabels([f"{DISPLAY[f]} vs {DISPLAY[o]}" for f, o, _l, _c in LINKS][::-1]
                                if j == 0 else [""] * len(LINKS))
             ax.set_ylim(-0.6, len(LINKS) - 0.4)
             ax.tick_params(axis="y", length=0)
@@ -156,9 +158,7 @@ def figure(rows, datasets, out: Path) -> None:
                 ax.set_ylabel(METRIC_LABEL.get(metric, metric), fontsize=SIZES[1])
             if i == len(metrics) - 1:
                 ax.set_xlabel("paired difference (95% BCa)", fontsize=SIZES[1])
-    fig.suptitle("What randomization costs, and what the monitor buys back",
-                 x=0.02, ha="left", fontsize=SIZES[0] + 1)
-    fig.tight_layout(rect=(0, 0, 1, 0.97))
+    fig.tight_layout()
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out)
     plt.close(fig)

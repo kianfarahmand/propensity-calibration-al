@@ -31,9 +31,9 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
 ARMS = {6: ("naive monitor", "#d95f02"),
-        7: ("propensity-corrected", "#1f4e9c"),
-        12: ("no leave-one-out refit", "#7fa6d9"),
-        13: ("no weight clipping", "#9d7fb8")}
+        7: ("IPW monitor", "#1f4e9c"),
+        12: ("IPW, no leave-one-out refit", "#7fa6d9"),
+        13: ("IPW, no weight clipping", "#9d7fb8")}
 TRUTH_COLOR = "#4d4d4d"
 SIZES = (8, 7, 6)   # base, annotation, ticks
 

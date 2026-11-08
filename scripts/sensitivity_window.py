@@ -167,6 +167,9 @@ def main() -> int:
 
     datasets = sorted({r["dataset"] for r in rows})
     labels = [s[0] for s in settings]
+    # Tick labels on the figure; the CSV keeps the setting names.
+    shown = {"frozen": "pre-registered", "window60": "window 60",
+             "window100": "window 100", "floor3": "ESS floor 3"}
     style()
     fig, axes = plt.subplots(2, len(datasets), figsize=(7.2, 4.2), squeeze=False)
     for j, dataset in enumerate(datasets):
@@ -186,11 +189,11 @@ def main() -> int:
             else:
                 ax.plot([i], [m], marker="x", color=colour, ms=4, zorder=3)
         ax.set_xticks(range(len(labels)))
-        ax.set_xticklabels(labels, rotation=30, ha="right")
+        ax.set_xticklabels([shown.get(lab, lab) for lab in labels], rotation=30, ha="right")
         ax.set_xlim(-0.5, len(labels) - 0.5)
         ax.set_title(dataset, fontsize=SIZES[0])
         if j == 0:
-            ax.set_ylabel("arm 7 - arm 6\nmean |reading - truth|", fontsize=SIZES[1])
+            ax.set_ylabel("IPW minus naive monitor,\nmean |reading - truth|", fontsize=SIZES[1])
         ax2 = axes[1][j]
         vals = []
         for label in labels:
@@ -202,13 +205,10 @@ def main() -> int:
                 width=0.6)
         ax2.set_ylim(0.0, 1.0)
         ax2.set_xticks(range(len(labels)))
-        ax2.set_xticklabels(labels, rotation=30, ha="right")
+        ax2.set_xticklabels([shown.get(lab, lab) for lab in labels], rotation=30, ha="right")
         if j == 0:
-            ax2.set_ylabel("arm 7 suppression rate", fontsize=SIZES[1])
-    fig.suptitle("Post-hoc: G3 re-measured at estimator settings nobody "
-                 "pre-registered (blue is the frozen setting)",
-                 x=0.02, ha="left", fontsize=SIZES[0] + 1)
-    fig.tight_layout(rect=(0, 0, 1, 0.95))
+            ax2.set_ylabel("IPW monitor\nsuppression rate", fontsize=SIZES[1])
+    fig.tight_layout()
     fig_path = Path(args.out_dir) / "sensitivity_window.png"
     fig_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(fig_path)

@@ -106,9 +106,7 @@ def main() -> int:
         ax.locator_params(axis="x", nbins=5)
         ax.set_title(dataset, fontsize=SIZES[0])
         ax.set_xlabel("selected - pool coverage at 0.90", fontsize=SIZES[1])
-    fig.suptitle("The gap an acquisition policy opens between what it sees and "
-                 "what is out there", x=0.02, ha="left", fontsize=SIZES[0] + 1)
-    fig.tight_layout(rect=(0, 0, 1, 0.94))
+    fig.tight_layout()
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / "g2_gap_by_policy.png"

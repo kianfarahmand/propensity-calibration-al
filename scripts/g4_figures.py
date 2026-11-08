@@ -29,6 +29,7 @@ import argparse
 import csv
 import gzip
 import math
+import re
 from pathlib import Path
 
 import matplotlib
@@ -39,9 +40,9 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
 ARMS = [(2, "greedy EI", "#4d4d4d"),
-        (5, "Boltzmann EI, no monitor", "#66a61e"),
+        (5, "Boltzmann EI", "#66a61e"),
         (6, "naive monitor", "#d95f02"),
-        (7, "propensity-corrected", "#1f4e9c"),
+        (7, "IPW monitor", "#1f4e9c"),
         (8, "online calibration", "#7570b3"),
         (9, "localized conformal", "#e7298a")]
 METRIC_LABEL = {"simple_regret": "simple regret (target units)",
@@ -138,13 +139,22 @@ def read_effects(paths) -> list[dict]:
     return rows
 
 
+def comparison_label(comparison: str) -> str:
+    """'arm7_vs_arm5' -> 'IPW monitor vs Boltzmann EI'; unknown forms pass through."""
+    names = {arm: label for arm, label, _colour in ARMS}
+    m = re.fullmatch(r"arm(\d+)_vs_arm(\d+)", comparison)
+    if not m or int(m.group(1)) not in names or int(m.group(2)) not in names:
+        return comparison.replace("arm", "arm ").replace("_vs_", " vs ")
+    return f"{names[int(m.group(1))]} vs {names[int(m.group(2))]}"
+
+
 def paired_effects(rows: list[dict], datasets, out: Path) -> None:
     order, seen = [], set()
     for r in rows:
         if r["comparison"] not in seen:
             seen.add(r["comparison"])
             order.append(r["comparison"])
-    labels = {c: c.replace("arm", "arm ").replace("_vs_", " vs ") for c in order}
+    labels = {c: comparison_label(c) for c in order}
     fig, axes = plt.subplots(len(METRIC_ORDER), len(datasets),
                              figsize=(7.2, 7.4), sharey=True)
     for i, metric in enumerate(METRIC_ORDER):
