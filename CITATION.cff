@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 title: >-
-  What an active learner can know about its own uncertainty:
-  propensity-corrected calibration monitoring in pool-based
-  materials optimization
+  Code, configurations and per-run results for: Selection bias in
+  calibration checks during active learning for materials discovery
 message: >-
-  If you refer to the pre-registered analysis plan, please cite the
-  archived release, which pins the frozen plan at the commit it was
+  To cite the code and results reported in the paper, cite the release
+  v1.0.0 DOI. To cite the pre-registered analysis plan, cite the
+  prereg-v1.0.1 DOI, which pins the frozen plan at the commit it was
   frozen at.
 type: software
 authors:
@@ -13,6 +13,11 @@ authors:
     given-names: Kian
 repository-code: https://github.com/kianfarahmand/propensity-calibration-al
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24146690
+    description: >-
+      Version DOI for release v1.0.0 (commit 1b2b7cee), the code and
+      results cited in the paper.
   - type: doi
     value: 10.5281/zenodo.23287243
     description: >-
