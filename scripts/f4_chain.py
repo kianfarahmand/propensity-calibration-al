@@ -55,6 +55,10 @@ METRIC_LABEL = {"simple_regret": "simple regret\n(lower is better)",
 METRIC_ORDER = ["topk_enrichment_50", "topk_enrichment_10", "discovery_auc",
                 "simple_regret"]
 SIZES = (8, 7, 6)
+# Panel titles name each dataset by its property, as the manuscript does.
+DATASET_LABEL = {"elastic_tensor_2015": "bulk modulus (DFT)",
+                 "heusler_magnetic": "Heusler formation energy (DFT)",
+                 "matbench_expt_gap": "band gap (experiment)"}
 COLS = ["dataset", "link", "arm", "arm_name", "reference_arm", "reference_name",
         "isolates", "metric", "higher_is_better", "n_pairs", "mean_arm",
         "mean_reference", "mean_difference", "ci_lo", "ci_hi", "p_raw",
@@ -153,7 +157,7 @@ def figure(rows, datasets, out: Path) -> None:
             ax.set_ylim(-0.6, len(LINKS) - 0.4)
             ax.tick_params(axis="y", length=0)
             if i == 0:
-                ax.set_title(dataset, fontsize=SIZES[0])
+                ax.set_title(DATASET_LABEL.get(dataset, dataset), fontsize=SIZES[0])
             if j == 0:
                 ax.set_ylabel(METRIC_LABEL.get(metric, metric), fontsize=SIZES[1])
             if i == len(metrics) - 1:

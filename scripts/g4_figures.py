@@ -52,6 +52,10 @@ METRIC_LABEL = {"simple_regret": "simple regret (target units)",
 METRIC_ORDER = ["simple_regret", "topk_enrichment_10", "topk_enrichment_50",
                 "discovery_auc"]
 SIZES = (8, 7, 6)   # base, annotation, ticks
+# Panel titles name each dataset by its property, as the manuscript does.
+DATASET_LABEL = {"elastic_tensor_2015": "bulk modulus (DFT)",
+                 "heusler_magnetic": "Heusler formation energy (DFT)",
+                 "matbench_expt_gap": "band gap (experiment)"}
 
 
 def style() -> None:
@@ -114,7 +118,7 @@ def discovery_curves(curves: dict, datasets, out: Path) -> None:
             if stacked:
                 ax.plot(grid, np.mean(stacked, axis=0), color=color,
                         linewidth=1.3, label=label, zorder=3)
-        ax.set_title(dataset)
+        ax.set_title(DATASET_LABEL.get(dataset, dataset))
         ax.set_xlabel("step")
     axes[0].set_ylabel("best queried target\n(pool-standardized)")
     axes[-1].legend(loc="lower right", fontsize=SIZES[2] - 0.5)
@@ -179,7 +183,7 @@ def paired_effects(rows: list[dict], datasets, out: Path) -> None:
             ax.set_yticklabels([labels[c] for c in reversed(order)])
             ax.set_ylim(-0.6, len(order) - 0.4)
             if i == 0:
-                ax.set_title(dataset)
+                ax.set_title(DATASET_LABEL.get(dataset, dataset))
             if i == len(METRIC_ORDER) - 1:
                 ax.set_xlabel("paired difference")
             if j == 0:
@@ -189,9 +193,10 @@ def paired_effects(rows: list[dict], datasets, out: Path) -> None:
                           linewidth=1.2, label="Holm-adjusted p < 0.05"),
                plt.Line2D([], [], color="#8c8c8c", marker="o", markersize=3.2,
                           linewidth=1.2, label="not separated from zero")]
-    axes[0, -1].legend(handles=handles, loc="lower right",
-                       fontsize=SIZES[2] - 0.5)
     fig.tight_layout()
+    # Below the panels, so the legend never covers an interval.
+    fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 0.0),
+               ncol=2, fontsize=SIZES[1])
     fig.savefig(out)
     plt.close(fig)
 

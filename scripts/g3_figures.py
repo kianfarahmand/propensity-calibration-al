@@ -35,6 +35,10 @@ ARMS = {6: ("naive monitor", "#d95f02"),
         12: ("IPW, no leave-one-out refit", "#7fa6d9"),
         13: ("IPW, no weight clipping", "#9d7fb8")}
 TRUTH_COLOR = "#4d4d4d"
+# Panel titles name each dataset by its property, as the manuscript does.
+DATASET_LABEL = {"elastic_tensor_2015": "bulk modulus (DFT)",
+                 "heusler_magnetic": "Heusler formation energy (DFT)",
+                 "matbench_expt_gap": "band gap (experiment)"}
 SIZES = (8, 7, 6)   # base, annotation, ticks
 
 
@@ -146,7 +150,7 @@ def figure_truth(agg, datasets, steps, out_path: Path, window, floor_frac=0.5):
                 if xs.size:
                     ax.plot(xs, np.full(xs.size, y), marker="|", ls="none",
                             color=color, ms=3, alpha=0.85)
-        ax.set_title(dataset.replace("_", " "))
+        ax.set_title(DATASET_LABEL.get(dataset, dataset.replace("_", " ")))
         ax.set_xlabel("step")
         ax.set_ylim(0.70, 1.005)
         ax.set_yticks([0.7, 0.8, 0.9, 1.0])
@@ -159,7 +163,7 @@ def figure_truth(agg, datasets, steps, out_path: Path, window, floor_frac=0.5):
                           label="most runs suppressed (upper row: no run answered)"),
                plt.Rectangle((0, 0), 1, 1, color="0.93",
                              label=f"scored window, steps {window[0]}-{window[1]}")]
-    fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.5, -0.17),
+    fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.5, -0.27),
                ncol=3, handlelength=1.4, columnspacing=1.4)
     fig.subplots_adjust(wspace=0.08)
     fig.savefig(out_path)
@@ -180,7 +184,7 @@ def figure_ess(agg, datasets, steps, out_path: Path, floor=10.0):
             if arm == 7:
                 ax.fill_between(steps, q1, q3, color=color, alpha=0.16, lw=0, zorder=1)
         ax.axhline(floor, color="#b2182b", ls="--", lw=0.8, zorder=4)
-        ax.set_title(dataset.replace("_", " "))
+        ax.set_title(DATASET_LABEL.get(dataset, dataset.replace("_", " ")))
         ax.set_xlabel("step")
         ax.set_yscale("log")
         ax.set_yticks([1, 2, 5, 10, 20, 30])

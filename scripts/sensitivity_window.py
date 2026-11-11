@@ -50,6 +50,10 @@ COLS = ["setting", "window", "ess_floor", "preregistered", "status", "dataset",
         "suppression_rate_ipw", "mean_steps_answered_ipw",
         "median_ess_step100_ipw", "steps_table"]
 SIZES = (8, 7, 6)
+# Panel titles name each dataset by its property, as the manuscript does.
+DATASET_LABEL = {"elastic_tensor_2015": "bulk modulus (DFT)",
+                 "heusler_magnetic": "Heusler formation energy (DFT)",
+                 "matbench_expt_gap": "band gap (experiment)"}
 
 
 def style() -> None:
@@ -191,7 +195,7 @@ def main() -> int:
         ax.set_xticks(range(len(labels)))
         ax.set_xticklabels([shown.get(lab, lab) for lab in labels], rotation=30, ha="right")
         ax.set_xlim(-0.5, len(labels) - 0.5)
-        ax.set_title(dataset, fontsize=SIZES[0])
+        ax.set_title(DATASET_LABEL.get(dataset, dataset), fontsize=SIZES[0])
         if j == 0:
             ax.set_ylabel("IPW minus naive monitor,\nmean |reading - truth|", fontsize=SIZES[1])
         ax2 = axes[1][j]

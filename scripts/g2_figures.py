@@ -35,6 +35,10 @@ ARMS = [(1, "uniform random", "#999999"),
         (3, "greedy UCB", "#d95f02"),
         (4, "greedy max-variance", "#66a61e")]
 SIZES = (8, 7, 6)
+# Panel titles name each dataset by its property, as the manuscript does.
+DATASET_LABEL = {"elastic_tensor_2015": "bulk modulus (DFT)",
+                 "heusler_magnetic": "Heusler formation energy (DFT)",
+                 "matbench_expt_gap": "band gap (experiment)"}
 
 
 def style() -> None:
@@ -104,7 +108,7 @@ def main() -> int:
         ax.set_ylim(-0.6, len(ARMS) - 0.4)
         ax.tick_params(axis="y", length=0, labelleft=(j == 0))
         ax.locator_params(axis="x", nbins=5)
-        ax.set_title(dataset, fontsize=SIZES[0])
+        ax.set_title(DATASET_LABEL.get(dataset, dataset), fontsize=SIZES[0])
         ax.set_xlabel("selected - pool coverage at 0.90", fontsize=SIZES[1])
     fig.tight_layout()
     out_dir = Path(args.out_dir)
